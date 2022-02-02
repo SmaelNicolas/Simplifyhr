@@ -6,6 +6,7 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Home from "./Pages/Home/Home";
 import Resources from "./Pages/Resources/Resources";
 import Login from "./Pages/Login/Login";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 					<Route exact path='/login' element={<Login />} />
 					<Route exact path='/resources' element={<Resources />} />
 				</Routes>
+				<Footer></Footer>
 			</BrowserRouter>
 		</AppContainerStyled>
 	);
