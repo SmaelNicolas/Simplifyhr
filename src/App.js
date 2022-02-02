@@ -11,8 +11,11 @@ function App() {
 	return (
 		<AppContainerStyled>
 			<BrowserRouter>
+				{/* Barra de navegacion */}
 				<Navbar></Navbar>
+				{/* Formulario de contacto tipo MODAL */}
 				<ContactUs></ContactUs>
+				{/* Rutas a las diferentes paginas (2 home, "/" donde inicia , "/home" para usar hashlink) */}
 				<Routes>
 					<Route exact path='/' element={<Home />} />
 					<Route exact path='/home' element={<Home />} />
