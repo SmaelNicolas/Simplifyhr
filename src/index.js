@@ -1,16 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
-`;
+import { GlobalStyle } from "./GlobalStyled";
 
 ReactDOM.render(
 	<React.StrictMode>
