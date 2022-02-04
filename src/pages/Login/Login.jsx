@@ -1,13 +1,25 @@
+import { useState } from "react";
 import { TitleStyled, FormStyled, LoginPageStyled } from "./LoginStyled";
 import LoginForm from "./LoginForm/LoginForm";
+import BlogPostScreen from "./BlogPostScreen/BlogPostScreen";
 
 function Login() {
+	const [isLogged, setIsLogged] = useState(true);
 	return (
 		<LoginPageStyled>
-			<TitleStyled>Login</TitleStyled>
-			<FormStyled method='post'>
-				<LoginForm></LoginForm>
-			</FormStyled>
+			{isLogged ? (
+				<>
+					<TitleStyled>CREATE BLOG POST</TitleStyled>
+					<BlogPostScreen></BlogPostScreen>
+				</>
+			) : (
+				<>
+					<TitleStyled>Login</TitleStyled>
+					<FormStyled method='post'>
+						<LoginForm></LoginForm>
+					</FormStyled>
+				</>
+			)}
 		</LoginPageStyled>
 	);
 }
