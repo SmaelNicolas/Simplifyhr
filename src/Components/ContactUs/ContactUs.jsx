@@ -9,6 +9,10 @@ import ContactUsFormItems from "./ContactUsFormItems/ContactUsFormItems";
 import { useState } from "react";
 
 function ContactUs() {
+	// TODO
+	// Agregar state showContactUs al navbar y eliminarlo de aca
+	// Ejecutar toggleShow en link contactUs
+	//Pasar comom prop la funcion toggleShow al contacto para ejecutarla en la X y boton enviar mensaje
 	const [showContactUs, setShowContactUs] = useState(false);
 
 	const toggleShow = () => {
@@ -16,19 +20,19 @@ function ContactUs() {
 		console.log(showContactUs);
 	};
 
-	return showContactUs ? (
-		<Fade>
-			<ContactUsContainer>
-				<FormContainer>
-					<CloseForm onClick={toggleShow}> X </CloseForm>
-					<ContactUsFormItems
-						toggleShow={toggleShow}
-					></ContactUsFormItems>
-				</FormContainer>
-			</ContactUsContainer>
-		</Fade>
-	) : (
-		<button onClick={toggleShow}>FORM CONTACT US</button>
+	return (
+		showContactUs && (
+			<Fade>
+				<ContactUsContainer>
+					<FormContainer>
+						<CloseForm onClick={toggleShow}> X </CloseForm>
+						<ContactUsFormItems
+							toggleShow={toggleShow}
+						></ContactUsFormItems>
+					</FormContainer>
+				</ContactUsContainer>
+			</Fade>
+		)
 	);
 }
 
