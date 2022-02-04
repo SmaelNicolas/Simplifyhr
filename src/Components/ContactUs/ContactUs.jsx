@@ -17,7 +17,6 @@ function ContactUs() {
 
 	const toggleShow = () => {
 		setShowContactUs(!showContactUs);
-		console.log(showContactUs);
 	};
 
 	return (
