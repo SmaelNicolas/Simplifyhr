@@ -5,15 +5,27 @@ import {
 } from "./ContactUsStyled";
 
 import ContactUsFormItems from "./ContactUsFormItems/ContactUsFormItems";
+import { useState } from "react";
 
 function ContactUs() {
-	return (
+	const [showContactUs, setShowContactUs] = useState(false);
+
+	const toggleShow = () => {
+		setShowContactUs(!showContactUs);
+		console.log(showContactUs);
+	};
+
+	return showContactUs ? (
 		<ContactUsContainer>
 			<FormContainer>
-				<CloseForm> X </CloseForm>
-				<ContactUsFormItems></ContactUsFormItems>
+				<CloseForm onClick={toggleShow}> X </CloseForm>
+				<ContactUsFormItems
+					toggleShow={toggleShow}
+				></ContactUsFormItems>
 			</FormContainer>
 		</ContactUsContainer>
+	) : (
+		<button onClick={toggleShow}>FORM CONTACT US</button>
 	);
 }
 

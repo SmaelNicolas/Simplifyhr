@@ -6,7 +6,7 @@ import {
 	Divisor,
 } from "./ContactUsFormItemsStyled";
 
-function ContactUsFormItems() {
+function ContactUsFormItems({ toggleShow }) {
 	return (
 		<>
 			<Divisor>
@@ -74,7 +74,8 @@ function ContactUsFormItems() {
 			<Button
 				onClick={(e) => {
 					e.preventDefault();
-					console.log("LOGGED");
+					console.log("Message Sent");
+					toggleShow();
 				}}
 				type='submit'
 			>
