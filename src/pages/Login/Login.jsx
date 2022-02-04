@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TitleStyled, FormStyled, LoginPageStyled } from "./LoginStyled";
 import LoginForm from "./LoginForm/LoginForm";
 import BlogPostScreen from "./BlogPostScreen/BlogPostScreen";
 
 function Login() {
-	const [isLogged, setIsLogged] = useState(true);
+	const [isLogged, setIsLogged] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setIsLogged(true);
+		}, 4000);
+	}, [isLogged]);
+
 	return (
 		<LoginPageStyled>
 			{isLogged ? (
