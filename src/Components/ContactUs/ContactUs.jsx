@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import {
 	ContactUsContainer,
 	FormContainer,
@@ -16,14 +17,16 @@ function ContactUs() {
 	};
 
 	return showContactUs ? (
-		<ContactUsContainer>
-			<FormContainer>
-				<CloseForm onClick={toggleShow}> X </CloseForm>
-				<ContactUsFormItems
-					toggleShow={toggleShow}
-				></ContactUsFormItems>
-			</FormContainer>
-		</ContactUsContainer>
+		<Fade>
+			<ContactUsContainer>
+				<FormContainer>
+					<CloseForm onClick={toggleShow}> X </CloseForm>
+					<ContactUsFormItems
+						toggleShow={toggleShow}
+					></ContactUsFormItems>
+				</FormContainer>
+			</ContactUsContainer>
+		</Fade>
 	) : (
 		<button onClick={toggleShow}>FORM CONTACT US</button>
 	);
