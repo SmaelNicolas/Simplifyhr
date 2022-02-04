@@ -13,8 +13,8 @@ function Cards() {
 			<CardStyled>
 				<CardTitleStyled>Essential</CardTitleStyled>
 				<CardTextStyled>
-					<CardTextContainerStyled>
-						Fin your C-levels to grow your team
+					<CardTextContainerStyled width='90%'>
+						Find your C-levels to grow your team
 					</CardTextContainerStyled>
 				</CardTextStyled>
 				<CardButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
@@ -35,7 +35,7 @@ function Cards() {
 			<CardStyled>
 				<CardTitleStyled>Custom</CardTitleStyled>
 				<CardTextStyled>
-					<CardTextContainerStyled>
+					<CardTextContainerStyled width='80%'>
 						Have a one-time hr project?
 					</CardTextContainerStyled>
 				</CardTextStyled>

@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
 export const CardsContainerStyled = styled.div`
-	width: 1000px;
-	height: 800px;
+	width: 100%;
+	height: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	margin: 15px;
 `;
 
 export const CardStyled = styled.div`
-	width: 33.3333%;
-	height: 550px;
+	max-width: 392px;
+	height: 542px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -21,41 +22,50 @@ export const CardStyled = styled.div`
 `;
 
 export const CardTitleStyled = styled.div`
+	font-family: "Roboto", sans-serif;
+	color: #ffffff;
 	width: 100%;
-	height: 70px;
-	font-size: 40px;
+	height: 75px;
+	font-size: 48px;
 	text-align: center;
-	font-weight: 600;
+	font-weight: 500;
 	padding: 10px;
 	background-color: #524ef8;
 `;
 
 export const CardTextStyled = styled.div`
 	width: 100%;
-	height: 600px;
+	height: 542px;
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	margin-top: 104px;
 `;
 
 export const CardTextContainerStyled = styled.div`
-	font-size: 35px;
+	width: ${({ width }) => width || "100%"};
+	font-family: 'Roboto', sans-serif;
+	font-size: 36px;
 	padding: 0px 10px;
-
+	color: black;
+	font-family:
 	text-align: center;
-	font-weight: 300;
+	font-weight: 700;
 `;
 
 export const CardButtonStyled = styled.a`
-	width: 80%;
-	height: auto;
+	font-family: "Roboto", sans-serif;
+	font-size: 36px;
+	font-weight: 600;
+
+	width: 300px;
+	height: 82px;
 	padding: 20px;
 	margin: 30px;
-	font-size: 25px;
+
 	text-align: center;
-	color: Black;
-	border: 1px solid black;
-	border-radius: 5px;
+	color: #000000;
 	background-color: #c4c4c4;
+	text-decoration: none;
 `;
