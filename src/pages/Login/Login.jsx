@@ -1,11 +1,13 @@
-import { TitleStyled } from "./LoginStyled";
-import { FormStyled } from "./LoginStyled";
+import { TitleStyled, FormStyled } from "./LoginStyled";
+import LoginForm from "./LoginForm/LoginForm";
 
 function Login() {
 	return (
 		<>
 			<TitleStyled>Login</TitleStyled>
-			<FormStyled method='post'> </FormStyled>
+			<FormStyled method='post'>
+				<LoginForm></LoginForm>
+			</FormStyled>
 		</>
 	);
 }
