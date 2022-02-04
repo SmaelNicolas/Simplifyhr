@@ -10,12 +10,8 @@ function Services() {
 	return (
 		<ServicesContainer>
 			<TitleContainer>
-				<TitleStyled color='#524ef8'>
-					StartUp up is in our DNA
-				</TitleStyled>
-				<TitleStyled color='#524ef8'>
-					All Services on Succes
-				</TitleStyled>
+				<TitleStyled>StartUp up is in our DNA</TitleStyled>
+				<TitleStyled>All Services on Succes</TitleStyled>
 			</TitleContainer>
 			<Cards></Cards>
 		</ServicesContainer>
