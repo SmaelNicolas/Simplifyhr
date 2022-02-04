@@ -57,19 +57,23 @@ function ContactUsFormItems() {
 				></Inputs>
 			</Divisor>
 
-			<Labels htmlFor='messageContact'>Message </Labels>
+			<Divisor width='100%'>
+				<Labels htmlFor='messageContact' width='90%'>
+					Message{" "}
+				</Labels>
 
-			<InputBodyContent
-				type='text'
-				id='messageContact'
-				name='messageContact'
-				placeholder='Write something..'
-				required
-			></InputBodyContent>
+				<InputBodyContent
+					type='text'
+					id='messageContact'
+					name='messageContact'
+					placeholder='Write something..'
+					required
+				></InputBodyContent>
+			</Divisor>
 
 			<Button
 				onClick={(e) => {
-					// e.preventDefault();
+					e.preventDefault();
 					console.log("LOGGED");
 				}}
 				type='submit'
