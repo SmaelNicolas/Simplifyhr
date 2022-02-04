@@ -6,7 +6,34 @@ import {
 	Divisor,
 } from "./ContactUsFormItemsStyled";
 
+import { useState } from "react";
+
+import database from "../../../Firebase/Firebase";
+import { doc, setDoc } from "firebase/firestore";
+import { v4 as uuidv4 } from "uuid";
+
 function ContactUsFormItems({ toggleShow }) {
+	const [name, setName] = useState();
+	const [lastName, setLastName] = useState();
+	const [email, setEmail] = useState();
+	const [company, setCompany] = useState();
+	const [body, setBody] = useState();
+
+	function generateMessage() {
+		const message = {
+			date: new Date(),
+			person: {
+				name: name,
+				lastName: lastName,
+				email: email,
+				company: company,
+			},
+			message: body,
+		};
+		// Add a new document in collection "cities"
+		setDoc(doc(database, "messages", uuidv4()), message);
+	}
+
 	return (
 		<>
 			<Divisor>
@@ -18,6 +45,7 @@ function ContactUsFormItems({ toggleShow }) {
 					placeholder='Name'
 					autocomplete='name'
 					required
+					onChange={(e) => setName(e.target.value)}
 				></Inputs>
 			</Divisor>
 
@@ -30,6 +58,7 @@ function ContactUsFormItems({ toggleShow }) {
 					placeholder='Last Name'
 					autocomplete='last-name'
 					required
+					onChange={(e) => setLastName(e.target.value)}
 				></Inputs>
 			</Divisor>
 
@@ -41,6 +70,7 @@ function ContactUsFormItems({ toggleShow }) {
 					name='company'
 					placeholder='Company'
 					required
+					onChange={(e) => setCompany(e.target.value)}
 				></Inputs>
 			</Divisor>
 
@@ -54,6 +84,7 @@ function ContactUsFormItems({ toggleShow }) {
 					type='email'
 					autocomplete='email'
 					required
+					onChange={(e) => setEmail(e.target.value)}
 				></Inputs>
 			</Divisor>
 
@@ -68,12 +99,14 @@ function ContactUsFormItems({ toggleShow }) {
 					name='messageContact'
 					placeholder='Write something..'
 					required
+					onChange={(e) => setBody(e.target.value)}
 				></InputBodyContent>
 			</Divisor>
 
 			<Button
 				onClick={(e) => {
 					e.preventDefault();
+					generateMessage();
 					console.log("Message Sent");
 					toggleShow();
 				}}
