@@ -1,5 +1,11 @@
+import { TitleStyled } from "./LoginStyled";
+
 function Login() {
-	return <div></div>;
+	return (
+		<>
+			<TitleStyled>Login</TitleStyled>
+		</>
+	);
 }
 
 export default Login;
