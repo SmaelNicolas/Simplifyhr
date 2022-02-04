@@ -40,7 +40,18 @@ function FormBlogItems() {
 				placeholder='Post Title'
 				required
 			></Inputs>
-			<Labels htmlFor='postContent'>Content </Labels>
+
+			<Labels htmlFor='urlImage'>Url Image </Labels>
+
+			<Inputs
+				type='text'
+				id='urlImage'
+				name='urlImage'
+				placeholder='Image Url'
+				required
+			></Inputs>
+
+			<Labels htmlFor='postContent'>Body </Labels>
 
 			<InputPostContent
 				type='text'
