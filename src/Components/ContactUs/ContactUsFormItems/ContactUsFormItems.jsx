@@ -30,7 +30,7 @@ function ContactUsFormItems({ toggleShow }) {
 			},
 			message: body,
 		};
-		// Add a new document in collection "cities"
+		// Add a new document in collection "messages"
 		setDoc(doc(database, "messages", uuidv4()), message);
 	}
 
@@ -107,7 +107,6 @@ function ContactUsFormItems({ toggleShow }) {
 				onClick={(e) => {
 					e.preventDefault();
 					generateMessage();
-					console.log("Message Sent");
 					toggleShow();
 				}}
 				type='submit'
