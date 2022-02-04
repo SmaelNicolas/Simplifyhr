@@ -1,5 +1,7 @@
+import { FormContainer } from "./ContactUsStyled";
+
 function ContactUs() {
-	return <div></div>;
+	return <FormContainer></FormContainer>;
 }
 
 export default ContactUs;
