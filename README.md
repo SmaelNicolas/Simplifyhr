@@ -12,3 +12,6 @@ npm install --save styled-components
 
 react-helmet-async
 npm i react-helmet-async
+
+react-awesome-reveal
+npm i react-awesome-reveal
