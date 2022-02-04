@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const FormBlog = styled.form`
 	width: 920px;
-	height: 700px;
+	height: 750px;
 	background-color: #000000d1;
+	padding: 15px 0px;
 	display: flex;
 	flex-direction: column;
 
@@ -12,4 +13,6 @@ export const FormBlog = styled.form`
 
 	border: 1px solid black;
 	border-radius: 6px;
+
+	gap: 10px;
 `;
