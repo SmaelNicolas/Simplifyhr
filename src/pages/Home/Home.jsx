@@ -1,5 +1,11 @@
+import Services from "./Services/Services";
+
 function Home() {
-	return <div></div>;
+	return (
+		<>
+			<Services />
+		</>
+	);
 }
 
 export default Home;
