@@ -12,7 +12,7 @@ export const Inputs = styled.input`
 	padding-left: 20px;
 `;
 
-export const Button = styled.input`
+export const Button = styled.button`
 	width: 250px;
 	height: 30px;
 	background-color: #8080808d;

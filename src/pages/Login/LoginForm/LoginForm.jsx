@@ -28,7 +28,9 @@ function LoginForm() {
 					e.preventDefault();
 				}}
 				type='submit'
-			></Button>
+			>
+				Login
+			</Button>
 		</>
 	);
 }
