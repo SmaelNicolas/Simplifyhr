@@ -1,0 +1,112 @@
+{
+	"english": {
+		"navbar": {
+			"a1": "home",
+			"a2": "Services",
+			"a3": "Why us?",
+			"a4": "Resources",
+			"a5": "Contact Us"
+		},
+		"header": {
+			"title": "Make your business run smoother",
+			"subTitle": "We match Companies with top talent"
+		},
+		"services": {
+			"title": "StartUp is in our DNA",
+			"subTitle": "All services on Success",
+			"cards": {
+				"card1": {
+					"title": "Essential",
+					"body": "Find your C-levels to grow your team",
+					"button": "5% GYS"
+				},
+				"card2": {
+					"title": "Express",
+					"body": "Need an urgent hire? We can also match. Fast.",
+					"button": "Book a call"
+				},
+				"card3": {
+					"title": "Custom",
+					"body": "Have a one-time hr project?",
+					"button": "Book a call"
+				}
+			}
+		},
+		"whyUs": {
+			"title": "Why Simplify-hr",
+			"subTitle": "We are obsessed with matching the best talent with their dream job",
+			"cards": {
+				"card1": {
+					"title": "Trust Driven.",
+					"body": "We gain your trust with actions over promises."
+				},
+				"card2": {
+					"title": "Low and transparent fees.",
+					"body": "We believe that referrals for a job well done is our biggest compliment. No strings attached."
+				},
+				"card3": {
+					"title": "Flexible",
+					"body": "Not one culture is the same. We develop a flexible plan for your individual growth goals"
+				}
+			},
+			"button": "Shedule a video chat"
+		},
+		"resources": "",
+		"footer": ""
+	},
+	"español": {
+		"navbar": {
+			"a1": "home",
+			"a2": "Services",
+			"a3": "Why us?",
+			"a4": "Resources",
+			"a5": "Contact Us"
+		},
+		"header": {
+			"title": "Make your business run smoother",
+			"subTitle": "We match Companies with top talent"
+		},
+		"services": {
+			"title": "StartUp is in our DNA",
+			"subTitle": "All services on Success",
+			"cards": {
+				"card1": {
+					"title": "Essential",
+					"body": "Find your C-levels to grow your team",
+					"button": "5% GYS"
+				},
+				"card2": {
+					"title": "Express",
+					"body": "Need an urgent hire? We can also match. Fast.",
+					"button": "Book a call"
+				},
+				"card3": {
+					"title": "Custom",
+					"body": "Have a one-time hr project?",
+					"button": "Book a call"
+				}
+			}
+		},
+		"whyUs": {
+			"title": "Why Simplify-hr",
+			"subTitle": "We are obsessed with matching the best talent with their dream job",
+			"cards": {
+				"card1": {
+					"title": "Trust Driven.",
+					"body": "We gain your trust with actions over promises."
+				},
+				"card2": {
+					"title": "Low and transparent fees.",
+					"body": "We believe that referrals for a job well done is our biggest compliment. No strings attached."
+				},
+				"card3": {
+					"title": "Flexible",
+					"body": "Not one culture is the same. We develop a flexible plan for your individual growth goals"
+				}
+			},
+			"button": "Shedule a video chat"
+		},
+		"resources": "",
+		"footer": ""
+	}
+}
