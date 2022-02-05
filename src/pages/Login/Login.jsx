@@ -6,11 +6,11 @@ import BlogPostScreen from "./BlogPostScreen/BlogPostScreen";
 function Login() {
 	const [isLogged, setIsLogged] = useState(false);
 
-	useEffect(() => {
-		setTimeout(() => {
-			setIsLogged(true);
-		}, 4000);
-	}, [isLogged]);
+	useEffect(() => {}, [isLogged]);
+
+	const valueIsLogged = (value) => {
+		setIsLogged(value);
+	};
 
 	return (
 		<LoginPageStyled>
@@ -23,7 +23,7 @@ function Login() {
 				<>
 					<TitleStyled>Login</TitleStyled>
 					<FormStyled method='post'>
-						<LoginForm></LoginForm>
+						<LoginForm valueIsLogged={valueIsLogged}></LoginForm>
 					</FormStyled>
 				</>
 			)}
