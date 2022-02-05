@@ -9,7 +9,7 @@ function LoginForm() {
 				id='fname'
 				name='idLogin'
 				placeholder='Username'
-				autocomplete='username'
+				autoComplete='username'
 				required
 			></Inputs>
 
@@ -19,7 +19,7 @@ function LoginForm() {
 				name='password'
 				placeholder='Password'
 				type='password'
-				autocomplete='current-password'
+				autoComplete='current-password'
 				id='current-password'
 				required
 			></Inputs>
