@@ -20,6 +20,24 @@ function ContactUsFormItems({ toggleShow }) {
 	const [body, setBody] = useState();
 
 	function generateMessage() {
+		fetch("https://formsubmit.co/ajax/9a8e0d24cf432f27bd92275ddf47b8dd", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+			},
+			body: JSON.stringify({
+				Name: name,
+				LastName: lastName,
+				Email: email,
+				Company: company,
+				Message: body,
+			}),
+		})
+			.then((response) => response.json())
+			.then((data) => console.log(data))
+			.catch((error) => console.log(error));
+
 		const message = {
 			date: new Date(),
 			person: {
@@ -80,7 +98,7 @@ function ContactUsFormItems({ toggleShow }) {
 				<Inputs
 					id='email'
 					name='email'
-					placeholder='Email'
+					placeholder='Email Address'
 					type='email'
 					autocomplete='email'
 					required

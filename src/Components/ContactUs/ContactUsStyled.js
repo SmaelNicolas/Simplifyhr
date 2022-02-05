@@ -9,7 +9,7 @@ export const ContactUsContainer = styled.div`
 	align-items: center;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
 	min-width: 300px;
 	max-width: 780px;
 	height: auto;
