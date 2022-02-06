@@ -3,7 +3,7 @@ import { LoadingContainer, Title } from "./LoadingScreenStyled";
 function LoadingScreen() {
 	return (
 		<LoadingContainer>
-			<Title>SimplifyHR</Title>
+			<Title>Simplify-HR</Title>
 		</LoadingContainer>
 	);
 }

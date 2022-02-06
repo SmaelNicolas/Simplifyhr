@@ -4,6 +4,7 @@ import {
 	Center,
 	ContactButton,
 	LanguageButton,
+	LanguageWrapper,
 	Left,
 	Logo,
 	NavbarContainer,
@@ -28,8 +29,10 @@ function Navbar() {
 				</Wrapper>
 			</Center>
 			<Right>
-				<LanguageButton onClick={() => setLanguage("es")}>ES</LanguageButton>
-				<LanguageButton onClick={() => setLanguage("en")}>EN</LanguageButton>
+				<LanguageWrapper>
+					<LanguageButton onClick={() => setLanguage("es")}>ES</LanguageButton>
+					<LanguageButton onClick={() => setLanguage("en")}>EN</LanguageButton>
+				</LanguageWrapper>
 				<ContactButton>{data.navbar.a4}</ContactButton>
 			</Right>
 		</NavbarContainer>
