@@ -19,13 +19,13 @@ function Navbar() {
 	return (
 		<NavbarContainer>
 			<Left>
-				<Logo>Simplify-hr</Logo>
+				<Logo to={`/`}>Simplify-hr</Logo>
 			</Left>
 			<Center>
 				<Wrapper>
-					<NavbarItem>{data.navbar.a1}</NavbarItem>
-					<NavbarItem>{data.navbar.a2}</NavbarItem>
-					<NavbarItem>{data.navbar.a3}</NavbarItem>
+					<NavbarItem to={"#"}>{data.navbar.a1}</NavbarItem>
+					<NavbarItem to={"#"}>{data.navbar.a2}</NavbarItem>
+					<NavbarItem to={"/resources"}>{data.navbar.a3}</NavbarItem>
 				</Wrapper>
 			</Center>
 			<Right>

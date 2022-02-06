@@ -1,5 +1,9 @@
 function Resources() {
-	return <div></div>;
+	return (
+  <BlogContainer>
+    <BlogTitle>Blog</BlogTitle>
+  </BlogContainer>
+  )
 }
 
 export default Resources;
