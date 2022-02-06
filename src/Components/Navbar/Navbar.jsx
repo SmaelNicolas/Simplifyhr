@@ -23,7 +23,7 @@ function Navbar() {
 			</Left>
 			<Center>
 				<Wrapper>
-					<NavbarItem to={"#"}>{data.navbar.a1}</NavbarItem>
+					<NavbarItem to={"/#services"}>{data.navbar.a1}</NavbarItem>
 					<NavbarItem to={"#"}>{data.navbar.a2}</NavbarItem>
 					<NavbarItem to={"/resources"}>{data.navbar.a3}</NavbarItem>
 				</Wrapper>
