@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import LanguageContextProvider from "./Context/LanguageContext";
 import { GlobalStyle } from "./GlobalStyled";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<GlobalStyle />
-		<App />
+		<LanguageContextProvider>
+			<App />
+		</LanguageContextProvider>
 	</React.StrictMode>,
 	document.getElementById("root")
 );

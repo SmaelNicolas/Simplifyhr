@@ -1,5 +1,7 @@
-import styled from "styled-components";
+import { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LanguageContext } from "./Context/LanguageContext";
+import styled from "styled-components";
 
 import Navbar from "./Components/Navbar/Navbar";
 import ContactUs from "./Components/ContactUs/ContactUs";
@@ -7,12 +9,16 @@ import Home from "./pages/Home/Home";
 import Resources from "./pages/Resources/Resources";
 import Login from "./pages/Login/Login";
 import Footer from "./Components/Footer/Footer";
-import LanguageContextProvider from "./Context/LanguageContext";
+import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 
 function App() {
+	const { loading } = useContext(LanguageContext);
+
 	return (
 		<AppContainerStyled>
-			<LanguageContextProvider>
+			{loading ? (
+				<LoadingScreen />
+			) : (
 				<BrowserRouter>
 					{/* Barra de navegacion */}
 					<Navbar></Navbar>
@@ -27,7 +33,7 @@ function App() {
 					</Routes>
 					<Footer></Footer>
 				</BrowserRouter>
-			</LanguageContextProvider>
+			)}
 		</AppContainerStyled>
 	);
 }

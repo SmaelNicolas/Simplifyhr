@@ -1,5 +1,11 @@
+import { LoadingContainer, Title } from "./LoadingScreenStyled";
+
 function LoadingScreen() {
-	return <div></div>;
+	return (
+		<LoadingContainer>
+			<Title>SimplifyHR</Title>
+		</LoadingContainer>
+	);
 }
 
 export default LoadingScreen;

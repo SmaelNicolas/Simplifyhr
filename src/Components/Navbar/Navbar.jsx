@@ -13,25 +13,24 @@ import {
 } from "./NavbarStyled";
 
 function Navbar() {
-	const { setLanguage, language } = useContext(LanguageContext);
+	const { setLanguage, language, data } = useContext(LanguageContext);
 
 	return (
 		<NavbarContainer>
 			<Left>
-				<Logo />
+				<Logo>Simplify-hr</Logo>
 			</Left>
 			<Center>
 				<Wrapper>
-					<NavbarItem></NavbarItem>
-					<NavbarItem></NavbarItem>
-					<NavbarItem></NavbarItem>
-					<NavbarItem></NavbarItem>
+					<NavbarItem>{data.navbar.a1}</NavbarItem>
+					<NavbarItem>{data.navbar.a2}</NavbarItem>
+					<NavbarItem>{data.navbar.a3}</NavbarItem>
 				</Wrapper>
 			</Center>
 			<Right>
 				<LanguageButton onClick={() => setLanguage("es")}>ES</LanguageButton>
 				<LanguageButton onClick={() => setLanguage("en")}>EN</LanguageButton>
-				<ContactButton />
+				<ContactButton>{data.navbar.a4}</ContactButton>
 			</Right>
 		</NavbarContainer>
 	);
