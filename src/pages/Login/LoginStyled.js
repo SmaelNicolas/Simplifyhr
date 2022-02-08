@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const LoginPageStyled = styled.section`
 	width: ${({ width }) => width || "100%"};
-	height: ${({ height }) => height || "120vh"};
+	height: ${({ height }) => height || "auto"};
 	background-color: ${({ backgroundColor }) => backgroundColor || "none"};
-	padding: ${({ padding }) => padding || "25px 0px"};
+	padding: ${({ padding }) => padding || "100px"};
 	display: ${({ display }) => display || "flex"};
 	flex-direction: ${({ flexDirection }) => flexDirection || "column"};
 	justify-content: ${({ justifyContent }) => justifyContent || "center"};
