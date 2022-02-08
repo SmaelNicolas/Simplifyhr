@@ -66,7 +66,7 @@ export const LanguageButton = styled.button`
 	cursor: pointer;
 `;
 
-export const ContactButton = styled.button`
+export const ContactButton = styled.a`
 	background-color: transparent;
 	border: none;
 	color: #fff;
