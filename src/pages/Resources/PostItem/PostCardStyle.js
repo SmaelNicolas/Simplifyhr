@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
@@ -11,7 +12,39 @@ export const Image = styled.img`
 	height: 336px;
 	border-radius: 20px;
 `;
-export const Info = styled.div``;
-export const Title = styled.p``;
+export const Info = styled.div`
+	margin: 20px 0;
+`;
+export const Title = styled.p`
+	font-family: "Roboto", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: 0.5px;
+`;
+
+export const Wrapper = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+`;
+export const Button = styled(Link)`
+	width: 108px;
+	height: 34px;
+	border-radius: 20px;
+	background-color: #a3a3a3;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+export const Dot = styled.img`
+	margin: 0 30px;
+	height: 8px;
+`;
+
 export const DateString = styled.p``;
-export const Button = styled.button``;

@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
 	font-family: "Roboto", sans-serif;
-	position: fixed;
 	height: 10vh;
 	width: 100%;
 	background-color: #524ef8;

@@ -25,6 +25,7 @@ function FormBlogItems() {
 	function generateBlogPost() {
 		const post = {
 			date: new Date().getTime(),
+			stringDate: "" + new Date(),
 			title: title,
 			body: body,
 			author: author,
@@ -40,84 +41,84 @@ function FormBlogItems() {
 
 	return (
 		<>
-			<Labels htmlFor='postTitle'>Language </Labels>
+			<Labels htmlFor="postTitle">Language </Labels>
 			<LanguageContainer>
 				<RadioInputs
-					type='radio'
-					id='language1'
-					name='language'
-					value='english'
+					type="radio"
+					id="language1"
+					name="language"
+					value="english"
 					defaultChecked={true}
 					onChange={() => {
 						setLanguage(!language);
 					}}
 				/>
-				<RadioLabel htmlFor='contactChoice1'>English</RadioLabel>
+				<RadioLabel htmlFor="contactChoice1">English</RadioLabel>
 
 				<RadioInputs
-					type='radio'
-					id='language2'
-					name='language'
-					value='español'
+					type="radio"
+					id="language2"
+					name="language"
+					value="español"
 					defaultChecked={false}
 					onChange={() => {
 						setLanguage(!language);
 					}}
 				/>
-				<RadioLabel htmlFor='contactChoice2'>Español</RadioLabel>
+				<RadioLabel htmlFor="contactChoice2">Español</RadioLabel>
 			</LanguageContainer>
 
-			<Labels htmlFor='postTitle'>Title </Labels>
+			<Labels htmlFor="postTitle">Title </Labels>
 
 			<Inputs
-				type='text'
-				id='postTitle'
-				name='postTitle'
-				placeholder='Post Title'
+				type="text"
+				id="postTitle"
+				name="postTitle"
+				placeholder="Post Title"
 				required
 				onChange={(e) => setTitle(e.target.value)}
 			></Inputs>
 
-			<Labels htmlFor='urlImage'>Url Image </Labels>
+			<Labels htmlFor="urlImage">Url Image </Labels>
 
 			<Inputs
-				type='text'
-				id='urlImage'
-				name='urlImage'
-				placeholder='Image Url'
+				type="text"
+				id="urlImage"
+				name="urlImage"
+				placeholder="Image Url"
 				required
 				onChange={(e) => setImgUrl(e.target.value)}
 			></Inputs>
 
-			<Labels htmlFor='lectureTime'>Read Time </Labels>
+			<Labels htmlFor="lectureTime">Read Time </Labels>
 
 			<Inputs
-				type='text'
-				id='readTime'
-				name='readTime'
-				placeholder='Read Time'
+				type="text"
+				id="readTime"
+				name="readTime"
+				placeholder="Read Time"
 				required
 				onChange={(e) => setReadTime(e.target.value)}
 			></Inputs>
 
-			<Labels htmlFor='author'>Author </Labels>
+			<Labels htmlFor="author">Author </Labels>
 
 			<Inputs
-				type='text'
-				id='author'
-				name='author'
-				placeholder='Author'
+				type="text"
+				id="author"
+				name="author"
+				placeholder="Author"
 				required
 				onChange={(e) => setAuthor(e.target.value)}
 			></Inputs>
 
-			<Labels htmlFor='postContent'>Body </Labels>
+			<Labels htmlFor="postContent">Body </Labels>
 
 			<InputPostContent
-				type='text'
-				id='postContent'
-				name='postContent'
-				placeholder='Write something..'
+				type="text"
+				id="postContent"
+				name="postContent"
+				placeholder="Write something.."
 				required
 				onChange={(e) => setBody(e.target.value)}
 			></InputPostContent>
@@ -127,7 +128,7 @@ function FormBlogItems() {
 					e.preventDefault();
 					generateBlogPost();
 				}}
-				type='submit'
+				type="submit"
 			>
 				Create Post
 			</Submit>

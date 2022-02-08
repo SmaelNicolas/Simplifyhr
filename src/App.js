@@ -10,6 +10,7 @@ import Resources from "./pages/Resources/Resources";
 import Login from "./pages/Login/Login";
 import Footer from "./Components/Footer/Footer";
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
+import PostView from "./pages/Resources/PostView/PostView";
 
 function App() {
 	const { loading } = useContext(LanguageContext);
@@ -37,6 +38,11 @@ function App() {
 							exact
 							path='/resources'
 							element={<Resources />}
+						/>
+            <Route
+							exact
+							path='/post/:postId'
+							element={<PostView />}
 						/>
 					</Routes>
 					<Footer></Footer>

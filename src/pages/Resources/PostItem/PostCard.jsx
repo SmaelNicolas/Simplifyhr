@@ -1,23 +1,28 @@
-import React from "react";
 import {
 	Button,
 	CardContainer,
 	DateString,
+	Dot,
 	Image,
 	Info,
 	Title,
+	Wrapper,
 } from "./PostCardStyle";
 
-const PostCard = ({ title, img, body, id, date }) => {
+const PostCard = ({ title, img, id, date }) => {
 	const ts = new Date(date);
+
 	return (
 		<CardContainer>
 			<Image src={img} />
 			<Info>
 				<Title>{title.toUpperCase()}</Title>
-				<DateString>{ts.toLocaleDateString()}</DateString>
 			</Info>
-			<Button>Ver mas</Button>
+			<Wrapper>
+				<Button to={`post/${id}`}>Ver mas</Button>
+				<Dot src={"./Images/circuloicono.png"} />
+				<DateString>{ts.toLocaleDateString()}</DateString>
+			</Wrapper>
 		</CardContainer>
 	);
 };
