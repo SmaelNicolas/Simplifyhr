@@ -1,10 +1,9 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageContext } from "./Context/LanguageContext";
 import styled from "styled-components";
 
 import Navbar from "./Components/Navbar/Navbar";
-import ContactUs from "./Components/ContactUs/ContactUs";
 import Home from "./pages/Home/Home";
 import Resources from "./pages/Resources/Resources";
 import Login from "./pages/Login/Login";
@@ -13,11 +12,6 @@ import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 
 function App() {
 	const { loading } = useContext(LanguageContext);
-	const [showContactUs, setShowContactUs] = useState(false);
-
-	const toggleShow = () => {
-		setShowContactUs(!showContactUs);
-	};
 
 	return (
 		<AppContainerStyled>
@@ -25,11 +19,7 @@ function App() {
 				<LoadingScreen />
 			) : (
 				<BrowserRouter>
-					<Navbar toggleShow={toggleShow}></Navbar>
-					<ContactUs
-						toggleShow={toggleShow}
-						showContactUs={showContactUs}
-					></ContactUs>
+					<Navbar></Navbar>
 					<Routes>
 						<Route exact path='/' element={<Home />} />
 						<Route exact path='/login' element={<Login />} />
@@ -39,6 +29,8 @@ function App() {
 							element={<Resources />}
 						/>
 					</Routes>
+					{console.log("RENDERIZA APP")}
+
 					<Footer></Footer>
 				</BrowserRouter>
 			)}
@@ -51,6 +43,7 @@ const AppContainerStyled = styled.div`
 	width: calc(100vw - (100vw - 100%));
 	background-color:green
 	min-height: 100vh;
+
 `;
 
 export default App;
