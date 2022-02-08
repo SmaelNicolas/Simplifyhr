@@ -7,6 +7,7 @@ export const ContactUsContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
 `;
 
 export const FormContainer = styled.form`
