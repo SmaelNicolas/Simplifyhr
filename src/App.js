@@ -49,6 +49,8 @@ function App() {
 const AppContainerStyled = styled.div`
 	/* Para evitar el scroll horizontal  en los contenedores de 100vw  cuando hay una barra de desplazamiento en Y */
 	width: calc(100vw - (100vw - 100%));
+	background-color:green
+	min-height: 100vh;
 `;
 
 export default App;
