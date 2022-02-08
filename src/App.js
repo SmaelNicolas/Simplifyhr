@@ -25,17 +25,13 @@ function App() {
 				<LoadingScreen />
 			) : (
 				<BrowserRouter>
-					{/* Barra de navegacion */}
 					<Navbar toggleShow={toggleShow}></Navbar>
-					{/* Formulario de contacto tipo MODAL */}
 					<ContactUs
 						toggleShow={toggleShow}
 						showContactUs={showContactUs}
 					></ContactUs>
-					{/* Rutas a las diferentes paginas (2 home, "/" donde inicia , "/home" para usar hashlink) */}
 					<Routes>
 						<Route exact path='/' element={<Home />} />
-						<Route exact path='/home' element={<Home />} />
 						<Route exact path='/login' element={<Login />} />
 						<Route
 							exact
