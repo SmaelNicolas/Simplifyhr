@@ -6,19 +6,8 @@ import {
 } from "./ContactUsStyled";
 
 import ContactUsFormItems from "./ContactUsFormItems/ContactUsFormItems";
-import { useState } from "react";
 
-function ContactUs() {
-	// TODO
-	// Agregar state showContactUs al navbar y eliminarlo de aca
-	// Ejecutar toggleShow en link contactUs
-	//Pasar comom prop la funcion toggleShow al contacto para ejecutarla en la X y boton enviar mensaje
-	const [showContactUs, setShowContactUs] = useState(false);
-
-	const toggleShow = () => {
-		setShowContactUs(!showContactUs);
-	};
-
+function ContactUs({ toggleShow, showContactUs }) {
 	return (
 		showContactUs && (
 			<Fade>
