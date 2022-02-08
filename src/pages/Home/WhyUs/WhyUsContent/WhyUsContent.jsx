@@ -1,4 +1,4 @@
-import React from "react";
+import { useContext } from "react";
 import {
 	ImgContainer,
 	Section,
@@ -7,36 +7,32 @@ import {
 	Title,
 } from "./WhyUsContentStyled";
 
+import { LanguageContext } from "../../../../Context/LanguageContext";
+
 function WhyUsContent() {
+	const { data } = useContext(LanguageContext);
+
 	return (
 		<>
 			<Section alignSelf='flex-end'>
 				<ImgContainer url='https://picsum.photos/200/200'></ImgContainer>
 				<TextContainer>
-					<Title>Trust Driven.</Title>
-					<TextContent>
-						We gain your trust with actions over promises
-					</TextContent>
+					<Title>{data.whyUs.cards.card1.title}</Title>
+					<TextContent>{data.whyUs.cards.card1.body}</TextContent>
 				</TextContainer>
 			</Section>
 			<Section alignSelf='flex-start'>
 				<ImgContainer url='https://picsum.photos/200/200'></ImgContainer>
 				<TextContainer>
-					<Title>Low and transparent fees.</Title>
-					<TextContent>
-						We believe that referrals for a job well done is our
-						biggest compliment. No string attached.
-					</TextContent>
+					<Title>{data.whyUs.cards.card2.title}</Title>
+					<TextContent>{data.whyUs.cards.card2.body}</TextContent>
 				</TextContainer>
 			</Section>
 			<Section alignSelf='center'>
 				<ImgContainer url='https://picsum.photos/200/200'></ImgContainer>
 				<TextContainer>
-					<Title>Flexible</Title>
-					<TextContent>
-						Not one culture is the same. We develop a flexible plan
-						for your individual growth goals.
-					</TextContent>
+					<Title>{data.whyUs.cards.card3.title}</Title>
+					<TextContent>{data.whyUs.cards.card3.body}</TextContent>
 				</TextContainer>
 			</Section>
 		</>

@@ -4,14 +4,20 @@ import {
 	TitleStyled,
 } from "./ServicesStyled";
 
+import { useContext } from "react";
+
+import { LanguageContext } from "../../../Context/LanguageContext";
+
 import Cards from "./Cards/Cards";
 
 function Services() {
+	const { data } = useContext(LanguageContext);
+
 	return (
-		<ServicesContainer id="services">
+		<ServicesContainer id='services'>
 			<TitleContainer>
-				<TitleStyled>StartUp up is in our DNA</TitleStyled>
-				<TitleStyled>All Services on Succes</TitleStyled>
+				<TitleStyled>{data.services.title}</TitleStyled>
+				<TitleStyled>{data.services.subTitle}</TitleStyled>
 			</TitleContainer>
 			<Cards></Cards>
 		</ServicesContainer>

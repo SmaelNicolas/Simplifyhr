@@ -7,40 +7,51 @@ import {
 	CardButtonStyled,
 } from "./CardsStyled";
 
+import { useContext } from "react";
+import { LanguageContext } from "../../../../Context/LanguageContext";
+
 function Cards() {
+	const { data } = useContext(LanguageContext);
+
 	return (
 		<CardsContainerStyled>
 			<CardStyled>
-				<CardTitleStyled>Essential</CardTitleStyled>
+				<CardTitleStyled>
+					{data.services.cards.card1.title}
+				</CardTitleStyled>
 				<CardTextStyled>
 					<CardTextContainerStyled width='90%'>
-						Find your C-levels to grow your team
+						{data.services.cards.card1.body}
 					</CardTextContainerStyled>
 				</CardTextStyled>
 				<CardButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
-					5% GYS
+					{data.services.cards.card1.button}
 				</CardButtonStyled>
 			</CardStyled>
 			<CardStyled>
-				<CardTitleStyled>Express</CardTitleStyled>
+				<CardTitleStyled>
+					{data.services.cards.card2.title}
+				</CardTitleStyled>
 				<CardTextStyled>
 					<CardTextContainerStyled>
-						Need an urgent hire? We can also match. Fast.
+						{data.services.cards.card2.body}
 					</CardTextContainerStyled>
 				</CardTextStyled>
 				<CardButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
-					Book a call
+					{data.services.cards.card2.button}
 				</CardButtonStyled>
 			</CardStyled>
 			<CardStyled>
-				<CardTitleStyled>Custom</CardTitleStyled>
+				<CardTitleStyled>
+					{data.services.cards.card3.title}
+				</CardTitleStyled>
 				<CardTextStyled>
 					<CardTextContainerStyled width='80%'>
-						Have a one-time hr project?
+						{data.services.cards.card3.body}
 					</CardTextContainerStyled>
 				</CardTextStyled>
 				<CardButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
-					Book a call
+					{data.services.cards.card3.button}
 				</CardButtonStyled>
 			</CardStyled>
 		</CardsContainerStyled>
