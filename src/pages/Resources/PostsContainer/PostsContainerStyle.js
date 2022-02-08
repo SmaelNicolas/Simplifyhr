@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div``
+
+export const Wrapper = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+`;
 
 export const Button = styled.button``;

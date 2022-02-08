@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "../../../Context/LanguageContext";
 import { database } from "../../../Firebase/Firebase";
 import { collection } from "firebase/firestore";
-import { Button, Container } from "./PostsContainerStyle";
+import { Button, Container, Wrapper } from "./PostsContainerStyle";
 import { getPosts } from "../../../Helpers/getPosts";
 import PostCard from "../PostItem/PostCard";
 
@@ -31,6 +31,7 @@ const PostsContainer = () => {
 
 	return (
 		<Container>
+      <Wrapper>
 			{slice.map((el) => {
 				return (
 					<PostCard
@@ -43,6 +44,7 @@ const PostsContainer = () => {
 					/>
 				);
 			})}
+      </Wrapper>
 			<Button onClick={showMore}>
 				{language === "en" ? "Show More" : "Ver Más"}
 			</Button>

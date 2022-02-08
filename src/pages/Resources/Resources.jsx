@@ -4,7 +4,6 @@ import { ResourcesContainer, Title } from "./ResourcesStyled";
 function Resources() {
 	return (
 		<ResourcesContainer>
-			<Title>Blog</Title>
 			<PostsContainer />
 		</ResourcesContainer>
 	);
