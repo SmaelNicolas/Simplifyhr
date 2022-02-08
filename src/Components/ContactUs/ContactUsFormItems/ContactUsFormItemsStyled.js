@@ -1,4 +1,13 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
+
+const opac = keyframes`
+	0%{opacity:0.5}
+	25%{opacity:0.7}
+	50%{opacity:0.9}
+	100%{opacity:1}
+
+`;
 
 export const Labels = styled.label`
 	width: 100%;
@@ -7,6 +16,7 @@ export const Labels = styled.label`
 	text-align: start;
 	padding-left: 10px;
 	letter-spacing: 0.4px;
+	animation: ${opac} 1s linear;
 `;
 
 export const Inputs = styled.input`
@@ -14,12 +24,14 @@ export const Inputs = styled.input`
 	height: 50px;
 	border-radius: 3px;
 	padding-left: 20px;
+	animation: ${opac} 1s linear;
 `;
 
 export const InputBodyContent = styled.textarea`
 	width: 100%;
 	height: 200px;
 	padding: 15px;
+	animation: ${opac} 1s linear;
 `;
 
 export const Divisor = styled.div`
@@ -38,4 +50,5 @@ export const Button = styled.button`
 	color: #ffff;
 
 	margin: 0 auto;
+	animation: ${opac} 1s linear;
 `;
