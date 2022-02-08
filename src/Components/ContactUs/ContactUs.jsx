@@ -1,26 +1,21 @@
-import { Fade } from "react-awesome-reveal";
 import {
 	ContactUsContainer,
 	FormContainer,
 	CloseForm,
+	ContactUsContainer2,
 } from "./ContactUsStyled";
 
 import ContactUsFormItems from "./ContactUsFormItems/ContactUsFormItems";
 
-function ContactUs({ toggleShow, showContactUs }) {
+function ContactUs({ toggleShow, opacity }) {
 	return (
-		showContactUs && (
-			<Fade>
-				<ContactUsContainer>
-					<FormContainer>
-						<CloseForm onClick={toggleShow}> X </CloseForm>
-						<ContactUsFormItems
-							toggleShow={toggleShow}
-						></ContactUsFormItems>
-					</FormContainer>
-				</ContactUsContainer>
-			</Fade>
-		)
+		<ContactUsContainer>
+			<ContactUsContainer2 onClick={toggleShow} />
+			<FormContainer opacity={opacity}>
+				<CloseForm onClick={toggleShow}> X </CloseForm>
+				<ContactUsFormItems></ContactUsFormItems>
+			</FormContainer>
+		</ContactUsContainer>
 	);
 }
 
