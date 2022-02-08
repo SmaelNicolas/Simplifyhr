@@ -13,7 +13,7 @@ import {
 	Wrapper,
 } from "./NavbarStyled";
 
-function Navbar() {
+function Navbar({ toggleShow }) {
 	const { setLanguage, language, data } = useContext(LanguageContext);
 
 	return (
@@ -24,16 +24,22 @@ function Navbar() {
 			<Center>
 				<Wrapper>
 					<NavbarItem to={"/#services"}>{data.navbar.a1}</NavbarItem>
-					<NavbarItem to={"#"}>{data.navbar.a2}</NavbarItem>
+					<NavbarItem to={"/#whyus"}>{data.navbar.a2}</NavbarItem>
 					<NavbarItem to={"/resources"}>{data.navbar.a3}</NavbarItem>
 				</Wrapper>
 			</Center>
 			<Right>
 				<LanguageWrapper>
-					<LanguageButton onClick={() => setLanguage("es")}>ES</LanguageButton>
-					<LanguageButton onClick={() => setLanguage("en")}>EN</LanguageButton>
+					<LanguageButton onClick={() => setLanguage("es")}>
+						ES
+					</LanguageButton>
+					<LanguageButton onClick={() => setLanguage("en")}>
+						EN
+					</LanguageButton>
 				</LanguageWrapper>
-				<ContactButton>{data.navbar.a4}</ContactButton>
+				<ContactButton onClick={toggleShow}>
+					{data.navbar.a4}
+				</ContactButton>
 			</Right>
 		</NavbarContainer>
 	);
