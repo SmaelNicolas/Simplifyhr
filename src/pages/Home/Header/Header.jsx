@@ -10,7 +10,6 @@ import {
 
 const Header = () => {
 	const { data } = useContext(LanguageContext);
-	console.log(data);
 
 	return (
 		<HeaderContainer>

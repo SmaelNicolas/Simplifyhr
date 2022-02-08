@@ -5,7 +5,7 @@ function Resources() {
 	return (
 		<ResourcesContainer>
 			<Title>Blog</Title>
-      <PostsContainer/>
+			<PostsContainer />
 		</ResourcesContainer>
 	);
 }
