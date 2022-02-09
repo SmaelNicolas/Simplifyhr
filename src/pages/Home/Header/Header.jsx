@@ -12,7 +12,7 @@ const Header = () => {
 	const { data } = useContext(LanguageContext);
 
 	return (
-		<HeaderContainer>
+		<HeaderContainer id='home'>
 			<InfoContainer>
 				<Title>{data.header.title}</Title>
 				<Subtitle>{data.header.subTitle}</Subtitle>

@@ -19,7 +19,7 @@ function Navbar() {
 	return (
 		<NavbarContainer>
 			<Left>
-				<Logo to={`/`}>Simplify-hr</Logo>
+				<Logo to={`/#home`}>Simplify-hr</Logo>
 			</Left>
 			<Center>
 				<Wrapper>
