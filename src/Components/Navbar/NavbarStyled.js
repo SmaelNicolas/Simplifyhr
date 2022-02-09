@@ -10,6 +10,8 @@ export const NavbarContainer = styled.div`
 	justify-content: space-around;
 	align-items: center;
 	color: #ffff;
+	position: sticky;
+	top: 0px;
 `;
 
 export const Left = styled.div`
