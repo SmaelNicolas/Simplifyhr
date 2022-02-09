@@ -20,7 +20,7 @@ function App() {
 				<LoadingScreen />
 			) : (
 				<BrowserRouter>
-					<Navbar></Navbar>
+					<Navbar />
 					<Routes>
 						<Route exact path='/' element={<Home />} />
 						<Route exact path='/login' element={<Login />} />
@@ -29,7 +29,7 @@ function App() {
 							path='/resources'
 							element={<Resources />}
 						/>
-            <Route
+						<Route
 							exact
 							path='/post/:postId'
 							element={<PostView />}
@@ -37,7 +37,7 @@ function App() {
 					</Routes>
 					{console.log("RENDERIZA APP")}
 
-					<Footer></Footer>
+					<Footer />
 				</BrowserRouter>
 			)}
 		</AppContainerStyled>

@@ -17,13 +17,13 @@ function Login() {
 			{isLogged ? (
 				<>
 					<TitleStyled>CREATE BLOG POST</TitleStyled>
-					<BlogPostScreen></BlogPostScreen>
+					<BlogPostScreen />
 				</>
 			) : (
 				<>
 					<TitleStyled>Login</TitleStyled>
 					<FormStyled method='post'>
-						<LoginForm valueIsLogged={valueIsLogged}></LoginForm>
+						<LoginForm valueIsLogged={valueIsLogged} />
 					</FormStyled>
 				</>
 			)}

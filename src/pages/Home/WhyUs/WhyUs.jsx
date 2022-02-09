@@ -19,7 +19,7 @@ function WhyUs() {
 			<TitleStyled color='#524ef8'>{data.whyUs.title}</TitleStyled>
 			<SubtitleStyled>{data.whyUs.subTitle}</SubtitleStyled>
 			<ContentContainer>
-				<WhyUsContent></WhyUsContent>
+				<WhyUsContent />
 			</ContentContainer>
 			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
 				{data.whyUs.button}

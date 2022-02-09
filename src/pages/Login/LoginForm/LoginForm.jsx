@@ -37,7 +37,7 @@ function LoginForm({ valueIsLogged }) {
 				autoComplete='username'
 				required
 				onChange={(e) => setUserInput(e.target.value)}
-			></Inputs>
+			/>
 
 			<Labels htmlFor='password'>Password </Labels>
 
@@ -49,7 +49,8 @@ function LoginForm({ valueIsLogged }) {
 				id='current-password'
 				required
 				onChange={(e) => setPwInput(e.target.value)}
-			></Inputs>
+			/>
+
 			<Button
 				onClick={(e) => {
 					e.preventDefault();

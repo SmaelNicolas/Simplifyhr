@@ -64,7 +64,7 @@ function ContactUsFormItems({ toggleShow }) {
 					autocomplete='name'
 					required
 					onChange={(e) => setName(e.target.value)}
-				></Inputs>
+				/>
 			</Divisor>
 
 			<Divisor>
@@ -77,7 +77,7 @@ function ContactUsFormItems({ toggleShow }) {
 					autocomplete='last-name'
 					required
 					onChange={(e) => setLastName(e.target.value)}
-				></Inputs>
+				/>
 			</Divisor>
 
 			<Divisor>
@@ -89,7 +89,7 @@ function ContactUsFormItems({ toggleShow }) {
 					placeholder='Company'
 					required
 					onChange={(e) => setCompany(e.target.value)}
-				></Inputs>
+				/>
 			</Divisor>
 
 			<Divisor>
@@ -103,7 +103,7 @@ function ContactUsFormItems({ toggleShow }) {
 					autocomplete='email'
 					required
 					onChange={(e) => setEmail(e.target.value)}
-				></Inputs>
+				/>
 			</Divisor>
 
 			<Divisor width='100%'>
@@ -118,7 +118,7 @@ function ContactUsFormItems({ toggleShow }) {
 					placeholder='Write something..'
 					required
 					onChange={(e) => setBody(e.target.value)}
-				></InputBodyContent>
+				/>
 			</Divisor>
 
 			<Button

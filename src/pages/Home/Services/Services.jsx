@@ -19,7 +19,7 @@ function Services() {
 				<TitleStyled>{data.services.title}</TitleStyled>
 				<TitleStyled>{data.services.subTitle}</TitleStyled>
 			</TitleContainer>
-			<Cards></Cards>
+			<Cards />
 		</ServicesContainer>
 	);
 }

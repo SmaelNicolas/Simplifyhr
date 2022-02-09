@@ -19,9 +19,7 @@ function ContactButtonNew() {
 
 				{data.navbar.a4}
 			</ContactButton>
-			{showContactUs && (
-				<ContactUs opacity={1} toggleShow={toggleShow}></ContactUs>
-			)}
+			{showContactUs && <ContactUs opacity={1} toggleShow={toggleShow} />}
 		</>
 	);
 }

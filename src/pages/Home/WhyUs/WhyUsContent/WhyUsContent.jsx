@@ -15,21 +15,21 @@ function WhyUsContent() {
 	return (
 		<>
 			<Section alignSelf='flex-end'>
-				<ImgContainer url='https://picsum.photos/200/200'></ImgContainer>
+				<ImgContainer url='https://picsum.photos/200/200' />
 				<TextContainer>
 					<Title>{data.whyUs.cards.card1.title}</Title>
 					<TextContent>{data.whyUs.cards.card1.body}</TextContent>
 				</TextContainer>
 			</Section>
 			<Section alignSelf='flex-start'>
-				<ImgContainer url='https://picsum.photos/200/200'></ImgContainer>
+				<ImgContainer url='https://picsum.photos/200/200' />
 				<TextContainer>
 					<Title>{data.whyUs.cards.card2.title}</Title>
 					<TextContent>{data.whyUs.cards.card2.body}</TextContent>
 				</TextContainer>
 			</Section>
 			<Section alignSelf='center'>
-				<ImgContainer url='https://picsum.photos/200/200'></ImgContainer>
+				<ImgContainer url='https://picsum.photos/200/200' />
 				<TextContainer>
 					<Title>{data.whyUs.cards.card3.title}</Title>
 					<TextContent>{data.whyUs.cards.card3.body}</TextContent>

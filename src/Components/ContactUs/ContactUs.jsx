@@ -13,7 +13,7 @@ function ContactUs({ toggleShow, opacity }) {
 			<ContactUsContainer2 onClick={toggleShow} />
 			<FormContainer opacity={opacity}>
 				<CloseForm onClick={toggleShow}> X </CloseForm>
-				<ContactUsFormItems></ContactUsFormItems>
+				<ContactUsFormItems />
 			</FormContainer>
 		</ContactUsContainer>
 	);
