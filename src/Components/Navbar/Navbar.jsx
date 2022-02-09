@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
+import ContactButtonNew from "./ContactButton/ContactButtonNew";
 import {
 	Center,
-	ContactButton,
 	LanguageButton,
 	LanguageWrapper,
 	Left,
@@ -13,8 +13,8 @@ import {
 	Wrapper,
 } from "./NavbarStyled";
 
-function Navbar({ toggleShow }) {
-	const { setLanguage, language, data } = useContext(LanguageContext);
+function Navbar() {
+	const { setLanguage, data } = useContext(LanguageContext);
 
 	return (
 		<NavbarContainer>
@@ -37,10 +37,9 @@ function Navbar({ toggleShow }) {
 						EN
 					</LanguageButton>
 				</LanguageWrapper>
-				<ContactButton onClick={toggleShow}>
-					{data.navbar.a4}
-				</ContactButton>
+				<ContactButtonNew />
 			</Right>
+			{console.log("RENDERIZA NAVBAR")}
 		</NavbarContainer>
 	);
 }
