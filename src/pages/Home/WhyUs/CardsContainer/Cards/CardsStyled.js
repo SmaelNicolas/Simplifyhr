@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const CardStyled = styled.section`
-	width: max-content;
-	height: max-content;
+	width: 450px;
 	display: flex;
 	flex-direction: row;
 	align-self: ${({ alignSelf }) => alignSelf || "none"};
 	gap: 15px;
+
 	:nth-child(1) {
 		align-self: flex-end;
 	}
@@ -14,6 +14,8 @@ export const CardStyled = styled.section`
 		align-self: flex-start;
 	}
 	:nth-child(3) {
+		align-self: center;
+
 		margin-left: 100px;
 	}
 `;
