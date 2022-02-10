@@ -38,7 +38,7 @@ function Cards() {
 
 	return (
 		<>
-			{console.log("RENDER CARDS")}
+			{console.log("RENDER SERVICES CARDS")}
 
 			{returnData}
 		</>
