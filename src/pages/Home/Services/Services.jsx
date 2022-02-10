@@ -8,7 +8,7 @@ import { useContext } from "react";
 
 import { LanguageContext } from "../../../Context/LanguageContext";
 
-import Cards from "./Cards/Cards";
+import CardsContainer from "./CardsContainer/CardsContainer";
 
 function Services() {
 	const { data } = useContext(LanguageContext);
@@ -19,7 +19,7 @@ function Services() {
 				<TitleStyled>{data.services.title}</TitleStyled>
 				<TitleStyled>{data.services.subTitle}</TitleStyled>
 			</TitleContainer>
-			<Cards />
+			<CardsContainer />
 		</ServicesContainer>
 	);
 }
