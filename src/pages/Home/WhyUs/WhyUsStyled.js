@@ -13,14 +13,6 @@ export const Section = styled.section`
 	gap: 15px;
 `;
 
-export const ContentContainer = styled.div`
-	width: 900px;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-`;
-
 export const TitleStyled = styled.div`
 	font-family: "Roboto", sans-serif;
 	width: 100%;
