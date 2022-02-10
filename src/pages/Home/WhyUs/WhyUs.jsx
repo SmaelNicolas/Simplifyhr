@@ -1,5 +1,5 @@
 import {
-	Section,
+	WhyUsContainer,
 	TitleStyled,
 	SubtitleStyled,
 	ButtonStyled,
@@ -14,7 +14,7 @@ function WhyUs() {
 	const { data } = useContext(LanguageContext);
 
 	return (
-		<Section id='whyus'>
+		<WhyUsContainer id='whyus'>
 			<TitleStyled color='#524ef8'>{data.whyUs.title}</TitleStyled>
 			<SubtitleStyled>{data.whyUs.subTitle}</SubtitleStyled>
 			<CardsContainer>
@@ -23,7 +23,7 @@ function WhyUs() {
 			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
 				{data.whyUs.button}
 			</ButtonStyled>
-		</Section>
+		</WhyUsContainer>
 	);
 }
 

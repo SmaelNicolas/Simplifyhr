@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
+export const WhyUsContainer = styled.section`
 	width: 100%;
 
-	padding: 50px;
+	padding: 100px 0px;
+	border: 1px solid black;
 
 	display: flex;
 	flex-direction: column;
