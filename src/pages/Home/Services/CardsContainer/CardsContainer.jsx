@@ -5,7 +5,7 @@ import { CardsContainerStyled } from "./CardsContainerStyled";
 function CardsContainer() {
 	return (
 		<CardsContainerStyled>
-			{console.log("RENDER CONTAINER CARDS")}
+			{console.log("RENDER CONTAINER SERVICE CARDS")}
 			<Cards />
 		</CardsContainerStyled>
 	);
