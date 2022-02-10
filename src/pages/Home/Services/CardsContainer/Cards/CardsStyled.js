@@ -44,10 +44,9 @@ export const CardTextStyled = styled.div`
 `;
 
 export const CardTextContainerStyled = styled.div`
-	width: ${({ width }) => width || "100%"};
+	width: 100%;
 	font-family: 'Roboto', sans-serif;
 	font-size: 36px;
-	padding: 0px 10px;
 	color: black;
 	font-family:
 	text-align: center;
