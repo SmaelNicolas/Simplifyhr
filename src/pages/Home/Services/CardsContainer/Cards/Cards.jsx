@@ -6,7 +6,7 @@ import {
 	CardButtonStyled,
 } from "./CardsStyled";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../../../../../Context/LanguageContext";
 
 function Cards() {
@@ -23,7 +23,7 @@ function Cards() {
 						{ArrayOfCards[i][1].title}
 					</CardTitleStyled>
 					<CardTextStyled>
-						<CardTextContainerStyled width='90%'>
+						<CardTextContainerStyled>
 							{ArrayOfCards[i][1].body}
 						</CardTextContainerStyled>
 					</CardTextStyled>
