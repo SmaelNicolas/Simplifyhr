@@ -122,6 +122,17 @@ function ContactUsFormItems({ toggleShow }) {
 			</Divisor>
 
 			<Button
+				bgColor='#C2C0FF'
+				color='#524ef8'
+				onClick={(e) => {
+					e.preventDefault();
+					toggleShow();
+				}}
+				type='submit'
+			>
+				Close
+			</Button>
+			<Button
 				onClick={(e) => {
 					e.preventDefault();
 					generateMessage();

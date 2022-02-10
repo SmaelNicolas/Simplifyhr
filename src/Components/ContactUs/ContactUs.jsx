@@ -1,7 +1,6 @@
 import {
 	ContactUsContainer,
 	FormContainer,
-	CloseForm,
 	ContactUsContainer2,
 } from "./ContactUsStyled";
 
@@ -12,8 +11,7 @@ function ContactUs({ toggleShow, opacity }) {
 		<ContactUsContainer>
 			<ContactUsContainer2 onClick={toggleShow} />
 			<FormContainer opacity={opacity}>
-				<CloseForm onClick={toggleShow}> X </CloseForm>
-				<ContactUsFormItems />
+				<ContactUsFormItems toggleShow={toggleShow} />
 			</FormContainer>
 		</ContactUsContainer>
 	);

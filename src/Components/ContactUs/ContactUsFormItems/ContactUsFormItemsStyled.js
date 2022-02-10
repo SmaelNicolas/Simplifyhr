@@ -11,27 +11,36 @@ const opac = keyframes`
 
 export const Labels = styled.label`
 	width: 100%;
-	color: #ffff;
+	color: #524ef8;
 	font-size: 15px;
 	text-align: start;
 	padding-left: 10px;
 	letter-spacing: 0.4px;
-	animation: ${opac} 1s linear;
+	animation: ${opac} 0.5s linear;
 `;
 
 export const Inputs = styled.input`
 	width: 100%;
 	height: 50px;
+	border-left: 4px solid #c2c0ff;
+	border-bottom: 4px solid #c2c0ff;
+	border-top: 1px solid #c2c0ff;
+	border-right: 1px solid #c2c0ff;
 	border-radius: 3px;
 	padding-left: 20px;
-	animation: ${opac} 1s linear;
+	animation: ${opac} 0.5s linear;
 `;
 
 export const InputBodyContent = styled.textarea`
 	width: 100%;
 	height: 200px;
 	padding: 15px;
-	animation: ${opac} 1s linear;
+	animation: ${opac} 0.5s linear;
+	resize: none;
+	border-left: 4px solid #c2c0ff;
+	border-bottom: 4px solid #c2c0ff;
+	border-top: 1px solid #c2c0ff;
+	border-right: 1px solid #c2c0ff;
 `;
 
 export const Divisor = styled.div`
@@ -45,10 +54,21 @@ export const Divisor = styled.div`
 
 export const Button = styled.button`
 	width: 250px;
-	height: 30px;
-	background-color: #8080808d;
-	color: #ffff;
+	height: 43px;
+	background-color: ${({ bgColor }) => bgColor || "#524ef8"};
+	color: ${({ color }) => color || "white"};
+	border: none;
+	border-radius: 10px;
+	font-weight: bolder;
+	letter-spacing: 0.3px;
+	font-size: 14px;
+	text-transform: uppercase;
 
 	margin: 0 auto;
-	animation: ${opac} 1s linear;
+	animation: ${opac} 0.5s linear;
+	cursor: pointer;
+
+	&:hover {
+		border: 1px solid black;
+	}
 `;

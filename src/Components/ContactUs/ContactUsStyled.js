@@ -47,12 +47,12 @@ export const FormContainer = styled.form`
 	justify-content: flex-start;
 	align-items: flex-start;
 
-	border: 1px solid black;
+	border: 1px solid #eeeeee;
 	border-radius: 6px;
-	background-color: black;
+	background-color: #ffffff;
 
 	padding: 30px;
-	margin: 5px;
+	margin: 15px;
 
 	gap: 10px;
 	position: relative;
