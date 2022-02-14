@@ -10,8 +10,6 @@ import { LanguageContext } from "../../../Context/LanguageContext";
 
 import CardsContainer from "./CardsContainer/CardsContainer";
 
-import obsInit from "../../../Helpers/intersectionObserver";
-
 function Services() {
 	const { data } = useContext(LanguageContext);
 

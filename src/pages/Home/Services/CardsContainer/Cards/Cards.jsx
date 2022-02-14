@@ -18,7 +18,7 @@ function Cards() {
 		let arr = [];
 		for (let i = 0; i < ArrayOfCards.length; i++) {
 			arr.push(
-				<CardStyled className='cards'>
+				<CardStyled key={`cardSection${i}`} className='cards'>
 					<CardTitleStyled>
 						{ArrayOfCards[i][1].title}
 					</CardTitleStyled>

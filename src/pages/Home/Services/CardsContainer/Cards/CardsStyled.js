@@ -19,20 +19,6 @@ export const CardStyled = styled.div`
 	justify-content: center;
 	align-items: center;
 	border: 1px solid black;
-	transition: all 0.5s cubic-bezier(0.79, 0.18, 0.46, 0.74);
-
-	:nth-child(1) {
-		opacity: 0;
-		transform: scale(0.5);
-	}
-	:nth-child(2) {
-		opacity: 0;
-		transform: scale(0.5);
-	}
-	:nth-child(3) {
-		opacity: 0;
-		transform: scale(0.5);
-	}
 `;
 
 export const CardTitleStyled = styled.div`
