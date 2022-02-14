@@ -10,8 +10,6 @@ import Login from "./pages/Login/Login";
 import Footer from "./Components/Footer/Footer";
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 import PostView from "./pages/Resources/PostView/PostView";
-import obsInit from "./Helpers/intersectionObserver";
-import "./app.css";
 
 function App() {
 	const { loading } = useContext(LanguageContext);
@@ -38,9 +36,6 @@ function App() {
 					</Routes>
 					{console.log("RENDERIZA APP")}
 					<Footer />
-					{setTimeout(() => {
-						obsInit();
-					}, 1000)}
 				</BrowserRouter>
 			)}
 		</AppContainerStyled>
