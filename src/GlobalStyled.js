@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
      :root {
         --primaryColor : #524EF8;
+        --greySubtitle : #686868;
      }
 
 
