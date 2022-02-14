@@ -21,11 +21,10 @@ export const TitleContainer = styled.div`
 `;
 
 export const TitleStyled = styled.div`
-	font-family: "Roboto", sans-serif;
 	width: 100%;
 	height: auto;
-	color: #524ef8;
-	font-size: 60px;
+	color: var(--primaryColor);
+	font-size: calc(2rem + 2vw);
 	font-weight: 600;
 	letter-spacing: 0.4px;
 	text-align: center;

@@ -15,20 +15,20 @@ export const WhyUsContainer = styled.section`
 `;
 
 export const TitleStyled = styled.div`
-	font-family: "Roboto", sans-serif;
 	width: 100%;
 	height: auto;
 	color: #524ef8;
-	font-size: 60px;
+	font-size: calc(2rem + 2vw);
+
 	font-weight: 600;
 	letter-spacing: 0.4px;
 	text-align: center;
 `;
 
 export const SubtitleStyled = styled.div`
-	width: 100%;
+	width: 70%;
 	text-align: center;
-	font-size: 30px;
+	font-size: calc(1.5rem + 2vw);
 	color: grey;
 	font-weight: 300;
 `;
