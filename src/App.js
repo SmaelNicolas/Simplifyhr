@@ -10,10 +10,11 @@ import Login from "./pages/Login/Login";
 import Footer from "./Components/Footer/Footer";
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 import PostView from "./pages/Resources/PostView/PostView";
+import obsInit from "./Helpers/intersectionObserver";
+import "./app.css";
 
 function App() {
 	const { loading } = useContext(LanguageContext);
-
 	return (
 		<AppContainerStyled>
 			{loading ? (
@@ -36,8 +37,10 @@ function App() {
 						/>
 					</Routes>
 					{console.log("RENDERIZA APP")}
-
 					<Footer />
+					{setTimeout(() => {
+						obsInit();
+					}, 1000)}
 				</BrowserRouter>
 			)}
 		</AppContainerStyled>
@@ -47,9 +50,7 @@ function App() {
 const AppContainerStyled = styled.div`
 	/* Para evitar el scroll horizontal  en los contenedores de 100vw  cuando hay una barra de desplazamiento en Y */
 	width: calc(100vw - (100vw - 100%));
-	background-color:green
 	min-height: 100vh;
-
 `;
 
 export default App;
