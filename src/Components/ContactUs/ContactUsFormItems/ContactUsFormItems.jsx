@@ -4,6 +4,7 @@ import {
 	Labels,
 	InputBodyContent,
 	Divisor,
+	ButtonCancel,
 } from "./ContactUsFormItemsStyled";
 
 import { useState } from "react";
@@ -14,7 +15,6 @@ import { v4 as uuidv4 } from "uuid";
 
 function ContactUsFormItems({ toggleShow }) {
 	const [name, setName] = useState();
-	const [lastName, setLastName] = useState();
 	const [email, setEmail] = useState();
 	const [company, setCompany] = useState();
 	const [body, setBody] = useState();
@@ -28,7 +28,6 @@ function ContactUsFormItems({ toggleShow }) {
 			},
 			body: JSON.stringify({
 				Name: name,
-				LastName: lastName,
 				Email: email,
 				Company: company,
 				Message: body,
@@ -42,7 +41,6 @@ function ContactUsFormItems({ toggleShow }) {
 			date: new Date(),
 			person: {
 				name: name,
-				lastName: lastName,
 				email: email,
 				company: company,
 			},
@@ -54,94 +52,75 @@ function ContactUsFormItems({ toggleShow }) {
 
 	return (
 		<>
-			<Divisor>
-				<Labels htmlFor='name'>Name </Labels>
-				<Inputs
-					type='text'
-					id='name'
-					name='name'
-					placeholder='Name'
-					autocomplete='name'
-					required
-					onChange={(e) => setName(e.target.value)}
-				/>
-			</Divisor>
+			<Labels htmlFor='name'>Name </Labels>
+			<Inputs
+				type='text'
+				id='name'
+				name='name'
+				placeholder='Name'
+				autocomplete='name'
+				required
+				onChange={(e) => setName(e.target.value)}
+			/>
+
+			<Labels htmlFor='company'>Company </Labels>
+			<Inputs
+				type='text'
+				id='company'
+				name='company'
+				placeholder='Company'
+				required
+				onChange={(e) => setCompany(e.target.value)}
+			/>
+
+			<Labels htmlFor='email'>Email </Labels>
+
+			<Inputs
+				id='email'
+				name='email'
+				placeholder='Email Address'
+				type='email'
+				autocomplete='email'
+				required
+				onChange={(e) => setEmail(e.target.value)}
+			/>
+
+			<Labels htmlFor='messageContact' width='90%'>
+				Message{" "}
+			</Labels>
+
+			<InputBodyContent
+				type='text'
+				id='messageContact'
+				name='messageContact'
+				placeholder='Write something..'
+				required
+				onChange={(e) => setBody(e.target.value)}
+			/>
 
 			<Divisor>
-				<Labels htmlFor='lastName'>Last Name </Labels>
-				<Inputs
-					type='text'
-					id='lastName'
-					name='lastName'
-					placeholder='Last Name'
-					autocomplete='last-name'
-					required
-					onChange={(e) => setLastName(e.target.value)}
-				/>
+				<ButtonCancel
+					bgColor='#C2C0FF'
+					color='#524ef8'
+					onClick={(e) => {
+						e.preventDefault();
+						toggleShow();
+					}}
+					type='submit'
+				>
+					Close
+				</ButtonCancel>
+				<Button
+					onClick={(e) => {
+						e.preventDefault();
+						generateMessage();
+						toggleShow();
+					}}
+					type='submit'
+				>
+					Send Message
+				</Button>
 			</Divisor>
-
-			<Divisor>
-				<Labels htmlFor='company'>Company </Labels>
-				<Inputs
-					type='text'
-					id='company'
-					name='company'
-					placeholder='Company'
-					required
-					onChange={(e) => setCompany(e.target.value)}
-				/>
-			</Divisor>
-
-			<Divisor>
-				<Labels htmlFor='email'>Email </Labels>
-
-				<Inputs
-					id='email'
-					name='email'
-					placeholder='Email Address'
-					type='email'
-					autocomplete='email'
-					required
-					onChange={(e) => setEmail(e.target.value)}
-				/>
-			</Divisor>
-
-			<Divisor width='100%'>
-				<Labels htmlFor='messageContact' width='90%'>
-					Message{" "}
-				</Labels>
-
-				<InputBodyContent
-					type='text'
-					id='messageContact'
-					name='messageContact'
-					placeholder='Write something..'
-					required
-					onChange={(e) => setBody(e.target.value)}
-				/>
-			</Divisor>
-
-			<Button
-				bgColor='#C2C0FF'
-				color='#524ef8'
-				onClick={(e) => {
-					e.preventDefault();
-					toggleShow();
-				}}
-				type='submit'
-			>
-				Close
-			</Button>
-			<Button
-				onClick={(e) => {
-					e.preventDefault();
-					generateMessage();
-					toggleShow();
-				}}
-				type='submit'
-			>
-				Send Message
-			</Button>
 		</>
 	);
 }
