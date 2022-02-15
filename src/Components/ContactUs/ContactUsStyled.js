@@ -37,37 +37,45 @@ export const ContactUsContainer2 = styled.a`
 `;
 
 export const FormContainer = styled.form`
-	min-width: 300px;
-	max-width: 780px;
-	height: auto;
+	width: 500px;
+	height: 545px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 
 	border: 1px solid #eeeeee;
 	border-radius: 6px;
 	background-color: #ffffff;
 
 	padding: 30px;
-	margin: 15px;
 
 	gap: 10px;
 	position: relative;
 	z-index: 10;
 	opacity: ${({ opacity }) => opacity || 0};
 	animation: ${opac} 1s linear;
+
+	@media (max-width: 540px) {
+		align-self: center;
+		margin-right: 5px;
+		width: 95%;
+		border: 1px solid var(--secondColor);
+	}
 `;
 
 export const CloseForm = styled.div`
 	width: 20px;
 	height: 30px;
+
 	position: absolute;
-	right: 5px;
-	top: 5px;
-	color: white;
+	right: 15px;
+	top: 10px;
+
+	color: var(--secondColor);
 	font-size: 20px;
+	font-weight: 800;
 	cursor: pointer;
 `;
