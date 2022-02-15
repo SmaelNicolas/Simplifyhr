@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const CardsContainerStyled = styled.div`
-	width: 1000px;
+	max-width: 1000px;
 	height: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	gap: 35px;
 `;
