@@ -10,17 +10,21 @@ const opac = keyframes`
 `;
 
 export const Labels = styled.label`
-	width: 100%;
-	color: #524ef8;
-	font-size: 15px;
-	text-align: start;
+	width: 90%;
 	padding-left: 10px;
-	letter-spacing: 0.4px;
+
+	color: #524ef8;
+
+	font-size: 15px;
+	font-weight: 600;
+	text-align: start;
+	letter-spacing: 0.5px;
+
 	animation: ${opac} 0.5s linear;
 `;
 
 export const Inputs = styled.input`
-	width: 100%;
+	width: 90%;
 	height: 50px;
 	border-left: 4px solid #c2c0ff;
 	border-bottom: 4px solid #c2c0ff;
@@ -29,11 +33,15 @@ export const Inputs = styled.input`
 	border-radius: 3px;
 	padding-left: 20px;
 	animation: ${opac} 0.5s linear;
+	&:focus {
+		outline: none;
+	}
 `;
 
 export const InputBodyContent = styled.textarea`
-	width: 100%;
-	height: 200px;
+	width: 90%;
+
+	height: 100px;
 	padding: 15px;
 	animation: ${opac} 0.5s linear;
 	resize: none;
@@ -41,24 +49,30 @@ export const InputBodyContent = styled.textarea`
 	border-bottom: 4px solid #c2c0ff;
 	border-top: 1px solid #c2c0ff;
 	border-right: 1px solid #c2c0ff;
+
+	&:focus {
+		outline: none;
+	}
 `;
 
 export const Divisor = styled.div`
-	width: max(${({ width }) => width || "49%"}, 300px);
+	width: 100%;
 	height: auto;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 10px;
 	padding: 10px;
 `;
 
 export const Button = styled.button`
-	width: 250px;
-	height: 43px;
-	background-color: ${({ bgColor }) => bgColor || "#524ef8"};
-	color: ${({ color }) => color || "white"};
+	width: 260px;
+	height: 58px;
+	background-color: var(--primaryColor);
+	color: var(--secondTitleColor);
+
 	border: none;
-	border-radius: 10px;
+	border-radius: 28px;
+
 	font-weight: bolder;
 	letter-spacing: 0.3px;
 	font-size: 14px;
@@ -67,8 +81,18 @@ export const Button = styled.button`
 	margin: 0 auto;
 	animation: ${opac} 0.5s linear;
 	cursor: pointer;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	transition: all 0.1s linear;
 
 	&:hover {
-		border: 1px solid black;
+		transition: all 0.1s linear;
+		transform: scale(1.05);
+		filter: drop-shadow(0px 4px 4px rgba(0.1, 0.1, 0.1, 1));
 	}
+`;
+
+export const ButtonCancel = styled(Button)`
+	border: 1px solid var(--primaryColor);
+	color: var(--primaryColor);
+	background-color: var(--secondTitleColor);
 `;
