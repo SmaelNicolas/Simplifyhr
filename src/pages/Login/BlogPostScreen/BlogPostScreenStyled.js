@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const FormBlog = styled.form`
-	width: 920px;
+	width: 100%;
 	height: 750px;
-	background-color: #000000d1;
 	padding: 15px 0px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 
-	justify-content: space-evenly;
-	align-items: center;
+	justify-content: center;
+	@media (max-width: 1089px) {
+		height: auto;
 
-	border: 1px solid black;
-	border-radius: 6px;
-
-	gap: 10px;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
 `;
