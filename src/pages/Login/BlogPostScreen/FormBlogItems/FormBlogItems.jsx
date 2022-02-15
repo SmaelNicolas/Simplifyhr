@@ -2,12 +2,11 @@ import { useState } from "react";
 
 import {
 	Labels,
-	LanguageContainer,
-	RadioInputs,
-	RadioLabel,
 	InputPostContent,
 	Inputs,
 	Submit,
+	InputContainer,
+	BodyContainer,
 } from "./FormBlogItemsStyled";
 
 import database from "../../../../Firebase/Firebase";
@@ -20,7 +19,6 @@ function FormBlogItems() {
 	const [imgUrl, setImgUrl] = useState();
 	const [readTime, setReadTime] = useState();
 	const [author, setAuthor] = useState();
-	const [language, setLanguage] = useState(true);
 
 	function generateBlogPost() {
 		const post = {
@@ -33,105 +31,79 @@ function FormBlogItems() {
 			imgUrl: imgUrl,
 		};
 
-		// Add a new document in collection "blogPostEnglish" "blogPostSpanish"
-		language
-			? setDoc(doc(database, "blogPostsEnglish", uuidv4()), post)
-			: setDoc(doc(database, "blogPostsSpanish", uuidv4()), post);
+		setDoc(doc(database, "blogPostsEnglish", uuidv4()), post);
 	}
 
 	return (
 		<>
-			<Labels htmlFor='postTitle'>Language </Labels>
-			<LanguageContainer>
-				<RadioInputs
-					type='radio'
-					id='language1'
-					name='language'
-					value='english'
-					defaultChecked={true}
-					onChange={() => {
-						setLanguage(!language);
-					}}
+			<InputContainer>
+				<Labels htmlFor='postTitle'>Title </Labels>
+
+				<Inputs
+					type='text'
+					id='postTitle'
+					name='postTitle'
+					placeholder='Post Title'
+					required
+					onChange={(e) => setTitle(e.target.value)}
 				/>
-				<RadioLabel htmlFor='contactChoice1'>English</RadioLabel>
 
-				<RadioInputs
-					type='radio'
-					id='language2'
-					name='language'
-					value='español'
-					defaultChecked={false}
-					onChange={() => {
-						setLanguage(!language);
-					}}
+				<Labels htmlFor='urlImage'>Url Image </Labels>
+
+				<Inputs
+					type='text'
+					id='urlImage'
+					name='urlImage'
+					placeholder='Image Url'
+					required
+					onChange={(e) => setImgUrl(e.target.value)}
 				/>
-				<RadioLabel htmlFor='contactChoice2'>Español</RadioLabel>
-			</LanguageContainer>
 
-			<Labels htmlFor='postTitle'>Title </Labels>
+				<Labels htmlFor='lectureTime'>Read Time </Labels>
 
-			<Inputs
-				type='text'
-				id='postTitle'
-				name='postTitle'
-				placeholder='Post Title'
-				required
-				onChange={(e) => setTitle(e.target.value)}
-			/>
+				<Inputs
+					type='text'
+					id='readTime'
+					name='readTime'
+					placeholder='Read Time'
+					required
+					onChange={(e) => setReadTime(e.target.value)}
+				/>
 
-			<Labels htmlFor='urlImage'>Url Image </Labels>
+				<Labels htmlFor='author'>Author </Labels>
 
-			<Inputs
-				type='text'
-				id='urlImage'
-				name='urlImage'
-				placeholder='Image Url'
-				required
-				onChange={(e) => setImgUrl(e.target.value)}
-			/>
+				<Inputs
+					type='text'
+					id='author'
+					name='author'
+					placeholder='Author'
+					required
+					onChange={(e) => setAuthor(e.target.value)}
+				/>
+			</InputContainer>
 
-			<Labels htmlFor='lectureTime'>Read Time </Labels>
+			<BodyContainer>
+				<Labels htmlFor='postContent'>Body </Labels>
 
-			<Inputs
-				type='text'
-				id='readTime'
-				name='readTime'
-				placeholder='Read Time'
-				required
-				onChange={(e) => setReadTime(e.target.value)}
-			/>
+				<InputPostContent
+					type='text'
+					id='postContent'
+					name='postContent'
+					placeholder='Write something..'
+					required
+					onChange={(e) => setBody(e.target.value)}
+				/>
 
-			<Labels htmlFor='author'>Author </Labels>
-
-			<Inputs
-				type='text'
-				id='author'
-				name='author'
-				placeholder='Author'
-				required
-				onChange={(e) => setAuthor(e.target.value)}
-			/>
-
-			<Labels htmlFor='postContent'>Body </Labels>
-
-			<InputPostContent
-				type='text'
-				id='postContent'
-				name='postContent'
-				placeholder='Write something..'
-				required
-				onChange={(e) => setBody(e.target.value)}
-			/>
-
-			<Submit
-				onClick={(e) => {
-					e.preventDefault();
-					generateBlogPost();
-				}}
-				type='submit'
-			>
-				Create Post
-			</Submit>
+				<Submit
+					onClick={(e) => {
+						e.preventDefault();
+						generateBlogPost();
+					}}
+					type='submit'
+				>
+					Create Post
+				</Submit>
+			</BodyContainer>
 		</>
 	);
 }
