@@ -4,7 +4,6 @@ export const WhyUsContainer = styled.section`
 	width: 100%;
 
 	padding: 100px 0px;
-	border: 1px solid black;
 
 	display: flex;
 	flex-direction: column;
@@ -22,6 +21,15 @@ export const TitleStyled = styled.div`
 	font-weight: 700;
 	letter-spacing: 0.4px;
 	text-align: center;
+	@media (max-width: 1089px) {
+		font-size: 40px;
+	}
+	@media (max-width: 370px) {
+		font-size: 35px;
+	}
+	@media (max-width: 350px) {
+		font-size: 30px;
+	}
 `;
 
 export const SubtitleStyled = styled.div`
@@ -31,6 +39,14 @@ export const SubtitleStyled = styled.div`
 	font-weight: 500;
 	font-size: 28px;
 	margin-bottom: 50px;
+	padding: 0px 10px;
+
+	@media (max-width: 1089px) {
+		font-size: 24px;
+	}
+	@media (max-width: 330px) {
+		font-size: 20px;
+	}
 `;
 
 export const ButtonStyled = styled.a`
