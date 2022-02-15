@@ -28,7 +28,7 @@ function Cards() {
 			</CardStyled>
 			<CardStyled alignSelf='flex-start'>
 				<ImgContainer url={svg2} />
-				<TextContainer>
+				<TextContainer width='800px'>
 					<Title>{data.whyUs.cards.card2.title}</Title>
 					<TextContent>{data.whyUs.cards.card2.body}</TextContent>
 				</TextContainer>
