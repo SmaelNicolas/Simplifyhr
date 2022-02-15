@@ -15,35 +15,47 @@ export const WhyUsContainer = styled.section`
 `;
 
 export const TitleStyled = styled.div`
-	width: 100%;
+	max-width: 428px;
 	height: auto;
-	color: #524ef8;
-	font-size: calc(2rem + 2vw);
-
-	font-weight: 600;
+	color: var(--primaryColor);
+	font-size: 45px;
+	font-weight: 700;
 	letter-spacing: 0.4px;
 	text-align: center;
 `;
 
 export const SubtitleStyled = styled.div`
-	width: 70%;
+	max-width: 979px;
 	text-align: center;
-	font-size: calc(1.5rem + 2vw);
-	color: grey;
-	font-weight: 300;
+	color: var(--greySubtitle);
+	font-weight: 500;
+	font-size: 28px;
+	margin-bottom: 50px;
 `;
 
 export const ButtonStyled = styled.a`
 	width: 400px;
 	height: 50px;
-	border: 1px solid black;
-	border-radius: 5px;
+	margin: 60px 0px;
+
+	border-radius: 25px;
 	cursor: pointer;
-	background-color: #524ef8;
+
 	text-align: center;
 	line-height: 48px;
-	color: white;
-	font-size: 36px;
-	margin: 60px 0px;
+	font-size: 25px;
+	font-weight: 900;
+	text-transform: uppercase;
+
 	text-decoration: none;
+	color: var(--primaryColor);
+	background: #ffffff;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	transition: all 0.2s linear;
+
+	&:hover {
+		transition: all 0.2s linear;
+		transform: scale(1.1);
+		filter: drop-shadow(0px 4px 4px rgba(0.1, 0.1, 0.1, 1));
+	}
 `;
