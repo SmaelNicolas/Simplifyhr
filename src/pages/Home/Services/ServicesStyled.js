@@ -13,7 +13,7 @@ export const ServicesContainer = styled.section`
 `;
 
 export const TitleContainer = styled.div`
-	width: 590px;
+	max-width: 590px;
 	height: 110px;
 	display: flex;
 	flex-direction: column;
@@ -31,4 +31,11 @@ export const TitleStyled = styled.div`
 	letter-spacing: 0.4px;
 	line-height: 55px;
 	text-align: center;
+	@media (max-width: 620px) {
+		font-size: calc(0.5rem + 5vw);
+	}
+
+	@media (max-width: 380px) {
+		font-size: calc(0.8rem + 3vw);
+	}
 `;
