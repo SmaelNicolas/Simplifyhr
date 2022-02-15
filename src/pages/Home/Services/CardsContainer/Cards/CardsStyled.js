@@ -27,7 +27,6 @@ export const CardTitleStyled = styled.div`
 	border-radius: 30px;
 	color: var(--secondColor);
 	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
 `;
 
 export const CardTextStyled = styled.div`
@@ -37,7 +36,6 @@ export const CardTextStyled = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	font-family: "Montserrat", sans-serif;
 `;
 
 export const CardTextContainerStyled = styled.div`
@@ -47,7 +45,6 @@ export const CardTextContainerStyled = styled.div`
 	color: #000000;
 	text-align: center;
 	font-weight: 500;
-	font-family: "Montserrat", sans-serif;
 `;
 
 export const CardButtonStyled = styled.a`
@@ -58,7 +55,7 @@ export const CardButtonStyled = styled.a`
 	font-weight: 900;
 
 	text-align: center;
-	line-height: 60px;
+	line-height: 57px;
 
 	color: var(--secondTitleColor);
 	background: var(--primaryColor);
@@ -66,5 +63,4 @@ export const CardButtonStyled = styled.a`
 	border-radius: 20px;
 	text-decoration: none;
 	margin-bottom: 25px;
-	font-family: "Montserrat", sans-serif;
 `;
