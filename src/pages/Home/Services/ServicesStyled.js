@@ -9,11 +9,11 @@ export const ServicesContainer = styled.section`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	background: linear-gradient(180deg, #524ef8 0%, #57add9 100%);
+	background: linear-gradient(116.82deg, #524ef8 0%, #57add9 100%);
 `;
 
 export const TitleContainer = styled.div`
-	width: 574px;
+	width: 590px;
 	height: 110px;
 	display: flex;
 	flex-direction: column;
@@ -23,8 +23,8 @@ export const TitleContainer = styled.div`
 `;
 
 export const TitleStyled = styled.div`
-	width: 574px;
-	height: 110px;
+	width: 100%;
+	height: 100%;
 	color: var(--secondTitleColor);
 	font-size: 45px;
 	font-weight: 700;
