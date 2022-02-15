@@ -27,7 +27,11 @@ function Cards() {
 							{ArrayOfCards[i][1].body}
 						</CardTextContainerStyled>
 					</CardTextStyled>
-					<CardButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
+					<CardButtonStyled
+						href='https://calendly.com/simplifyhr/intro-call'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						{ArrayOfCards[i][1].button}
 					</CardButtonStyled>
 				</CardStyled>
