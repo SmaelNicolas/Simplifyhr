@@ -15,7 +15,7 @@ function WhyUs() {
 
 	return (
 		<WhyUsContainer id='whyus'>
-			<TitleStyled color='#524ef8'>{data.whyUs.title}</TitleStyled>
+			<TitleStyled>{data.whyUs.title}</TitleStyled>
 			<SubtitleStyled>{data.whyUs.subTitle}</SubtitleStyled>
 			<CardsContainer>
 				{console.log("RENDER WHY US CONTAINER CARDS")}
