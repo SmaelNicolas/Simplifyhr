@@ -17,6 +17,8 @@ export const ErrorTextMessage = styled.div`
 	line-height: 30px;
 	color: red;
 	text-align: center;
+	font-size: 20px;
+	font-weight: 500;
 	cursor: default;
 `;
 

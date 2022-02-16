@@ -15,8 +15,10 @@ export const SuccessTextMessage = styled.div`
 	width: 200px;
 	height: 30px;
 	line-height: 30px;
-	text-align: center;
 	color: green;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 500;
 	cursor: default;
 `;
 
