@@ -18,6 +18,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         scroll-behavior: smooth;
-	    font-family: var(--montserratFont);
+	      font-family: var(--montserratFont);
     }
 `;

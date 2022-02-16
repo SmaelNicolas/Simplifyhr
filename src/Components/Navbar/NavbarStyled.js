@@ -2,16 +2,16 @@ import { NavHashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
-	font-family: "Roboto", sans-serif;
 	height: 10vh;
 	width: 100%;
-	background-color: #524ef8;
+	background-color: var(--primaryColor);
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	color: #ffff;
 	position: sticky;
 	top: 0px;
+	z-index: 1000;
 `;
 
 export const Left = styled.div`
@@ -20,15 +20,6 @@ export const Left = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-`;
-
-export const Logo = styled(NavHashLink)`
-	text-transform: uppercase;
-	cursor: pointer;
-	text-decoration: none;
-	color: #fff;
-	font-size: 2em;
-	font-weight: 600;
 `;
 
 export const Center = styled.div`

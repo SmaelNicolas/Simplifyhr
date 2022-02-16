@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
+import Logo from "../Logo/Logo";
 import ContactButtonNew from "./ContactButton/ContactButtonNew";
 import {
 	Center,
 	LanguageButton,
 	LanguageWrapper,
 	Left,
-	Logo,
 	NavbarContainer,
 	NavbarItem,
 	Right,
