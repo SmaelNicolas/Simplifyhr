@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const CardStyled = styled.div`
 	width: 330px;
 	height: 490px;
+	margin: 0px 5px;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -48,7 +50,7 @@ export const CardTextStyled = styled.div`
 `;
 
 export const CardTextContainerStyled = styled.div`
-	width: 95%;
+	width: 83%;
 	font-size: 22px;
 	color: #000000;
 	font-weight: 500;
