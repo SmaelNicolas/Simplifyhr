@@ -7,6 +7,9 @@ import {
 	ButtonCancel,
 } from "./ContactUsFormItemsStyled";
 
+import SuccessMessage from "../../SuccessMessage/SuccesMessage";
+import ErrorMessage from "../../ErrorMessage/ErrorMessage";
+
 import { useState } from "react";
 
 import database from "../../../Firebase/Firebase";
@@ -14,10 +17,12 @@ import { doc, setDoc } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
 
 function ContactUsFormItems({ toggleShow }) {
-	const [name, setName] = useState();
-	const [email, setEmail] = useState();
-	const [company, setCompany] = useState();
-	const [body, setBody] = useState();
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [company, setCompany] = useState("");
+	const [body, setBody] = useState("");
+	const [showError, setShowError] = useState(false);
+	const [showSuccess, setShowSucces] = useState(false);
 
 	function generateMessage() {
 		fetch("https://formsubmit.co/ajax/9a8e0d24cf432f27bd92275ddf47b8dd", {
@@ -48,9 +53,45 @@ function ContactUsFormItems({ toggleShow }) {
 		};
 		// Add a new document in collection "messages"
 		setDoc(doc(database, "messages", uuidv4()), message);
+		setShowSucces(true);
 	}
 
-	return (
+	function checkForm() {
+		if (
+			name === "" ||
+			company === "" ||
+			email === "" ||
+			body === "" ||
+			body === undefined ||
+			email.includes("@") === false ||
+			email.includes(".com") === false
+		) {
+			setShowError(true);
+		} else {
+			generateMessage();
+		}
+	}
+
+	const changeValueSuccessMessage = () => {
+		setShowSucces(!showSuccess);
+		toggleShow();
+	};
+
+	const changeValueErrorMessage = () => {
+		setShowError(!showError);
+	};
+
+	return showSuccess ? (
+		<SuccessMessage
+			click={changeValueSuccessMessage}
+			message='Email Enviado'
+		/>
+	) : showError ? (
+		<ErrorMessage
+			click={changeValueErrorMessage}
+			message='Complete All Fields'
+		/>
+	) : (
 		<>
 			<Labels htmlFor='name'>Name </Labels>
 			<Inputs
@@ -113,8 +154,7 @@ function ContactUsFormItems({ toggleShow }) {
 				<Button
 					onClick={(e) => {
 						e.preventDefault();
-						generateMessage();
-						toggleShow();
+						checkForm();
 					}}
 					type='submit'
 				>
