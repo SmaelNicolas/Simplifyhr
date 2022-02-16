@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { TitleStyled, FormStyled, LoginPageStyled } from "./LoginStyled";
 import LoginForm from "./LoginForm/LoginForm";
 import BlogPostScreen from "./BlogPostScreen/BlogPostScreen";
+import LoginImages from "./LoginImages/LoginImages";
 
 function Login() {
 	const [isLogged, setIsLogged] = useState(false);
-
-	useEffect(() => {}, [isLogged]);
 
 	const valueIsLogged = (value) => {
 		setIsLogged(value);
@@ -18,6 +17,7 @@ function Login() {
 				<BlogPostScreen />
 			) : (
 				<>
+					<LoginImages />
 					<TitleStyled>Login</TitleStyled>
 					<FormStyled method='post'>
 						<LoginForm valueIsLogged={valueIsLogged} />
