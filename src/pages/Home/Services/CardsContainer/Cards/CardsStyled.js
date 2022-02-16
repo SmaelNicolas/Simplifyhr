@@ -11,13 +11,14 @@ export const CardStyled = styled.div`
 	background: #ffffff;
 	border-radius: 30px;
 	transition: all 0.1s linear;
-	opacity: 0.8;
 	cursor: default;
+	opacity: 0.8;
 
 	&:hover {
+		opacity: 1;
+
 		transition: all 0.1s linear;
 		transform: scale(1.08);
-		opacity: 1;
 	}
 `;
 
@@ -73,7 +74,6 @@ export const CardButtonStyled = styled.a`
 	text-decoration: none;
 	margin-bottom: 25px;
 
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	transition: all 0.1s linear;
 
 	&:hover {
