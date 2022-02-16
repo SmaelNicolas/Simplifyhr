@@ -31,7 +31,7 @@ export const Right = styled.div`
 `;
 
 export const Wrapper = styled.div`
-	width: 60%;
+	width: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,6 +42,8 @@ export const NavbarItem = styled(NavHashLink)`
 	cursor: pointer;
 	text-decoration: none;
 	color: var(--secondTitleColor);
+	margin: 0 20px;
+	text-align: center;
 `;
 
 export const LanguageWrapper = styled.div`
@@ -60,6 +62,11 @@ export const LanguageTitle = styled.p`
 	justify-content: space-around;
 	align-items: center;
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		transform: scale(1.03);
+	}
 `;
 
 export const LanguageDropdown = styled.ul`
@@ -89,9 +96,23 @@ export const LanguageButton = styled.li`
 `;
 
 export const ContactButton = styled.a`
-	background-color: transparent;
+	background-color: #f1f1f1;
+	min-width: 150px;
 	border: none;
-	color: #fff;
+	color: var(--primaryColor);
+	font-weight: 600;
+	padding: 10px 20px;
 	cursor: pointer;
 	text-transform: uppercase;
+	text-align: center;
+	border-radius: 40px;
+	box-shadow: 2px 2px 10px 0px rgba(100, 100, 100, 0.8);
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		transform: scale(1.03);
+	}
+	&:active {
+		transform: scale(0.95);
+	}
 `;
