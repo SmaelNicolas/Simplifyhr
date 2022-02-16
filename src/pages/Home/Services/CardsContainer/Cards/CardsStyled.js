@@ -14,7 +14,6 @@ export const CardStyled = styled.div`
 	border-radius: 30px;
 	transition: all 0.1s linear;
 	cursor: default;
-	opacity: 0.8;
 
 	&:hover {
 		opacity: 1;
