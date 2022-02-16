@@ -66,8 +66,11 @@ export const ButtonStyled = styled.a`
 	text-decoration: none;
 	color: var(--primaryColor);
 	background: #ffffff;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	transition: all 0.1s linear;
+
+	box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
+	-webkit-box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
+	-moz-box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
 
 	&:hover {
 		transition: all 0.1s linear;
