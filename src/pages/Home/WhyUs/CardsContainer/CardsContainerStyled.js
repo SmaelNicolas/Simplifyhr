@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
-	width: 90%;
+	width: 60%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 15px;
+
+	@media (max-width: 1650px) {
+		width: 90%;
+	}
 
 	@media (max-width: 1089px) {
 		width: 100%;
