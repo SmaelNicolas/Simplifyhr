@@ -1,7 +1,7 @@
 import React from "react";
 import { ErrorButton, ErrorImg, ErrorTextMessage } from "./ErrorItemsStyled";
 
-import ImgError from "../../../Assest/error.svg";
+import ImgError from "../../../Assets/error.svg";
 
 function ErrorItems({ click, message }) {
 	return (

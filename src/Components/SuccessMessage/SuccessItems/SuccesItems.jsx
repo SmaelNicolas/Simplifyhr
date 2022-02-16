@@ -5,7 +5,7 @@ import {
 	SuccessTextMessage,
 } from "./SuccesItemsStyled";
 
-import ImgSucces from "../../../Assest/success.svg";
+import ImgSucces from "../../../Assets/success.svg";
 
 function SuccesItems({ click, message }) {
 	return (

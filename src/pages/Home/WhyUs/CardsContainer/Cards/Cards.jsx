@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../../../../Context/LanguageContext";
 
-import svg1 from "../../../../../Assest/trust.svg";
-import svg2 from "../../../../../Assest/low.svg";
-import svg3 from "../../../../../Assest/flexible.svg";
+import svg1 from "../../../../../Assets/trust.svg";
+import svg2 from "../../../../../Assets/low.svg";
+import svg3 from "../../../../../Assets/flexible.svg";
 
 import {
 	CardStyled,
