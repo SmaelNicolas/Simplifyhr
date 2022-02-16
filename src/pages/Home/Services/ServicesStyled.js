@@ -39,3 +39,43 @@ export const TitleStyled = styled.div`
 		font-size: calc(0.8rem + 3vw);
 	}
 `;
+
+export const ButtonStyled = styled.a`
+	width: 400px;
+	height: 50px;
+	margin: 60px 0px;
+
+	border-radius: 25px;
+	cursor: pointer;
+
+	text-align: center;
+	line-height: 48px;
+	font-size: 25px;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	text-decoration: none;
+	color: var(--primaryColor);
+	background: #ffffff;
+	transition: all 0.1s linear;
+
+	box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
+	-webkit-box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
+	-moz-box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
+
+	&:hover {
+		transition: all 0.1s linear;
+		transform: scale(1.1);
+		filter: drop-shadow(0px 4px 4px rgba(0.1, 0.1, 0.1, 1));
+	}
+
+	@media (max-width: 620px) {
+		width: 320px;
+		font-size: 15px;
+	}
+
+	@media (max-width: 370px) {
+		width: 300px;
+		font-size: 15px;
+	}
+`;
