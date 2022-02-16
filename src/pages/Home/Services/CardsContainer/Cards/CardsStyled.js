@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const CardStyled = styled.div`
-	width: 304px;
-	height: 390px;
+	width: 330px;
+	height: 490px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -40,21 +40,20 @@ export const CardTitleStyled = styled.div`
 `;
 
 export const CardTextStyled = styled.div`
-	width: 237px;
-	height: 85px;
-	text-align: center;
+	width: 100%;
+	height: 300px;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 `;
 
 export const CardTextContainerStyled = styled.div`
-	width: 237px;
-
+	width: 95%;
 	font-size: 22px;
 	color: #000000;
-	text-align: center;
 	font-weight: 500;
+	text-align: center;
+	line-height: 150%;
 `;
 
 export const CardButtonStyled = styled.a`
