@@ -1,4 +1,5 @@
 import {
+	ButtonStyled,
 	ServicesContainer,
 	TitleContainer,
 	TitleStyled,
@@ -20,6 +21,9 @@ function Services() {
 				<TitleStyled>{data.services.subTitle}</TitleStyled>
 			</TitleContainer>
 			<CardsContainer />
+			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
+				{data.services.button}
+			</ButtonStyled>
 		</ServicesContainer>
 	);
 }
