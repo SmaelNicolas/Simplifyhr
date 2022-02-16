@@ -9,7 +9,7 @@ export const CardStyled = styled.section`
 	gap: 15px;
 
 	@media (max-width: 1089px) {
-		width: 90%;
+		width: 95%;
 		align-self: center;
 	}
 	@media (max-width: 330px) {
@@ -39,7 +39,7 @@ export const TextContainer = styled.div`
 	align-items: center;
 
 	@media (max-width: 1089px) {
-		width: 90%;
+		width: 87%;
 	}
 `;
 
