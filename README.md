@@ -19,3 +19,6 @@ npm i react-awesome-reveal
 uuid ( Para generar ids unicos para guardar en firebase)
 https://www.npmjs.com/package/uuid
 npm i uuid
+
+material-ui icons
+npm i @mui/material @emotion/react @emotion/styled @mui/icons-material
