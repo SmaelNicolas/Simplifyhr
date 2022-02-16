@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FormBlog = styled.form`
 	width: 100%;
-	height: 750px;
+	min-height: 80vh;
 	padding: 15px 0px;
 	display: flex;
 	flex-direction: row;
