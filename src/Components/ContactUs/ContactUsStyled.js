@@ -6,8 +6,6 @@ const opac = keyframes`
 	25%{opacity:0.7}
 	50%{opacity:0.9}
 	100%{opacity:1}
-
-
 `;
 
 export const ContactUsContainer = styled.div`

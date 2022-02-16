@@ -1,5 +1,12 @@
 import styled from "styled-components";
 import { NavHashLink } from "react-router-hash-link";
+import { keyframes } from "styled-components";
+
+const moveUpDown = keyframes`
+	0% {background-position:top}
+	50% {background-position:center}
+	100% {background-position:top}
+`;
 
 export const WhyUsContainer = styled.section`
 	width: 100%;
@@ -93,11 +100,12 @@ export const ButtonStyled = styled.a`
 export const ButtonToTop = styled(NavHashLink)`
 	width: 50px;
 	height: 50px;
-	font-size: 30px;
 	background-image: url(${({ url }) => `${url}`});
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 50%;
 	border-radius: 50%;
 	margin-top: 15px;
+	background-color: var(--secondTitleColor);
+	animation: ${moveUpDown} 2s linear infinite;
 `;
