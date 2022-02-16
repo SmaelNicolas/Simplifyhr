@@ -35,6 +35,8 @@ export const Inputs = styled.input`
 	padding-left: 20px;
 	animation: ${opac} 0.5s linear;
 	z-index: 98;
+	color: black;
+	font-weight: 600;
 
 	&:focus {
 		outline: none;
