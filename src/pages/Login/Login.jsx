@@ -15,10 +15,7 @@ function Login() {
 	return (
 		<LoginPageStyled>
 			{isLogged ? (
-				<>
-					<TitleStyled>CREATE BLOG POST</TitleStyled>
-					<BlogPostScreen />
-				</>
+				<BlogPostScreen />
 			) : (
 				<>
 					<TitleStyled>Login</TitleStyled>
