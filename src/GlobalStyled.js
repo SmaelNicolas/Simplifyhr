@@ -7,6 +7,9 @@ export const GlobalStyle = createGlobalStyle`
         --secondColor : #2F2D93;
         --greySubtitle : #686868;
         --secondTitleColor : #ffffff;
+        --montserratFont : "Montserrat", sans-serif;
+        --robotoFont : 'Roboto', sans-serif;
+        --dmsansFont : 'DM Sans', sans-serif;
      }
 
 
@@ -15,9 +18,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         scroll-behavior: smooth;
-	font-family: "Montserrat", sans-serif;
-
-        /* font-family: 'Roboto', sans-serif; */
-
+	    font-family: var(--montserratFont);
     }
 `;
