@@ -8,6 +8,7 @@ export const SuccesImg = styled.div`
 	background-repeat: no-repeat;
 	background-size: contain;
 	border-radius: 50%;
+	cursor: default;
 `;
 
 export const SuccessTextMessage = styled.div`
@@ -16,6 +17,7 @@ export const SuccessTextMessage = styled.div`
 	line-height: 30px;
 	text-align: center;
 	color: green;
+	cursor: default;
 `;
 
 export const SuccesButton = styled.div`
@@ -30,4 +32,5 @@ export const SuccesButton = styled.div`
 	border-radius: 28px;
 	border: 1px solid var(--primaryColor);
 	color: var(--primaryColor);
+	cursor: pointer;
 `;

@@ -8,6 +8,7 @@ export const ErrorImg = styled.div`
 	background-repeat: no-repeat;
 	background-size: contain;
 	border-radius: 50%;
+	cursor: default;
 `;
 
 export const ErrorTextMessage = styled.div`
