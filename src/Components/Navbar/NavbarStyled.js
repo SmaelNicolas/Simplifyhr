@@ -56,7 +56,6 @@ export const LanguageTitle = styled.p`
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
-	border: 1px solid #f1f1f1;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
