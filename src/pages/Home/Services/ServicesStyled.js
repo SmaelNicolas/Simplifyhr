@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavHashLink } from "react-router-hash-link";
 
 export const ServicesContainer = styled.section`
 	width: 100%;
@@ -78,4 +79,16 @@ export const ButtonStyled = styled.a`
 		width: 300px;
 		font-size: 15px;
 	}
+`;
+
+export const ButtonToTop = styled(NavHashLink)`
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	background-image: url(${({ url }) => `${url}`});
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 50%;
+	margin-top: 15px;
 `;
