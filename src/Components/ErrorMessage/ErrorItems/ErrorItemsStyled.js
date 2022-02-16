@@ -33,4 +33,19 @@ export const ErrorButton = styled.div`
 	border: 1px solid var(--primaryColor);
 	color: var(--primaryColor);
 	cursor: pointer;
+	transition: 0.3s ease-out;
+
+	background: linear-gradient(
+			to left,
+			var(--secondTitleColor) 50%,
+			var(--primaryColor) 50%
+		)
+		right;
+	background-size: 200%;
+
+	&:hover {
+		transition: 0.3s ease-out;
+		color: var(--secondTitleColor);
+		background-position: left;
+	}
 `;
