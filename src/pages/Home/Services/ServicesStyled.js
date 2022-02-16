@@ -97,7 +97,6 @@ export const ButtonToTop = styled(NavHashLink)`
 	background-size: 50%;
 	border-radius: 50%;
 	margin-top: 15px;
-	/* background-color: var(--secondTitleColor); */
 	background-color: transparent;
 	animation: ${moveUpDown} 2s linear infinite;
 `;
