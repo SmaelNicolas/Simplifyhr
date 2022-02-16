@@ -1,5 +1,6 @@
 import {
 	ButtonStyled,
+	ButtonToTop,
 	ServicesContainer,
 	TitleContainer,
 	TitleStyled,
@@ -10,6 +11,8 @@ import { useContext } from "react";
 import { LanguageContext } from "../../../Context/LanguageContext";
 
 import CardsContainer from "./CardsContainer/CardsContainer";
+
+import arrotToTop from "../../../Assets/arrowTop.svg";
 
 function Services() {
 	const { data } = useContext(LanguageContext);
@@ -24,6 +27,7 @@ function Services() {
 			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
 				{data.services.button}
 			</ButtonStyled>
+			<ButtonToTop to={`/#home`} url={arrotToTop}></ButtonToTop>
 		</ServicesContainer>
 	);
 }

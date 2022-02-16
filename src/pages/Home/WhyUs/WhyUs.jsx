@@ -3,12 +3,15 @@ import {
 	TitleStyled,
 	SubtitleStyled,
 	ButtonStyled,
+	ButtonToTop,
 } from "./WhyUsStyled";
 
 import CardsContainer from "./CardsContainer/CardsContainer";
 
 import { useContext } from "react";
 import { LanguageContext } from "../../../Context/LanguageContext";
+
+import arrotToTop from "../../../Assets/arrowTop.svg";
 
 function WhyUs() {
 	const { data } = useContext(LanguageContext);
@@ -23,6 +26,7 @@ function WhyUs() {
 			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
 				{data.whyUs.button}
 			</ButtonStyled>
+			<ButtonToTop to={`/#home`} url={arrotToTop}></ButtonToTop>
 		</WhyUsContainer>
 	);
 }
