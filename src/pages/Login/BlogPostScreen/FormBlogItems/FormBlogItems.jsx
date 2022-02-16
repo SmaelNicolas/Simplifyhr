@@ -12,13 +12,17 @@ import {
 import database from "../../../../Firebase/Firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
+import SuccessMessage from "../../../../Components/SuccessMessage/SuccesMessage";
+import ErrorMessage from "../../../../Components/ErrorMessage/ErrorMessage";
 
 function FormBlogItems() {
-	const [title, setTitle] = useState();
-	const [body, setBody] = useState();
-	const [imgUrl, setImgUrl] = useState();
-	const [readTime, setReadTime] = useState();
-	const [author, setAuthor] = useState();
+	const [title, setTitle] = useState("");
+	const [body, setBody] = useState("");
+	const [imgUrl, setImgUrl] = useState("");
+	const [readTime, setReadTime] = useState("");
+	const [author, setAuthor] = useState("");
+	const [showError, setShowError] = useState(false);
+	const [showSuccess, setShowSucces] = useState(false);
 
 	function generateBlogPost() {
 		const post = {
@@ -32,9 +36,42 @@ function FormBlogItems() {
 		};
 
 		setDoc(doc(database, "blogPostsEnglish", uuidv4()), post);
+		setShowSucces(true);
 	}
 
-	return (
+	function checkForm() {
+		if (
+			title === "" ||
+			body === "" ||
+			imgUrl === "" ||
+			readTime === "" ||
+			author === ""
+		) {
+			setShowError(true);
+		} else {
+			generateBlogPost();
+		}
+	}
+
+	const changeValueSuccessMessage = () => {
+		setShowSucces(!showSuccess);
+	};
+
+	const changeValueErrorMessage = () => {
+		setShowError(!showError);
+	};
+
+	return showSuccess ? (
+		<SuccessMessage
+			click={changeValueSuccessMessage}
+			message='Post Created'
+		/>
+	) : showError ? (
+		<ErrorMessage
+			click={changeValueErrorMessage}
+			message='Complete All Fields'
+		/>
+	) : (
 		<>
 			<InputContainer>
 				<Labels htmlFor='postTitle'>Title </Labels>
@@ -97,7 +134,7 @@ function FormBlogItems() {
 				<Submit
 					onClick={(e) => {
 						e.preventDefault();
-						generateBlogPost();
+						checkForm(e);
 					}}
 					type='submit'
 				>
