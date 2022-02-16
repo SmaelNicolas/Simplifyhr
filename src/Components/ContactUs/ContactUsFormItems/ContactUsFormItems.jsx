@@ -10,11 +10,12 @@ import {
 import SuccessMessage from "../../SuccessMessage/SuccesMessage";
 import ErrorMessage from "../../ErrorMessage/ErrorMessage";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import database from "../../../Firebase/Firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
+import { LanguageContext } from "../../../Context/LanguageContext";
 
 function ContactUsFormItems({ toggleShow }) {
 	const [name, setName] = useState("");
@@ -23,6 +24,8 @@ function ContactUsFormItems({ toggleShow }) {
 	const [body, setBody] = useState("");
 	const [showError, setShowError] = useState(false);
 	const [showSuccess, setShowSucces] = useState(false);
+
+	const { data } = useContext(LanguageContext);
 
 	function generateMessage() {
 		fetch("https://formsubmit.co/ajax/9a8e0d24cf432f27bd92275ddf47b8dd", {
@@ -84,12 +87,12 @@ function ContactUsFormItems({ toggleShow }) {
 	return showSuccess ? (
 		<SuccessMessage
 			click={changeValueSuccessMessage}
-			message='Form Submitted'
+			message={data.successMessage.sendForm}
 		/>
 	) : showError ? (
 		<ErrorMessage
 			click={changeValueErrorMessage}
-			message='Please fill in all the fields correctly'
+			message={data.errorMessage.sendForm}
 		/>
 	) : (
 		<>
@@ -127,7 +130,7 @@ function ContactUsFormItems({ toggleShow }) {
 			/>
 
 			<Labels htmlFor='messageContact' width='90%'>
-				Message{" "}
+				Message
 			</Labels>
 
 			<InputBodyContent

@@ -3,7 +3,6 @@ import {
 	CardStyled,
 	CardTextStyled,
 	CardTextContainerStyled,
-	CardButtonStyled,
 } from "./CardsStyled";
 
 import { useContext, useState } from "react";

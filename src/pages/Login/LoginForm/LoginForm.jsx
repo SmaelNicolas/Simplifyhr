@@ -1,14 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { Labels, Inputs, Button } from "./LoginFormStyled";
 import database from "../../../Firebase/Firebase";
 import ErrorMessage from "../../../Components/ErrorMessage/ErrorMessage";
+import { LanguageContext } from "../../../Context/LanguageContext";
 
 function LoginForm({ valueIsLogged }) {
 	const [userInput, setUserInput] = useState();
 	const [pwInput, setPwInput] = useState();
 	const [users, setUsers] = useState();
 	const [showMessage, setShowMessage] = useState(false);
+
+	const { data } = useContext(LanguageContext);
 
 	useEffect(() => {
 		getUsers();
@@ -35,7 +38,7 @@ function LoginForm({ valueIsLogged }) {
 	return showMessage ? (
 		<ErrorMessage
 			click={changeValueMessage}
-			message='Incorrect User or Password'
+			message={data.errorMessage.login}
 		/>
 	) : (
 		<>

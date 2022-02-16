@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import {
 	Labels,
@@ -14,6 +14,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
 import SuccessMessage from "../../../../Components/SuccessMessage/SuccesMessage";
 import ErrorMessage from "../../../../Components/ErrorMessage/ErrorMessage";
+import { LanguageContext } from "../../../../Context/LanguageContext";
 
 function FormBlogItems() {
 	const [title, setTitle] = useState("");
@@ -23,6 +24,9 @@ function FormBlogItems() {
 	const [author, setAuthor] = useState("");
 	const [showError, setShowError] = useState(false);
 	const [showSuccess, setShowSucces] = useState(false);
+
+	const { data } = useContext(LanguageContext);
+	console.log(data);
 
 	function generateBlogPost() {
 		const post = {
@@ -64,12 +68,12 @@ function FormBlogItems() {
 	return showSuccess ? (
 		<SuccessMessage
 			click={changeValueSuccessMessage}
-			message='Post Created'
+			message={data.successMessage.createPost}
 		/>
 	) : showError ? (
 		<ErrorMessage
 			click={changeValueErrorMessage}
-			message='Complete All Fields'
+			message={data.errorMessage.createPost}
 		/>
 	) : (
 		<>
