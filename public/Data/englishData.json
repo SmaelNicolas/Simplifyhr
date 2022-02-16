@@ -48,5 +48,14 @@
 		"button": "Schedule a video chat"
 	},
 	"resources": "",
-	"footer": ""
+	"footer": "",
+	"successMessage": {
+		"createPost": "Post Created!",
+		"sendForm": "Form Submitted!"
+	},
+	"errorMessage": {
+		"createPost": "Please fill in all the fields correctly",
+		"sendForm": "Please fill in all the fields correctly",
+		"login": "Incorrect User or Password"
+	}
 }
