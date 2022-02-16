@@ -84,12 +84,12 @@ function ContactUsFormItems({ toggleShow }) {
 	return showSuccess ? (
 		<SuccessMessage
 			click={changeValueSuccessMessage}
-			message='Email Enviado'
+			message='Form Submitted'
 		/>
 	) : showError ? (
 		<ErrorMessage
 			click={changeValueErrorMessage}
-			message='Complete All Fields'
+			message='Please fill in all the fields correctly'
 		/>
 	) : (
 		<>
