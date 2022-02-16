@@ -15,20 +15,18 @@
 		"cards": {
 			"card1": {
 				"title": "Essential",
-				"body": "Looking to scale? We will match you with your C-levels for a management team that is aligned with your vision and values. We make it affordable, 5% of their gross yearly salary.",
-				"button": "5% GYS"
+				"body": "Looking to scale? We will match you with your C-levels for a management team that is aligned with your vision and values. We make it affordable, 5% of their gross yearly salary."
 			},
 			"card2": {
 				"title": "Express",
-				"body": "Need an urgent hire to cover unexpected leavers? We can hire faster without compromising quality of process.",
-				"button": "Book a call"
+				"body": "Need an urgent hire to cover unexpected leavers? We can hire faster without compromising quality of process."
 			},
 			"card3": {
 				"title": "Custom",
-				"body": "Count on us for your HR projects as you scale. Need an employee handbook? Are you establishing strong recruitment processes - we got you!",
-				"button": "Book a call"
+				"body": "Count on us for your HR projects as you scale. Need an employee handbook? Are you establishing strong recruitment processes - we got you!"
 			}
-		}
+		},
+		"button": "Book a call"
 	},
 	"whyUs": {
 		"title": "Why Simplify-hr",
