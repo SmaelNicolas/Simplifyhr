@@ -1,12 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
+import Logo from "../Logo/Logo";
+import {
+	KeyboardArrowDownRounded,
+	KeyboardArrowUpRounded,
+	LanguageOutlined,
+} from "@mui/icons-material";
 import ContactButtonNew from "./ContactButton/ContactButtonNew";
 import {
-	Center,
 	LanguageButton,
+	LanguageDropdown,
+	LanguageTitle,
 	LanguageWrapper,
 	Left,
-	Logo,
 	NavbarContainer,
 	NavbarItem,
 	Right,
@@ -14,28 +20,40 @@ import {
 } from "./NavbarStyled";
 
 function Navbar() {
-	const { setLanguage, data } = useContext(LanguageContext);
+	const { setLanguage, data, language } = useContext(LanguageContext);
+	const [dropdown, setDropdown] = useState(false);
 
 	return (
 		<NavbarContainer>
 			<Left>
-				<Logo to={`/#home`}>Simplify-hr</Logo>
+				<Logo />
 			</Left>
-			<Center>
+			<Right>
 				<Wrapper>
 					<NavbarItem to={"/#services"}>{data.navbar.a1}</NavbarItem>
 					<NavbarItem to={"/#whyus"}>{data.navbar.a2}</NavbarItem>
 					<NavbarItem to={"/resources"}>{data.navbar.a3}</NavbarItem>
 				</Wrapper>
-			</Center>
-			<Right>
-				<LanguageWrapper>
-					<LanguageButton onClick={() => setLanguage("es")}>
-						ES
-					</LanguageButton>
-					<LanguageButton onClick={() => setLanguage("en")}>
-						EN
-					</LanguageButton>
+				<LanguageWrapper
+					onClick={() => setDropdown(!dropdown)}
+					active={dropdown}
+				>
+					<LanguageTitle>
+						<LanguageOutlined /> {language}
+						{dropdown ? (
+							<KeyboardArrowUpRounded />
+						) : (
+							<KeyboardArrowDownRounded />
+						)}
+					</LanguageTitle>
+					<LanguageDropdown>
+						<LanguageButton onClick={() => setLanguage("Español")}>
+							Español
+						</LanguageButton>
+						<LanguageButton onClick={() => setLanguage("English")}>
+							English
+						</LanguageButton>
+					</LanguageDropdown>
 				</LanguageWrapper>
 				<ContactButtonNew />
 			</Right>
