@@ -7,6 +7,7 @@ export const LoginPageStyled = styled.section`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 `;
 
 export const TitleStyled = styled.div`
@@ -18,6 +19,7 @@ export const TitleStyled = styled.div`
 	font-weight: 700;
 	letter-spacing: 0.4px;
 	text-align: center;
+	z-index: 5;
 `;
 
 export const FormStyled = styled.form`
@@ -31,4 +33,6 @@ export const FormStyled = styled.form`
 
 	border: 1px solid var(--secondColor);
 	border-radius: 6px;
+	z-index: 5;
+	background-color: rgba(255, 255, 255, 0.5);
 `;
