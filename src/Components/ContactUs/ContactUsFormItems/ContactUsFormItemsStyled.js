@@ -80,15 +80,14 @@ export const Button = styled.button`
 	border: none;
 	border-radius: 28px;
 
-	font-weight: bolder;
-	letter-spacing: 0.3px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
 	font-size: 14px;
 	text-transform: uppercase;
 
 	margin: 0 auto;
 	animation: ${opac} 0.5s linear;
 	cursor: pointer;
-	border: 1px solid var(--secondColor);
 
 	transition: all 0.1s linear;
 	z-index: 95;
