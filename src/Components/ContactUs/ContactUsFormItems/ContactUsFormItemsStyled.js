@@ -21,6 +21,7 @@ export const Labels = styled.label`
 	letter-spacing: 0.5px;
 
 	animation: ${opac} 0.5s linear;
+	z-index: 99;
 `;
 
 export const Inputs = styled.input`
@@ -33,6 +34,8 @@ export const Inputs = styled.input`
 	border-radius: 3px;
 	padding-left: 20px;
 	animation: ${opac} 0.5s linear;
+	z-index: 98;
+
 	&:focus {
 		outline: none;
 	}
@@ -49,6 +52,7 @@ export const InputBodyContent = styled.textarea`
 	border-bottom: 4px solid #c2c0ff;
 	border-top: 1px solid #c2c0ff;
 	border-right: 1px solid #c2c0ff;
+	z-index: 97;
 
 	&:focus {
 		outline: none;
@@ -62,6 +66,7 @@ export const Divisor = styled.div`
 	flex-direction: row;
 	gap: 10px;
 	padding: 10px;
+	z-index: 96;
 `;
 
 export const Button = styled.button`
@@ -81,8 +86,10 @@ export const Button = styled.button`
 	margin: 0 auto;
 	animation: ${opac} 0.5s linear;
 	cursor: pointer;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border: 1px solid var(--secondColor);
+
 	transition: all 0.1s linear;
+	z-index: 95;
 
 	&:hover {
 		transition: all 0.1s linear;
@@ -95,4 +102,5 @@ export const ButtonCancel = styled(Button)`
 	border: 1px solid var(--primaryColor);
 	color: var(--primaryColor);
 	background-color: var(--secondTitleColor);
+	z-index: 40;
 `;
