@@ -20,6 +20,7 @@ export const ContactUsContainer = styled.div`
 	left: 0px;
 	top: 0px;
 	transition: width 2s;
+	z-index: 997;
 `;
 
 export const ContactUsContainer2 = styled.a`
@@ -34,6 +35,7 @@ export const ContactUsContainer2 = styled.a`
 	top: 0px;
 	border: none;
 	animation: ${opac} 1s linear;
+	z-index: 998;
 `;
 
 export const FormContainer = styled.form`
@@ -54,9 +56,9 @@ export const FormContainer = styled.form`
 
 	gap: 10px;
 	position: relative;
-	z-index: 10;
 	opacity: ${({ opacity }) => opacity || 0};
 	animation: ${opac} 1s linear;
+	z-index: 999;
 
 	@media (max-width: 540px) {
 		align-self: center;
@@ -64,18 +66,4 @@ export const FormContainer = styled.form`
 		width: 95%;
 		border: 1px solid var(--secondColor);
 	}
-`;
-
-export const CloseForm = styled.div`
-	width: 20px;
-	height: 30px;
-
-	position: absolute;
-	right: 15px;
-	top: 10px;
-
-	color: var(--secondColor);
-	font-size: 20px;
-	font-weight: 800;
-	cursor: pointer;
 `;
