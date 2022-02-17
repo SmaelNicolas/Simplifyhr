@@ -44,7 +44,8 @@ export const CardTextStyled = styled.div`
 	width: 100%;
 	height: 300px;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-evenly;
 	align-items: center;
 `;
 
@@ -57,28 +58,16 @@ export const CardTextContainerStyled = styled.div`
 	line-height: 150%;
 `;
 
-export const CardButtonStyled = styled.a`
-	width: 255px;
-	height: 55px;
+export const CardSubTextContainerStyled = styled.div`
+	width: 83%;
+	padding: 10px;
+	border-radius: 15px;
 
-	font-size: 25px;
-	font-weight: 900;
-
-	text-align: center;
-	line-height: 57px;
-
+	background-color: var(--primaryColor);
 	color: var(--secondTitleColor);
-	background: var(--primaryColor);
 
-	border-radius: 20px;
-	text-decoration: none;
-	margin-bottom: 25px;
-
-	transition: all 0.1s linear;
-
-	&:hover {
-		transition: all 0.1s linear;
-		transform: scale(1.05);
-		filter: drop-shadow(0px 4px 4px rgba(0.1, 0.1, 0.1, 1));
-	}
+	font-size: 15px;
+	text-align: center;
+	font-weight: 400;
+	line-height: 17px;
 `;
