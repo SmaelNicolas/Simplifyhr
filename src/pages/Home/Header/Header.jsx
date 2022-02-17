@@ -23,9 +23,11 @@ const Header = () => {
 			<InfoContainer>
 				<Title>{data.header.title}</Title>
 				<Subtitle>{data.header.subTitle}</Subtitle>
-        <Button to={'/#services'}>{data.header.button}</Button>
+        
 			</InfoContainer>
-			<ImgContainer></ImgContainer>
+			<ImgContainer>
+      <Button to={'/#services'}>{data.header.button}</Button>
+      </ImgContainer>
 		</HeaderContainer>
 	);
 };

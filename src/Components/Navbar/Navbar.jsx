@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
 import Logo from "../Logo/Logo";
 import { CloseRounded, MenuRounded } from "@mui/icons-material";
@@ -17,6 +17,9 @@ import LanguageButton from "./LanguageButton/LanguageButton";
 function Navbar() {
 	const { data } = useContext(LanguageContext);
 	const [isOpen, setIsOpen] = useState(false);
+
+  const el=useRef();
+  console.log(el);
 
 	const toggle = () => {
 		setIsOpen(!isOpen);
@@ -37,13 +40,23 @@ function Navbar() {
 					</MobileIcon>
 					<NavMenu>
 						<NavbarItem>
-							<NavbarLink to={"/#services"}>{data.navbar.a1}</NavbarLink>
+							<NavbarLink
+								smooth
+								to={`/#whyus`}
+                ref={el}
+							>
+								{data.navbar.a2}
+							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to={"/#whyus"}>{data.navbar.a2}</NavbarLink>
+							<NavbarLink smooth to={"/#services"}>
+								{data.navbar.a1}
+							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to={"/resources"}>{data.navbar.a3}</NavbarLink>
+							<NavbarLink smooth to={"/resources"}>
+								{data.navbar.a3}
+							</NavbarLink>
 						</NavbarItem>
 						<LanguageButton />
 						<ContactButtonNew />

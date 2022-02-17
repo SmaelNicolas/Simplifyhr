@@ -27,7 +27,7 @@ function Services() {
 			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
 				{data.services.button}
 			</ButtonStyled>
-			<ButtonToTop to={`/#home`} url={arrotToTop}></ButtonToTop>
+			<ButtonToTop smooth to={`/#home`} url={arrotToTop}></ButtonToTop>
 		</ServicesContainer>
 	);
 }

@@ -14,7 +14,7 @@ const Title = styled(NavHashLink)`
 `;
 
 const Logo = () => {
-	return <Title to={`/#home`}>Simplify-hr</Title>;
+	return <Title smooth to={`/#home`}>Simplify-hr</Title>;
 };
 
 export default Logo;

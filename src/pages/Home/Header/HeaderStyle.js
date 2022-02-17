@@ -10,6 +10,10 @@ export const HeaderContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	position: relative;
+
+	@media screen and (max-width: 834px) {
+		flex-direction: column;
+	}
 `;
 
 export const HeaderBg = styled.div`
@@ -29,7 +33,8 @@ export const HeaderVideo = styled.video`
 	height: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
-	background: var(--primaryColor);
+	//background: var(--primaryColor);
+	opacity: 0.8;
 `;
 
 export const InfoContainer = styled.div`
@@ -40,7 +45,7 @@ export const InfoContainer = styled.div`
 	align-items: flex-start;
 	padding: 30px;
 	z-index: 5;
-	background-color: rgba(47, 45, 147,0.4);
+	//background-color: rgba(47, 45, 147,0.4);
 	height: 100%;
 `;
 
@@ -50,7 +55,7 @@ export const Title = styled.h2`
 
 export const Subtitle = styled.h3`
 	font-size: 30px;
-  margin: 30px 0;
+	margin: 30px 0;
 `;
 
 export const Button = styled(HashLink)`
@@ -60,10 +65,25 @@ export const Button = styled(HashLink)`
 	color: #fff;
 	text-decoration: none;
 	padding: 10px 20px;
-  border-radius: 40px;
-  align-self: center;
+	border-radius: 40px;
+	align-self: center;
 `;
 
 export const ImgContainer = styled.div`
 	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	z-index: 5;
+	transition: all 0.3s ease-in-out;
+	height: 30%;
+
+	@media screen and (max-width: 834px) {
+		justify-content: center;
+	}
+
+	&:hover {
+		transform: scale(1.02);
+	}
 `;

@@ -12,9 +12,9 @@ const Sidebar = ({ data, isOpen }) => {
 		<SidebarContainer isOpen={isOpen}>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to={"/#services"}>{data.navbar.a1}</SidebarLink>
-					<SidebarLink to={"/#whyus"}>{data.navbar.a2}</SidebarLink>
-					<SidebarLink to={"/resources"}>{data.navbar.a3}</SidebarLink>
+					<SidebarLink smooth to={"/#services"}>{data.navbar.a1}</SidebarLink>
+					<SidebarLink smooth to={"/#whyus"}>{data.navbar.a2}</SidebarLink>
+					<SidebarLink smooth to={"/resources"}>{data.navbar.a3}</SidebarLink>
 					<ContactButtonNew />
 					<LanguageButton />
 				</SidebarMenu>
