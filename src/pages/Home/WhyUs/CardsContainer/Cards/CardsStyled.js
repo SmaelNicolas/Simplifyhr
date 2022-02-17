@@ -20,14 +20,13 @@ export const CardStyled = styled.section`
 	}
 `;
 
-export const ImgContainer = styled.img`
+export const ImgContainer = styled.div`
 	width: 150px;
 	height: 150px;
 	background-image: url(${({ url }) => `${url}`});
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
-	border: 1px solid var(--primaryColor);
 	border-radius: 10px;
 `;
 
