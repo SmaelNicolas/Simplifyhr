@@ -14,6 +14,7 @@ export const CardStyled = styled.div`
 	border-radius: 30px;
 	transition: all 0.1s linear;
 	cursor: default;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
 	&:hover {
 		opacity: 1;
@@ -45,7 +46,7 @@ export const CardTextStyled = styled.div`
 	height: 300px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	align-items: center;
 `;
 
@@ -60,11 +61,13 @@ export const CardTextContainerStyled = styled.div`
 
 export const CardSubTextContainerStyled = styled.div`
 	width: 83%;
+	margin-top: 20px;
 	padding: 10px;
 	border-radius: 15px;
 
 	background-color: var(--primaryColor);
 	color: var(--secondTitleColor);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
 	font-size: 15px;
 	text-align: center;
