@@ -12,7 +12,6 @@ export const ServicesContainer = styled.section`
 	width: 100%;
 	min-height: 100vh;
 	padding: 100px 0px;
-	border: 1px solid black;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
