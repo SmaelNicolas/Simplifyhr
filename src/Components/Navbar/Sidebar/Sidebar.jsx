@@ -1,8 +1,6 @@
 import ContactButtonNew from "../ContactButton/ContactButtonNew";
 import LanguageButton from "../LanguageButton/LanguageButton";
 import {
-	CloseIcon,
-	Icon,
 	SidebarContainer,
 	SidebarLink,
 	SidebarMenu,

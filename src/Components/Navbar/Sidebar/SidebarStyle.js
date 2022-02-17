@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { CloseRounded } from "@mui/icons-material";
 import { NavHashLink } from "react-router-hash-link";
 
 export const SidebarContainer = styled.aside`

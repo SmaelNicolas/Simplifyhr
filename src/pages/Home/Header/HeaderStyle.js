@@ -40,7 +40,7 @@ export const InfoContainer = styled.div`
 	align-items: flex-start;
 	padding: 30px;
 	z-index: 5;
-	//background-color: var(--primaryColor);
+	background-color: rgba(47, 45, 147,0.4);
 	height: 100%;
 `;
 
