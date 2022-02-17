@@ -18,6 +18,7 @@ export const ServicesContainer = styled.section`
 	justify-content: flex-start;
 	align-items: center;
 	background: linear-gradient(116.82deg, #524ef8 0%, #57add9 100%);
+	mix-blend-mode: normal;
 `;
 
 export const TitleContainer = styled.div`
