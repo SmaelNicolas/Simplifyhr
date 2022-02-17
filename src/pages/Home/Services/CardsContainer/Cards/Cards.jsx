@@ -1,12 +1,6 @@
-import {
-	CardTitleStyled,
-	CardStyled,
-	CardTextStyled,
-	CardTextContainerStyled,
-} from "./CardsStyled";
-
 import { useContext, useState } from "react";
 import { LanguageContext } from "../../../../../Context/LanguageContext";
+import Card from "./Card/Card";
 
 function Cards() {
 	const { data } = useContext(LanguageContext);
@@ -16,19 +10,22 @@ function Cards() {
 	function loop() {
 		let arr = [];
 		for (let i = 0; i < ArrayOfCards.length; i++) {
-			arr.push(
-				<CardStyled key={`cardSection${i}`} className='cards'>
-					<CardTitleStyled>
-						{ArrayOfCards[i][1].title}
-					</CardTitleStyled>
-					<CardTextStyled>
-						<CardTextContainerStyled>
-							{ArrayOfCards[i][1].body}
-						</CardTextContainerStyled>
-					</CardTextStyled>
-				</CardStyled>
-			);
+			ArrayOfCards[i][1].subBody !== undefined
+				? arr.push(
+						<Card
+							title={ArrayOfCards[i][1].title}
+							body={ArrayOfCards[i][1].body}
+							subBody={ArrayOfCards[i][1].subBody}
+						/>
+				  )
+				: arr.push(
+						<Card
+							title={ArrayOfCards[i][1].title}
+							body={ArrayOfCards[i][1].body}
+						/>
+				  );
 		}
+
 		return arr;
 	}
 
