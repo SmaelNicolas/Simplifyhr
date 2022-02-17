@@ -13,6 +13,7 @@ function Cards() {
 			ArrayOfCards[i][1].subBody !== undefined
 				? arr.push(
 						<Card
+							key={`cardService${i}`}
 							title={ArrayOfCards[i][1].title}
 							body={ArrayOfCards[i][1].body}
 							subBody={ArrayOfCards[i][1].subBody}
@@ -20,6 +21,7 @@ function Cards() {
 				  )
 				: arr.push(
 						<Card
+							key={`cardService${i}`}
 							title={ArrayOfCards[i][1].title}
 							body={ArrayOfCards[i][1].body}
 						/>
