@@ -7,7 +7,7 @@ export const CardStyled = styled.div`
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 
 	background: #ffffff;
@@ -43,11 +43,13 @@ export const CardTitleStyled = styled.div`
 
 export const CardTextStyled = styled.div`
 	width: 100%;
+	padding-top: 15px;
 	height: 300px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	flex-direction: column;
 `;
 
 export const CardTextContainerStyled = styled.div`
@@ -64,7 +66,6 @@ export const CardSubTextContainerStyled = styled.div`
 	margin-top: 20px;
 	padding: 10px;
 	border-radius: 15px;
-
 	background-color: var(--primaryColor);
 	color: var(--secondTitleColor);
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);

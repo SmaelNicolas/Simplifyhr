@@ -9,4 +9,7 @@ export const CardsContainerStyled = styled.div`
 	justify-content: center;
 	align-items: center;
 	gap: 35px;
+	@media (max-width: 820px) {
+		display: none;
+	}
 `;
