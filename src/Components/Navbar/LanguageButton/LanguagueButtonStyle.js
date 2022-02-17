@@ -29,7 +29,6 @@ export const LanguageDropdown = styled.ul`
 	padding: 7px 0;
 	border-radius: 10px;
 	position: relative;
-	border: 1px solid var(--primaryColor);
 	color: var(--primaryColor);
 	list-style: none;
 	margin-top: 3px;

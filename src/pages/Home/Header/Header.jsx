@@ -1,7 +1,11 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../../Context/LanguageContext";
+import Video from "../../../Assets/video.mp4";
 import {
+  Button,
+	HeaderBg,
 	HeaderContainer,
+	HeaderVideo,
 	ImgContainer,
 	InfoContainer,
 	Subtitle,
@@ -12,10 +16,14 @@ const Header = () => {
 	const { data } = useContext(LanguageContext);
 
 	return (
-		<HeaderContainer id='home'>
+		<HeaderContainer id="home">
+			<HeaderBg>
+				<HeaderVideo autoPlay loop muted src={Video} type="video/mp4" />
+			</HeaderBg>
 			<InfoContainer>
 				<Title>{data.header.title}</Title>
 				<Subtitle>{data.header.subTitle}</Subtitle>
+        <Button to={'/#services'}>{data.header.button}</Button>
 			</InfoContainer>
 			<ImgContainer></ImgContainer>
 		</HeaderContainer>
