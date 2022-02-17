@@ -41,7 +41,7 @@ export const MobileIcon = styled.div`
 	}
 `;
 
-export const NavMenu = styled.li`
+export const NavMenu = styled.ul`
 	display: flex;
 	align-items: center;
 	list-style: none;

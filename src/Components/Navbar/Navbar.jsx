@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
 import Logo from "../Logo/Logo";
-import { MenuRounded } from "@mui/icons-material";
+import { CloseRounded, MenuRounded } from "@mui/icons-material";
 import ContactButtonNew from "./ContactButton/ContactButtonNew";
+import Sidebar from "./Sidebar/Sidebar";
 import {
 	MobileIcon,
 	Nav,
@@ -15,30 +16,42 @@ import LanguageButton from "./LanguageButton/LanguageButton";
 
 function Navbar() {
 	const { data } = useContext(LanguageContext);
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
 
 	return (
-		<Nav>
-			<NavContainer>
-				<Logo />
-				<MobileIcon>
-					<MenuRounded />
-				</MobileIcon>
-				<NavMenu>
-					<NavbarItem>
-						<NavbarLink to={"/#services"}>{data.navbar.a1}</NavbarLink>
-					</NavbarItem>
-					<NavbarItem>
-						<NavbarLink to={"/#whyus"}>{data.navbar.a2}</NavbarLink>
-					</NavbarItem>
-					<NavbarItem>
-						<NavbarLink to={"/resources"}>{data.navbar.a3}</NavbarLink>
-					</NavbarItem>
-					<LanguageButton />
-					<ContactButtonNew />
-				</NavMenu>
-			</NavContainer>
-			{console.log("RENDERIZA NAVBAR")}
-		</Nav>
+		<>
+			<Sidebar isOpen={isOpen} data={data} toggle={toggle} />
+			<Nav>
+				<NavContainer>
+					<Logo />
+					<MobileIcon>
+						{isOpen ? (
+							<CloseRounded onClick={toggle} />
+						) : (
+							<MenuRounded onClick={toggle} />
+						)}
+					</MobileIcon>
+					<NavMenu>
+						<NavbarItem>
+							<NavbarLink to={"/#services"}>{data.navbar.a1}</NavbarLink>
+						</NavbarItem>
+						<NavbarItem>
+							<NavbarLink to={"/#whyus"}>{data.navbar.a2}</NavbarLink>
+						</NavbarItem>
+						<NavbarItem>
+							<NavbarLink to={"/resources"}>{data.navbar.a3}</NavbarLink>
+						</NavbarItem>
+						<LanguageButton />
+						<ContactButtonNew />
+					</NavMenu>
+				</NavContainer>
+				{console.log("RENDERIZA NAVBAR")}
+			</Nav>
+		</>
 	);
 }
 
