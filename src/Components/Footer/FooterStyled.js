@@ -56,4 +56,5 @@ export const Wrapper = styled.div`
 export const FooterLink = styled(Link)`
 	text-decoration: none;
 	color: #fff;
+  font-size: 12px;
 `;
