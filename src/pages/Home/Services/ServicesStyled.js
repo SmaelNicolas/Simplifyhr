@@ -12,12 +12,12 @@ export const ServicesContainer = styled.section`
 	width: 100%;
 	min-height: 100vh;
 	padding: 100px 0px;
-	border: 1px solid black;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	background: linear-gradient(116.82deg, #524ef8 0%, #57add9 100%);
+	mix-blend-mode: normal;
 `;
 
 export const TitleContainer = styled.div`
@@ -58,7 +58,7 @@ export const ButtonStyled = styled.a`
 
 	text-align: center;
 	line-height: 48px;
-	font-size: 25px;
+	font-size: 22px;
 	font-weight: 900;
 	text-transform: uppercase;
 

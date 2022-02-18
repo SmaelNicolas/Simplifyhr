@@ -7,13 +7,14 @@ export const CardStyled = styled.div`
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 
 	background: #ffffff;
 	border-radius: 30px;
 	transition: all 0.1s linear;
 	cursor: default;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
 	&:hover {
 		opacity: 1;
@@ -42,10 +43,13 @@ export const CardTitleStyled = styled.div`
 
 export const CardTextStyled = styled.div`
 	width: 100%;
+	padding-top: 15px;
 	height: 300px;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-start;
 	align-items: center;
+	flex-direction: column;
 `;
 
 export const CardTextContainerStyled = styled.div`
@@ -57,28 +61,17 @@ export const CardTextContainerStyled = styled.div`
 	line-height: 150%;
 `;
 
-export const CardButtonStyled = styled.a`
-	width: 255px;
-	height: 55px;
-
-	font-size: 25px;
-	font-weight: 900;
-
-	text-align: center;
-	line-height: 57px;
-
+export const CardSubTextContainerStyled = styled.div`
+	width: 83%;
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: var(--primaryColor);
 	color: var(--secondTitleColor);
-	background: var(--primaryColor);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
-	border-radius: 20px;
-	text-decoration: none;
-	margin-bottom: 25px;
-
-	transition: all 0.1s linear;
-
-	&:hover {
-		transition: all 0.1s linear;
-		transform: scale(1.05);
-		filter: drop-shadow(0px 4px 4px rgba(0.1, 0.1, 0.1, 1));
-	}
+	font-size: 15px;
+	text-align: center;
+	font-weight: 400;
+	line-height: 17px;
 `;

@@ -1,0 +1,15 @@
+.swiper-pagination-bullet {
+	background-color: white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	color: white;
+}
+
+.swiper-slide,
+.swiper-slide-active {
+	display: flex;
+	justify-content: center;
+	align-items: space-evenly;
+}

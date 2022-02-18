@@ -67,7 +67,7 @@ export const ButtonStyled = styled.a`
 
 	text-align: center;
 	line-height: 48px;
-	font-size: 25px;
+	font-size: 23px;
 	font-weight: 900;
 	text-transform: uppercase;
 

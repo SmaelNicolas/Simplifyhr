@@ -16,7 +16,8 @@
 		"cards": {
 			"card1": {
 				"title": "Essential",
-				"body": "Looking to scale? We will match you with your C-levels for a management team that is aligned with your vision and values. We make it affordable, 5% of their gross yearly salary."
+				"body": "Looking to scale? We will match you with your C-levels for a management team that is aligned with your vision and values.",
+				"subBody": "We make it affordable, 5% of their gross yearly salary."
 			},
 			"card2": {
 				"title": "Express",

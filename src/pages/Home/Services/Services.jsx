@@ -13,6 +13,7 @@ import { LanguageContext } from "../../../Context/LanguageContext";
 import CardsContainer from "./CardsContainer/CardsContainer";
 
 import arrotToTop from "../../../Assets/arrowTop.svg";
+import SwiperServices from "../../../Components/SwiperServices/SwiperServices";
 
 function Services() {
 	const { data } = useContext(LanguageContext);
@@ -24,6 +25,7 @@ function Services() {
 				<TitleStyled>{data.services.subTitle}</TitleStyled>
 			</TitleContainer>
 			<CardsContainer />
+			<SwiperServices />
 			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
 				{data.services.button}
 			</ButtonStyled>
