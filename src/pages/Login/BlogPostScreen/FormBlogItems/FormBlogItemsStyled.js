@@ -68,4 +68,17 @@ export const Submit = styled.button`
 	color: var(--secondTitleColor);
 
 	border-radius: 28px;
+	cursor: pointer;
+
+	transition: all 0.1s linear;
+
+	box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
+	-webkit-box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
+	-moz-box-shadow: 0px 1px 1px 1px rgba(158, 154, 154, 0.77);
+
+	&:hover {
+		transition: all 0.1s linear;
+		transform: scale(1.01);
+		filter: drop-shadow(0px 4px 4px rgba(0.1, 0.1, 0.1, 1));
+	}
 `;
