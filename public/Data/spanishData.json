@@ -51,5 +51,8 @@
     "button": "Shedule a video chat"
   },
   "resources": "",
-  "footer": ""
+  "footer":{
+    "title": "Hi, let's ",
+    "subtitles": ["book a call", "discuss new ideas", "have a coffee", "work together"]
+  }
 }

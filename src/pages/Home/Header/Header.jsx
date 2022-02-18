@@ -26,7 +26,7 @@ const Header = () => {
         
 			</InfoContainer>
 			<ImgContainer>
-      <Button to={'/#services'}>{data.header.button}</Button>
+      <Button href='https://calendly.com/simplifyhr/intro-call'>{data.header.button}</Button>
       </ImgContainer>
 		</HeaderContainer>
 	);

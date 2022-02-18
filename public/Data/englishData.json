@@ -49,7 +49,11 @@
 		"button": "Schedule a video chat"
 	},
 	"resources": "",
-	"footer": "",
+	"footer": {
+    "title": "Hi, let's ",
+    "subtitles": ["book a call", "discuss new ideas", "have a coffee", "work together"]
+
+  },
 	"successMessage": {
 		"createPost": "Post Created!",
 		"sendForm": "Form Submitted!"

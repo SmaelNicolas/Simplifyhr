@@ -58,7 +58,7 @@ export const Subtitle = styled.h3`
 	margin: 30px 0;
 `;
 
-export const Button = styled(HashLink)`
+export const Button = styled.a`
 	font-size: 20px;
 	font-weight: 400;
 	background-color: var(--primaryColor);
@@ -67,6 +67,11 @@ export const Button = styled(HashLink)`
 	padding: 10px 20px;
 	border-radius: 40px;
 	align-self: center;
+  transition: all 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.02);
+	}
 `;
 
 export const ImgContainer = styled.div`
@@ -76,14 +81,9 @@ export const ImgContainer = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 	z-index: 5;
-	transition: all 0.3s ease-in-out;
 	height: 30%;
 
 	@media screen and (max-width: 834px) {
 		justify-content: center;
-	}
-
-	&:hover {
-		transform: scale(1.02);
 	}
 `;
