@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
 import Logo from "../Logo/Logo";
 import { CloseRounded, MenuRounded } from "@mui/icons-material";
@@ -17,9 +17,6 @@ import LanguageButton from "./LanguageButton/LanguageButton";
 function Navbar() {
 	const { data } = useContext(LanguageContext);
 	const [isOpen, setIsOpen] = useState(false);
-
-  const el=useRef();
-  console.log(el);
 
 	const toggle = () => {
 		setIsOpen(!isOpen);
@@ -43,7 +40,6 @@ function Navbar() {
 							<NavbarLink
 								smooth
 								to={`/#whyus`}
-                ref={el}
 							>
 								{data.navbar.a2}
 							</NavbarLink>
