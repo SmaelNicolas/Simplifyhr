@@ -30,6 +30,21 @@ function App() {
 						/>
 						<Route
 							exact
+							path='/cookies'
+							element={<PostView />}
+						/>
+            <Route
+							exact
+							path='/legal-terms'
+							element={<PostView />}
+						/>
+            <Route
+							exact
+							path='/privacy-policy'
+							element={<PostView />}
+						/>
+            <Route
+							exact
 							path='/post/:postId'
 							element={<PostView />}
 						/>

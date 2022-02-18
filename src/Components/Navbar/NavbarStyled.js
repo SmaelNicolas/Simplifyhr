@@ -65,6 +65,7 @@ export const NavbarLink = styled(NavHashLink)`
 	padding: 0 1rem;
 	height: 100%;
 	color: var(--secondTitleColor);
+	background-color: ${({ match }) => match && "yellow"};
 
 	&:active {
 		border: 1px solid #f1f1f1;

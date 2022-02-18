@@ -7,7 +7,8 @@
   },
   "header": {
     "title": "Make your business run smoother",
-    "subTitle": "We match Companies with top talent"
+    "subTitle": "We match Companies with top talent",
+    "button": "Agendar llamada"
   },
   "services": {
     "title": "StartUp is in our DNA",
@@ -50,5 +51,8 @@
     "button": "Shedule a video chat"
   },
   "resources": "",
-  "footer": ""
+  "footer":{
+    "title": "Hi, let's ",
+    "subtitles": ["book a call", "discuss new ideas", "have a coffee", "work together"]
+  }
 }

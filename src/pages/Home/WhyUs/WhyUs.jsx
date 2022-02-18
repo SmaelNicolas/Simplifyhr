@@ -26,7 +26,7 @@ function WhyUs() {
 			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
 				{data.whyUs.button}
 			</ButtonStyled>
-			<ButtonToTop to={`/#home`} url={arrotToTop}></ButtonToTop>
+			<ButtonToTop smooth to={`/#home`} url={arrotToTop}></ButtonToTop>
 		</WhyUsContainer>
 	);
 }

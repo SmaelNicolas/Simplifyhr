@@ -10,7 +10,7 @@ const LanguageButton = () => {
 
 	return (
 		<LanguageWrapper onClick={() => setDropdown(!dropdown)} active={dropdown}>
-			<LanguageTitle>
+			<LanguageTitle >
 				<LanguageOutlined /> {language}
 				{dropdown ? <KeyboardArrowUpRounded /> : <KeyboardArrowDownRounded />}
 			</LanguageTitle>
