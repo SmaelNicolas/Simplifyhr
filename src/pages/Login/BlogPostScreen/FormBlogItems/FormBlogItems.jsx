@@ -9,12 +9,10 @@ import {
 	BodyContainer,
 } from "./FormBlogItemsStyled";
 
-import database from "../../../../Firebase/Firebase";
-import { doc, setDoc } from "firebase/firestore";
-import { v4 as uuidv4 } from "uuid";
 import SuccessMessage from "../../../../Components/SuccessMessage/SuccesMessage";
 import ErrorMessage from "../../../../Components/ErrorMessage/ErrorMessage";
 import { LanguageContext } from "../../../../Context/LanguageContext";
+import checkForm from "../../../../Helpers/checkBlogForm";
 
 function FormBlogItems() {
 	const [title, setTitle] = useState("");
@@ -26,36 +24,6 @@ function FormBlogItems() {
 	const [showSuccess, setShowSucces] = useState(false);
 
 	const { data } = useContext(LanguageContext);
-	console.log(data);
-
-	function generateBlogPost() {
-		const post = {
-			date: new Date().getTime(),
-			stringDate: "" + new Date(),
-			title: title,
-			body: body,
-			author: author,
-			readTime: readTime,
-			imgUrl: imgUrl,
-		};
-
-		setDoc(doc(database, "blogPostsEnglish", uuidv4()), post);
-		setShowSucces(true);
-	}
-
-	function checkForm() {
-		if (
-			title === "" ||
-			body === "" ||
-			imgUrl === "" ||
-			readTime === "" ||
-			author === ""
-		) {
-			setShowError(true);
-		} else {
-			generateBlogPost();
-		}
-	}
 
 	const changeValueSuccessMessage = () => {
 		setShowSucces(!showSuccess);
@@ -63,6 +31,18 @@ function FormBlogItems() {
 
 	const changeValueErrorMessage = () => {
 		setShowError(!showError);
+	};
+
+	const checking = () => {
+		checkForm(
+			title,
+			body,
+			imgUrl,
+			readTime,
+			author,
+			setShowSucces,
+			setShowError
+		);
 	};
 
 	return showSuccess ? (
@@ -138,7 +118,7 @@ function FormBlogItems() {
 				<Submit
 					onClick={(e) => {
 						e.preventDefault();
-						checkForm(e);
+						checking();
 					}}
 					type='submit'
 				>

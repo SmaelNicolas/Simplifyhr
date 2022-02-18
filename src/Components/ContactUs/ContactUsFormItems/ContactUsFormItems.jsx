@@ -12,10 +12,8 @@ import ErrorMessage from "../../ErrorMessage/ErrorMessage";
 
 import { useContext, useState } from "react";
 
-import database from "../../../Firebase/Firebase";
-import { doc, setDoc } from "firebase/firestore";
-import { v4 as uuidv4 } from "uuid";
 import { LanguageContext } from "../../../Context/LanguageContext";
+import checkForm from "../../../Helpers/checkContactForm";
 
 function ContactUsFormItems({ toggleShow }) {
 	const [name, setName] = useState("");
@@ -27,54 +25,6 @@ function ContactUsFormItems({ toggleShow }) {
 
 	const { data } = useContext(LanguageContext);
 
-	function generateMessage() {
-		fetch("https://formsubmit.co/ajax/9a8e0d24cf432f27bd92275ddf47b8dd", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json",
-			},
-			body: JSON.stringify({
-				Name: name,
-				Email: email,
-				Company: company,
-				Message: body,
-			}),
-		})
-			.then((response) => response.json())
-			.then((data) => console.log(data))
-			.catch((error) => console.log(error));
-
-		const message = {
-			date: new Date(),
-			person: {
-				name: name,
-				email: email,
-				company: company,
-			},
-			message: body,
-		};
-		// Add a new document in collection "messages"
-		setDoc(doc(database, "messages", uuidv4()), message);
-		setShowSucces(true);
-	}
-
-	function checkForm() {
-		if (
-			name === "" ||
-			company === "" ||
-			email === "" ||
-			body === "" ||
-			body === undefined ||
-			email.includes("@") === false ||
-			email.includes(".com") === false
-		) {
-			setShowError(true);
-		} else {
-			generateMessage();
-		}
-	}
-
 	const changeValueSuccessMessage = () => {
 		setShowSucces(!showSuccess);
 		toggleShow();
@@ -82,6 +32,10 @@ function ContactUsFormItems({ toggleShow }) {
 
 	const changeValueErrorMessage = () => {
 		setShowError(!showError);
+	};
+
+	const checking = () => {
+		checkForm(name, email, company, body, setShowSucces, setShowError);
 	};
 
 	return showSuccess ? (
@@ -157,7 +111,7 @@ function ContactUsFormItems({ toggleShow }) {
 				<Button
 					onClick={(e) => {
 						e.preventDefault();
-						checkForm();
+						checking();
 					}}
 					type='submit'
 				>

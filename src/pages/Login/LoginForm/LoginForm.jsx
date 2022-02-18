@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from "react";
-import { collection, getDocs } from "firebase/firestore";
 import { Labels, Inputs, Button } from "./LoginFormStyled";
-import database from "../../../Firebase/Firebase";
 import ErrorMessage from "../../../Components/ErrorMessage/ErrorMessage";
 import { LanguageContext } from "../../../Context/LanguageContext";
+import getUsers from "../../../Helpers/getUsers";
+import checkUser from "../../../Helpers/checkUser";
 
 function LoginForm({ valueIsLogged }) {
 	const [userInput, setUserInput] = useState();
@@ -14,25 +14,15 @@ function LoginForm({ valueIsLogged }) {
 	const { data } = useContext(LanguageContext);
 
 	useEffect(() => {
-		getUsers();
+		getUsers(setUsers);
 	}, []);
-
-	function checkUser() {
-		let isUser = users.find(
-			(user) => user.id === userInput && user.password === pwInput
-		);
-		isUser !== undefined ? valueIsLogged(true) : setShowMessage(true);
-	}
-
-	async function getUsers() {
-		const usersCollection = collection(database, "users");
-		const userDocs = await getDocs(usersCollection);
-		const userDocsListed = userDocs.docs.map((doc) => doc.data());
-		setUsers(userDocsListed);
-	}
 
 	const changeValueMessage = () => {
 		setShowMessage(!showMessage);
+	};
+
+	const checking = () => {
+		checkUser(users, userInput, pwInput, valueIsLogged, setShowMessage);
 	};
 
 	return showMessage ? (
@@ -68,7 +58,7 @@ function LoginForm({ valueIsLogged }) {
 			<Button
 				onClick={(e) => {
 					e.preventDefault();
-					checkUser();
+					checking();
 				}}
 				type='submit'
 			>
