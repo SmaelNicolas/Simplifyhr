@@ -38,7 +38,7 @@ export const ContactUsContainer2 = styled.a`
 
 export const FormContainer = styled.form`
 	width: 500px;
-	height: 545px;
+	height: 540px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;

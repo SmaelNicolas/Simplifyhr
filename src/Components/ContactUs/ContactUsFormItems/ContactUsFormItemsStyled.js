@@ -72,8 +72,8 @@ export const Divisor = styled.div`
 `;
 
 export const Button = styled.button`
-	width: 260px;
-	height: 58px;
+	width: 180px;
+	height: 50px;
 	background-color: var(--primaryColor);
 	color: var(--secondTitleColor);
 
