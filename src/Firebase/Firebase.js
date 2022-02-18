@@ -1,7 +1,6 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyAmboJSwnT164svu0OJ-H1VuQufjflRUrk",
@@ -18,11 +17,3 @@ export const database = getFirestore(app);
 // export const analytics = getAnalytics(app);
 
 export default database;
-
-//funcion para probar si recibe los datos
-export async function getUsers() {
-	const usersCollection = collection(database, "users");
-	const userDocs = await getDocs(usersCollection);
-	const userDocsListed = userDocs.docs.map((doc) => doc.data());
-	console.log(userDocsListed);
-}
