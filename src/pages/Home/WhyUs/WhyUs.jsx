@@ -31,7 +31,12 @@ function WhyUs() {
 			>
 				{data.whyUs.button}
 			</ButtonStyled>
-			<ButtonToTop smooth to={`/#home`} url={arrotToTop}></ButtonToTop>
+			<ButtonToTop
+				smooth
+				aria-label='Home Page'
+				to={`/#home`}
+				url={arrotToTop}
+			></ButtonToTop>
 		</WhyUsContainer>
 	);
 }
