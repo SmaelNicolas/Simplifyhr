@@ -10,6 +10,7 @@ import Login from "./pages/Login/Login";
 import Footer from "./Components/Footer/Footer";
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 import PostView from "./pages/Resources/PostView/PostView";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 
 function App() {
 	const { loading } = useContext(LanguageContext);
@@ -28,22 +29,18 @@ function App() {
 							path='/resources'
 							element={<Resources />}
 						/>
+						<Route exact path='/cookies' element={<PostView />} />
 						<Route
-							exact
-							path='/cookies'
-							element={<PostView />}
-						/>
-            <Route
 							exact
 							path='/legal-terms'
 							element={<PostView />}
 						/>
-            <Route
+						<Route
 							exact
 							path='/privacy-policy'
-							element={<PostView />}
+							element={<PrivacyPolicy />}
 						/>
-            <Route
+						<Route
 							exact
 							path='/post/:postId'
 							element={<PostView />}
