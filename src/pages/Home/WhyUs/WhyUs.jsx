@@ -12,6 +12,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../../../Context/LanguageContext";
 
 import arrotToTop from "../../../Assets/arrowTop.svg";
+import { openInNewTab } from "../../../Helpers/openNewTab";
 
 function WhyUs() {
 	const { data } = useContext(LanguageContext);
@@ -23,7 +24,11 @@ function WhyUs() {
 			<CardsContainer>
 				{console.log("RENDER WHY US CONTAINER CARDS")}
 			</CardsContainer>
-			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
+			<ButtonStyled
+				onClick={() =>
+					openInNewTab("https://calendly.com/simplifyhr/intro-call")
+				}
+			>
 				{data.whyUs.button}
 			</ButtonStyled>
 			<ButtonToTop smooth to={`/#home`} url={arrotToTop}></ButtonToTop>

@@ -15,6 +15,8 @@ import CardsContainer from "./CardsContainer/CardsContainer";
 import arrotToTop from "../../../Assets/arrowTop.svg";
 import SwiperServices from "../../../Components/SwiperServices/SwiperServices";
 
+import { openInNewTab } from "../../../Helpers/openNewTab";
+
 function Services() {
 	const { data } = useContext(LanguageContext);
 
@@ -26,7 +28,11 @@ function Services() {
 			</TitleContainer>
 			<CardsContainer />
 			<SwiperServices />
-			<ButtonStyled href='https://calendly.com/simplifyhr/intro-call'>
+			<ButtonStyled
+				onClick={() =>
+					openInNewTab("https://calendly.com/simplifyhr/intro-call")
+				}
+			>
 				{data.services.button}
 			</ButtonStyled>
 			<ButtonToTop smooth to={`/#home`} url={arrotToTop}></ButtonToTop>
