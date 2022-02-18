@@ -10,7 +10,7 @@ const LanguageContextProvider = ({ children }) => {
 	const loadingDelay = () => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 3000);
+		}, 4000);
 	};
 
 	useEffect(() => {
