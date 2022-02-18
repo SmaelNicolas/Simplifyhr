@@ -14,6 +14,10 @@ const Title = styled(NavHashLink)`
 	color: #fff;
 	font-weight: 600;
   font-size: 2rem;
+
+  @media screen and (max-width: 945px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Subtitle = styled.span`
@@ -25,6 +29,9 @@ const Subtitle = styled.span`
   padding:2px 7px;
   margin: 5px 0;
   font-family: var(--dmsansFont);
+  @media screen and (max-width: 945px) {
+    font-size: 0.5rem;
+  }
 `;
 
 const Logo = () => {

@@ -12,7 +12,7 @@ export const FooterContainer = styled.div`
 `;
 
 export const Left = styled.div`
-	flex: 2;
+	flex: 1;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -24,6 +24,11 @@ export const Message = styled.h4`
 	font-size: 2rem;
 	font-weight: 600;
 	overflow: hidden;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 440px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Title = styled.span``;
@@ -35,6 +40,10 @@ export const Email = styled.a`
 	font-size: 20px;
 	text-decoration: none;
 	color: #fff;
+
+  @media screen and (max-width: 834px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Right = styled.div`
@@ -43,7 +52,7 @@ export const Right = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	height: 100%;
 `;
 
