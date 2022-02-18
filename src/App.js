@@ -11,6 +11,7 @@ import Footer from "./Components/Footer/Footer";
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 import PostView from "./pages/Resources/PostView/PostView";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
 
 function App() {
 	const { loading } = useContext(LanguageContext);
@@ -33,7 +34,7 @@ function App() {
 						<Route
 							exact
 							path='/legal-terms'
-							element={<PostView />}
+							element={<TermsOfUse />}
 						/>
 						<Route
 							exact
