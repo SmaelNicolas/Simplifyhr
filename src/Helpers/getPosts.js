@@ -1,6 +1,7 @@
 import { getDocs } from "firebase/firestore";
 
-export const getPosts = (collection) => {
+
+export const getPosts = (collection, setLoading, loading) => {
 	return new Promise((resolve, reject) => {
 		getDocs(collection)
 			.then((res) => {
@@ -11,6 +12,6 @@ export const getPosts = (collection) => {
 			})
 			.catch((err) => {
 				console.log(err);
-			});
+			})
 	});
 };

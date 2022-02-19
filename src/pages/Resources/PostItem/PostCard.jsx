@@ -9,7 +9,7 @@ import {
 	Wrapper,
 } from "./PostCardStyle";
 
-const PostCard = ({ title, img, id, date }) => {
+const PostCard = ({ title, img, id, date, language }) => {
 	const ts = new Date(date);
 
 	return (
@@ -19,8 +19,8 @@ const PostCard = ({ title, img, id, date }) => {
 				<Title>{title.toUpperCase()}</Title>
 			</Info>
 			<Wrapper>
-				<Button to={`post/${id}`}>Ver mas</Button>
-				<Dot src={"./Images/circuloicono.png"} />
+				<Button to={`post/${id}`}>	{language === "English" ? "Show More" : "Ver Más"}</Button>
+				<Dot/>
 				<DateString>{ts.toLocaleDateString()}</DateString>
 			</Wrapper>
 		</CardContainer>

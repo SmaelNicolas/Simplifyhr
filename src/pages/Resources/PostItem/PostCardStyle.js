@@ -1,3 +1,4 @@
+import { FiberManualRecord } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -42,9 +43,12 @@ export const Button = styled(Link)`
 	align-items: center;
 `;
 
-export const Dot = styled.img`
+export const Dot = styled.div`
 	margin: 0 30px;
-	height: 8px;
+	height: 0.5em;
+  width: 0.5em;
+  background-color: #000;
+  border-radius: 50%;
 `;
 
 export const DateString = styled.p``;
