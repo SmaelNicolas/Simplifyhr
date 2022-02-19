@@ -23,3 +23,6 @@ npm i uuid
 material-ui icons
 npm i @mui/material @emotion/react @emotion/styled @mui/icons-material
 
+GSAP
+npm i gsap --save
+
