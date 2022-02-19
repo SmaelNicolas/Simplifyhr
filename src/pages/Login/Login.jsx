@@ -3,10 +3,11 @@ import { TitleStyled, FormStyled, LoginPageStyled } from "./LoginStyled";
 import LoginForm from "./LoginForm/LoginForm";
 import LoginImages from "./LoginImages/LoginImages";
 import Admin from "../Admin/Admin";
-import { LoginContext } from "../../Context/LoginContext";
+import { IsLoggedContext } from "../../Context/isLoggedContext";
 
 function Login() {
-	const { isLogged } = useContext(LoginContext);
+	const { isLogged } = useContext(IsLoggedContext);
+
 	return (
 		<LoginPageStyled>
 			{isLogged ? (
