@@ -3,39 +3,51 @@ import React, { createContext, useState, useEffect } from "react";
 export const IsLoggedContext = createContext();
 
 const IsLoggedContextProvider = ({ children }) => {
-	//si si logeo , crea en LocalStorate  logged = true;
-	const valueIsLogged = (value) => {
-		setIsLogged(value);
-		value && createLS();
+	//si coincide id & pass > true
+	const [isLogged, setIsLogged] = useState();
+
+	// si logea con check Remember Me > true
+	const [allowLS, setAllowLS] = useState(false);
+
+	// cambia el valor cuando clickea el chekbox Remember Me
+	const valueAllowLs = () => {
+		setAllowLS(!allowLS);
 	};
 
-	//busca en LS y si el valor es verdadero no pide login . Si no esta en LS o el valor es falso pide login
+	//si logeo Y tildo Remember Me > llama a crear ls;
+	const valueIsLogged = (value) => {
+		setIsLogged(value);
+		value && allowLS && createLS();
+	};
+
+	//crea logged=true en LS
+	const createLS = () => {
+		localStorage.setItem("logged", JSON.stringify(true));
+	};
+
+	//logged=false en LS y isLogged=false para q muestre la pantalla de login > NUEVO BOTON EN Admin.jsx que llama a esta funcion
+	const logOutLS = () => {
+		localStorage.setItem("logged", JSON.stringify(false));
+		setIsLogged(false);
+		setAllowLS(false);
+	};
+
+	// si el valor es verdadero no pide login . Si no esta en LS o el valor es falso pide login > NUEVO USEEFFECT EN Login.jsx para q renderize cuando hay cambios en isLogged
 	const getValueLS = () => {
 		JSON.parse(localStorage.getItem("logged"))
 			? setIsLogged(true)
 			: setIsLogged(false);
 	};
 
-	//crea logged en LS
-	const createLS = () => {
-		localStorage.setItem("logged", JSON.stringify(true));
-	};
-
-	//pone en falso el valor de LS logged creado en el momento que hizo login.
-	const logOutLS = () => {
-		localStorage.setItem("logged", JSON.stringify(false));
-	};
-
-	const [isLogged, setIsLogged] = useState();
-	console.log(isLogged);
-
-	//toma 1 unica vez el valor del LS
+	//toma una unica vez el valor del LS
 	useEffect(() => {
 		getValueLS();
 	}, []);
 
 	return (
-		<IsLoggedContext.Provider value={{ isLogged, valueIsLogged, logOutLS }}>
+		<IsLoggedContext.Provider
+			value={{ isLogged, valueIsLogged, valueAllowLs, logOutLS }}
+		>
 			{children}
 		</IsLoggedContext.Provider>
 	);
