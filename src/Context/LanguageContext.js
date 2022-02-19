@@ -13,17 +13,19 @@ const LanguageContextProvider = ({ children }) => {
 		}, 4000);
 	};
 
+	window.onload = () => {
+		loadingDelay();
+	};
+
 	useEffect(() => {
 		if (language === "English") {
 			fetch("Data/englishData.json")
 				.then((res) => res.json())
-				.then((data) => setData(data))
-				.then(loadingDelay);
+				.then((data) => setData(data));
 		} else {
 			fetch("Data/spanishData.json")
 				.then((res) => res.json())
-				.then((data) => setData(data))
-				.then(loadingDelay);
+				.then((data) => setData(data));
 		}
 	}, [language]);
 

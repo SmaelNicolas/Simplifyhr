@@ -1,25 +1,35 @@
+import { FiberManualRecord } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-	height: 461px;
-	width: 340px;
+	height: auto;
+	width: 300px;
 	display: flex;
 	flex-direction: column;
+  box-shadow: 0px 4px 8px rgba(150, 150, 150, 0.24);
+  border-radius: 10px;
+  margin: 30px 0;
 `;
 export const Image = styled.img`
-	width: 340px;
-	height: 336px;
-	border-radius: 20px;
+	width: 300px;
+	height: 300px;
+	border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 `;
 export const Info = styled.div`
-	margin: 20px 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
 `;
 export const Title = styled.p`
-	font-family: "Roboto", sans-serif;
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 16px;
 	letter-spacing: 0.5px;
+  overflow: hidden;
+  margin-bottom: 10px;
 `;
 
 export const Wrapper = styled.div`
@@ -29,22 +39,33 @@ export const Wrapper = styled.div`
 	align-items: center;
 `;
 export const Button = styled(Link)`
-	width: 108px;
-	height: 34px;
 	border-radius: 20px;
-	background-color: #a3a3a3;
+	background-color: var(--secondColor);
 	border: none;
 	cursor: pointer;
 	text-decoration: none;
-	color: #000;
+	color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  font-size:12px;
+  font-weight:600;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    transform: scale(1.03);
+  }
 `;
 
-export const Dot = styled.img`
+export const Dot = styled.div`
 	margin: 0 30px;
-	height: 8px;
+	height: 0.5em;
+  width: 0.5em;
+  background-color: #000;
+  border-radius: 50%;
 `;
 
-export const DateString = styled.p``;
+export const DateString = styled.p`
+  font-size:12px;
+`;

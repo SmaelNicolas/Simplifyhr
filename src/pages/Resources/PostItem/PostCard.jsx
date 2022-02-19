@@ -17,12 +17,14 @@ const PostCard = ({ title, img, id, date }) => {
 			<Image src={img} />
 			<Info>
 				<Title>{title.toUpperCase()}</Title>
+				<Wrapper>
+					<Button to={`post/${id}`}>
+						Read More
+					</Button>
+					<Dot />
+					<DateString>{ts.toLocaleDateString()}</DateString>
+				</Wrapper>
 			</Info>
-			<Wrapper>
-				<Button to={`post/${id}`}>Ver mas</Button>
-				<Dot src={"./Images/circuloicono.png"} />
-				<DateString>{ts.toLocaleDateString()}</DateString>
-			</Wrapper>
 		</CardContainer>
 	);
 };

@@ -5,23 +5,23 @@ import { collection } from "firebase/firestore";
 import { Arrow, Button, Container, Wrapper } from "./PostsContainerStyle";
 import { getPosts } from "../../../Helpers/getPosts";
 import PostCard from "../PostItem/PostCard";
+import LoadingScreen from "../../../Components/LoadingScreen/LoadingScreen";
+import { ArrowDownwardRounded } from "@mui/icons-material";
 
 const PostsContainer = () => {
 	const [posts, setPosts] = useState([]);
 	const [postsOnWindow, setPostsOnWindow] = useState(3);
-	const { language } = useContext(LanguageContext);
-	const postsLanguage =
-		language === "en" ? "blogPostsEnglish" : "blogPostsSpanish";
+	const { language, setLoading, loading } = useContext(LanguageContext);
 
-	const postsCollection = collection(database, postsLanguage);
+	const postsCollection = collection(database, "blogPostsEnglish");
 
 	useEffect(() => {
-		getPosts(postsCollection).then((resultado) => {
+		getPosts(postsCollection, setLoading, loading).then((resultado) => {
 			const res = resultado;
 			setPosts(res);
 		});
 		return () => {};
-	}, [language]);
+	}, []);
 
 	const slice = posts.slice(0, postsOnWindow);
 
@@ -30,26 +30,35 @@ const PostsContainer = () => {
 	};
 
 	return (
-		<Container>
-			<Wrapper>
-				{slice.map((el) => {
-					return (
-						<PostCard
-							key={el.id}
-							title={el.title}
-							img={el.imgUrl}
-							body={el.body}
-							date={el.date}
-							id={el.id}
-						/>
-					);
-				})}
-			</Wrapper>
-			<Button onClick={showMore}>
-				<Arrow src={"./Images/flechaIcono.png"} />
-				{language === "en" ? "Show More" : "Ver Más"}
-			</Button>
-		</Container>
+		<>
+			{slice.length < 1 ? (
+				<LoadingScreen />
+			) : (
+				<Container>
+					<Wrapper>
+						{slice.map((el) => {
+							return (
+								<PostCard
+									key={el.id}
+									title={el.title}
+									img={el.imgUrl}
+									body={el.body}
+									date={el.date}
+									id={el.id}
+									language={language}
+								/>
+							);
+						})}
+					</Wrapper>
+					{slice.length !== posts.length && (
+						<Button onClick={showMore}>
+							<Arrow/>
+							{language === "English" ? "Show More" : "Ver Más"}
+						</Button>
+					)}
+				</Container>
+			)}
+		</>
 	);
 };
 
