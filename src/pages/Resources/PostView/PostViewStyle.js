@@ -39,26 +39,28 @@ export const Info = styled.div`
 	width: 80%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: space-around;
+	align-items: flex-start;
 	min-height: 20vh;
 `;
 
 export const Title = styled.h1`
   display: inline-block;
-  width: 100%;
-  text-align: center;
+  text-align: left;
 `;
 
 export const Wrapper = styled.div`
-	width: 50%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 `;
 
 export const Author = styled.h2`
 	font-weight: 400;
 	font-size: 18px;
+
+  @media screen and (min-width: 768px){
+    font-size: 10px;
+  }
 `;
 
 export const VerticalLine = styled.div`
@@ -66,11 +68,15 @@ export const VerticalLine = styled.div`
 	height: 24px;
 	width: 2px;
 	border-radius: 1px;
+  margin: 0 20px;
 `;
 
 export const ReadTime = styled.p`
 	font-weight: 400;
 	font-size: 18px;
+  @media screen and (min-width: 768px){
+    font-size: 10px;
+  }
 `;
 
 export const Image = styled.img`
