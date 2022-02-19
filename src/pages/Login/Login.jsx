@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { TitleStyled, FormStyled, LoginPageStyled } from "./LoginStyled";
 import LoginForm from "./LoginForm/LoginForm";
 import LoginImages from "./LoginImages/LoginImages";
@@ -8,6 +8,8 @@ import { IsLoggedContext } from "../../Context/isLoggedContext";
 function Login() {
 	const { isLogged } = useContext(IsLoggedContext);
 
+	useEffect(() => {}, [isLogged]);
+
 	return (
 		<LoginPageStyled>
 			{isLogged ? (
@@ -16,7 +18,7 @@ function Login() {
 				<>
 					<LoginImages />
 					<TitleStyled>Login</TitleStyled>
-					<FormStyled method="post">
+					<FormStyled method='post'>
 						<LoginForm />
 					</FormStyled>
 				</>
