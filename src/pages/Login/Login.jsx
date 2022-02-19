@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { TitleStyled, FormStyled, LoginPageStyled } from "./LoginStyled";
 import LoginForm from "./LoginForm/LoginForm";
-import BlogPostScreen from "./BlogPostScreen/BlogPostScreen";
 import LoginImages from "./LoginImages/LoginImages";
 import Admin from "../Admin/Admin";
+import { IsLoggedContext } from "../../Context/isLoggedContext";
 
 function Login() {
-	const [isLogged, setIsLogged] = useState(false);
+	const { isLogged, setIsLogged } = useContext(IsLoggedContext);
 
 	const valueIsLogged = (value) => {
 		setIsLogged(value);
