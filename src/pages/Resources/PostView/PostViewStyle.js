@@ -45,11 +45,11 @@ export const Info = styled.div`
 `;
 
 export const Title = styled.h1`
-  display: inline-block;
-  text-align: left;
+margin-bottom: 20px;
 `;
 
 export const Wrapper = styled.div`
+	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 `;
@@ -58,8 +58,8 @@ export const Author = styled.h2`
 	font-weight: 400;
 	font-size: 18px;
 
-  @media screen and (min-width: 768px){
-    font-size: 10px;
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
   }
 `;
 
@@ -68,14 +68,18 @@ export const VerticalLine = styled.div`
 	height: 24px;
 	width: 2px;
 	border-radius: 1px;
-  margin: 0 20px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 `;
 
 export const ReadTime = styled.p`
 	font-weight: 400;
 	font-size: 18px;
-  @media screen and (min-width: 768px){
-    font-size: 10px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
   }
 `;
 

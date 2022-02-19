@@ -4,12 +4,17 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
 	height: auto;
+  max-height: 500px;
 	width: 300px;
 	display: flex;
 	flex-direction: column;
   box-shadow: 0px 4px 8px rgba(150, 150, 150, 0.24);
   border-radius: 10px;
-  margin: 30px 0;
+  margin: 30px;
+
+  @media screen and (max-width: 769px) {
+    margin: 30px 0;
+  }
 `;
 export const Image = styled.img`
 	width: 300px;
