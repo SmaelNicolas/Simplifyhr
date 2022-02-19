@@ -1,5 +1,11 @@
 import { useState, useEffect, useContext } from "react";
-import { Labels, Inputs, Button } from "./LoginFormStyled";
+import {
+	Labels,
+	Inputs,
+	Button,
+	RememberMe,
+	InputCheckbox,
+} from "./LoginFormStyled";
 import ErrorMessage from "../../../Components/ErrorMessage/ErrorMessage";
 import { LanguageContext } from "../../../Context/LanguageContext";
 import getUsers from "../../../Helpers/getUsers";
@@ -13,7 +19,7 @@ function LoginForm() {
 	const [showMessage, setShowMessage] = useState(false);
 
 	const { data } = useContext(LanguageContext);
-  const {valueIsLogged} = useContext(IsLoggedContext);
+	const { valueIsLogged, valueAllowLs } = useContext(IsLoggedContext);
 
 	useEffect(() => {
 		getUsers(setUsers);
@@ -56,6 +62,15 @@ function LoginForm() {
 				required
 				onChange={(e) => setPwInput(e.target.value)}
 			/>
+			<RememberMe>
+				<InputCheckbox
+					name='rememberMe'
+					placeholder='Remember Me'
+					type='checkbox'
+					onClick={valueAllowLs}
+				/>
+				<Labels htmlFor='rememberMe'>Remember Me </Labels>
+			</RememberMe>
 
 			<Button
 				onClick={(e) => {

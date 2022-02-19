@@ -17,6 +17,20 @@ export const Inputs = styled.input`
 	font-size: 20px;
 `;
 
+export const InputCheckbox = styled.input`
+	width: 20px;
+	height: 20px;
+	border-radius: 50pxpx;
+`;
+
+export const RememberMe = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+`;
+
 export const Button = styled.button`
 	width: 250px;
 	height: 58px;
