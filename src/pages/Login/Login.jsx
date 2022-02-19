@@ -1,17 +1,12 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { TitleStyled, FormStyled, LoginPageStyled } from "./LoginStyled";
 import LoginForm from "./LoginForm/LoginForm";
-import BlogPostScreen from "./BlogPostScreen/BlogPostScreen";
 import LoginImages from "./LoginImages/LoginImages";
 import Admin from "../Admin/Admin";
+import { LoginContext } from "../../Context/LoginContext";
 
 function Login() {
-	const [isLogged, setIsLogged] = useState(false);
-
-	const valueIsLogged = (value) => {
-		setIsLogged(value);
-	};
-
+	const { isLogged } = useContext(LoginContext);
 	return (
 		<LoginPageStyled>
 			{isLogged ? (
@@ -20,8 +15,8 @@ function Login() {
 				<>
 					<LoginImages />
 					<TitleStyled>Login</TitleStyled>
-					<FormStyled method='post'>
-						<LoginForm valueIsLogged={valueIsLogged} />
+					<FormStyled method="post">
+						<LoginForm />
 					</FormStyled>
 				</>
 			)}

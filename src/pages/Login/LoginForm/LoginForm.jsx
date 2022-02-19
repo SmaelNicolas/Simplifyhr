@@ -4,14 +4,16 @@ import ErrorMessage from "../../../Components/ErrorMessage/ErrorMessage";
 import { LanguageContext } from "../../../Context/LanguageContext";
 import getUsers from "../../../Helpers/getUsers";
 import checkUser from "../../../Helpers/checkUser";
+import { LoginContext } from "../../../Context/LoginContext";
 
-function LoginForm({ valueIsLogged }) {
+function LoginForm() {
 	const [userInput, setUserInput] = useState();
 	const [pwInput, setPwInput] = useState();
 	const [users, setUsers] = useState();
 	const [showMessage, setShowMessage] = useState(false);
 
 	const { data } = useContext(LanguageContext);
+  const {valueIsLogged} = useContext(LoginContext);
 
 	useEffect(() => {
 		getUsers(setUsers);

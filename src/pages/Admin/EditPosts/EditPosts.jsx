@@ -1,6 +1,7 @@
 import { DeleteOutlineOutlined } from "@mui/icons-material";
 import { collection, deleteDoc, doc } from "firebase/firestore";
 import React, { useContext, useEffect, useState } from "react";
+import { FirestoreDocsContext } from "../../../Context/FirestoreDocsContext";
 import { LanguageContext } from "../../../Context/LanguageContext";
 import database from "../../../Firebase/Firebase";
 import { getPosts } from "../../../Helpers/getPosts";
@@ -15,28 +16,8 @@ import {
 } from "./EditPostsStyles";
 
 const EditPosts = () => {
-	const [posts, setPosts] = useState([]);
-	const { setLoading, loading } = useContext(LanguageContext);
-
-	const postsCollection = collection(database, "blogPostsEnglish");
-
-	const deletePosts = async (id) => {
-		await deleteDoc(doc(database, "blogPostsEnglish", id));
-		refreshPosts();
-	};
-
-	const refreshPosts = () => {
-		getPosts(postsCollection, setLoading, loading).then((resultado) => {
-			const res = resultado;
-			setPosts(res);
-		});
-	};
-
-	useEffect(() => {
-		refreshPosts();
-		return () => {};
-	}, []);
-
+	const {posts, deletePosts} = useContext(FirestoreDocsContext);
+  console.log(posts);
 
 	return (
 		<Container>
