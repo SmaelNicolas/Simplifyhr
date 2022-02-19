@@ -31,13 +31,15 @@ const Messages = () => {
 		<Container>
 			{messages.map((m) => {
 				return (
-					<Row>
+					<Row key={m.id}>
 						<Date>{`Fecha: ${m.date.slice(0, 21)}`}</Date>
 						<Name>{`Nombre: ${m.person.name}`}</Name>
 						<Company>{`Compañia: ${m.person.company}`}</Company>
 						<Email>{`Email: ${m.person.email}`}</Email>
 						<Body>{`Mensaje: ${m.message}`}</Body>
-						<Button href={`mailto: ${m.person.email}`}>Responder</Button>
+						<Button href={`mailto: ${m.person.email}`}>
+							Responder
+						</Button>
 					</Row>
 				);
 			})}

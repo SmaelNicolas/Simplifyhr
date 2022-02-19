@@ -16,18 +16,19 @@ import {
 } from "./EditPostsStyles";
 
 const EditPosts = () => {
-	const {posts, deletePosts} = useContext(FirestoreDocsContext);
-  console.log(posts);
+	const { posts, deletePosts } = useContext(FirestoreDocsContext);
 
 	return (
 		<Container>
 			{posts.map((p) => {
 				return (
-					<Row>
+					<Row key={p.id}>
 						<Image src={p.imgUrl} />
 						<Title>{p.title}</Title>
 						<Wrapper>
-							<ViewButton to={`/post/${p.id}`}>Ver post</ViewButton>
+							<ViewButton to={`/post/${p.id}`}>
+								Ver post
+							</ViewButton>
 							<DeleteButton
 								onClick={() => {
 									deletePosts(p.id);
