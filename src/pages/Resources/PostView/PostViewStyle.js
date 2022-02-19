@@ -44,7 +44,11 @@ export const Info = styled.div`
 	min-height: 20vh;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+`;
 
 export const Wrapper = styled.div`
 	width: 50%;
