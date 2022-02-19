@@ -18,7 +18,7 @@ function generateMessage(name, email, company, body, setShowSucces) {
 	}).then((response) => response.json());
 
 	const message = {
-		date: new Date(),
+		date: "" + new Date(),
 		person: {
 			name: name,
 			email: email,
