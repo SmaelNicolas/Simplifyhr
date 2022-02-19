@@ -44,10 +44,12 @@ export const Info = styled.div`
 	min-height: 20vh;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+margin-bottom: 20px;
+`;
 
 export const Wrapper = styled.div`
-	width: 50%;
+	width: 100%;
 	display: flex;
 	justify-content: space-around;
 `;
@@ -55,6 +57,10 @@ export const Wrapper = styled.div`
 export const Author = styled.h2`
 	font-weight: 400;
 	font-size: 18px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 `;
 
 export const VerticalLine = styled.div`
@@ -62,11 +68,19 @@ export const VerticalLine = styled.div`
 	height: 24px;
 	width: 2px;
 	border-radius: 1px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 `;
 
 export const ReadTime = styled.p`
 	font-weight: 400;
 	font-size: 18px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 `;
 
 export const Image = styled.img`

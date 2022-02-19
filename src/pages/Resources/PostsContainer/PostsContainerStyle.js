@@ -7,15 +7,24 @@ export const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding: 30px;
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
 export const Wrapper = styled.div`
-	width: 90%;
+	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: auto;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Button = styled.button`
