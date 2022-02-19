@@ -23,6 +23,3 @@ npm i uuid
 material-ui icons
 npm i @mui/material @emotion/react @emotion/styled @mui/icons-material
 
-react-scroll
-https://www.npmjs.com/package/react-scroll
-npm install react-scroll
