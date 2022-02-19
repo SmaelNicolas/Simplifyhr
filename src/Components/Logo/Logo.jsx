@@ -1,4 +1,4 @@
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
@@ -9,29 +9,29 @@ const LogoContainer = styled.div`
 	cursor: pointer;
 `;
 
-const Title = styled(NavHashLink)`
+const Title = styled(HashLink)`
 	text-decoration: none;
 	color: #fff;
 	font-weight: 600;
-  font-size: 2rem;
+	font-size: 2rem;
 
-  @media screen and (max-width: 945px) {
-    font-size: 1.2rem;
-  }
+	@media screen and (max-width: 945px) {
+		font-size: 1.2rem;
+	}
 `;
 
 const Subtitle = styled.span`
 	text-decoration: none;
 	color: #fff;
 	font-weight: 200;
-  font-size: 0.8rem;
-  border: 1px solid #fff;
-  padding:2px 7px;
-  margin: 5px 0;
-  font-family: var(--dmsansFont);
-  @media screen and (max-width: 945px) {
-    font-size: 0.5rem;
-  }
+	font-size: 0.8rem;
+	border: 1px solid #fff;
+	padding: 2px 7px;
+	margin: 5px 0;
+	font-family: var(--dmsansFont);
+	@media screen and (max-width: 945px) {
+		font-size: 0.5rem;
+	}
 `;
 
 const Logo = () => {

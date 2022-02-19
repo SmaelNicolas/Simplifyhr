@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import { keyframes } from "styled-components";
 
 const moveUpDown = keyframes`
@@ -88,7 +88,7 @@ export const ButtonStyled = styled.a`
 	}
 `;
 
-export const ButtonToTop = styled(NavHashLink)`
+export const ButtonToTop = styled(HashLink)`
 	width: 50px;
 	height: 50px;
 	background-image: url(${({ url }) => `${url}`});

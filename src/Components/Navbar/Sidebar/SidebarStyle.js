@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 
 export const SidebarContainer = styled.aside`
 	position: fixed;
@@ -29,7 +29,7 @@ export const SidebarMenu = styled.div`
 	height: 100%;
 `;
 
-export const SidebarLink = styled(NavHashLink)`
+export const SidebarLink = styled(HashLink)`
 	display: flex;
 	align-items: center;
 	justify-content: center;

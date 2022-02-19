@@ -1,4 +1,4 @@
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
@@ -57,7 +57,7 @@ export const NavbarItem = styled.li`
 	height: 50px;
 `;
 
-export const NavbarLink = styled(NavHashLink)`
+export const NavbarLink = styled(HashLink)`
 	cursor: pointer;
 	text-decoration: none;
 	display: flex;
