@@ -1,3 +1,4 @@
+import { ArrowBackIosNewRounded } from "@mui/icons-material";
 import { collection } from "firebase/firestore";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -36,7 +37,7 @@ const PostView = () => {
 	return (
 		<Container>
 			<ReturnContainer>
-				<ReturnButton to={"/resources"}>
+				<ReturnButton to={"/resources"}> <ArrowBackIosNewRounded/>
 					{language === "English" ? "Return to the blog" : "Regresar al blog"}
 				</ReturnButton>
 			</ReturnContainer>
@@ -44,9 +45,9 @@ const PostView = () => {
 				<Info>
 					<Title>{post.title}</Title>
 					<Wrapper>
-						<Author>{post.author}</Author>
+						<Author>{`Author: ${post.author}`}</Author>
 						<VerticalLine />
-						<ReadTime>{`${post.readTime} min`}</ReadTime>
+						<ReadTime>{`Read time: ${post.readTime} min`}</ReadTime>
 					</Wrapper>
 				</Info>
 				<Image src={post.imgUrl} />
