@@ -67,11 +67,12 @@ export const Button = styled.a`
 	padding: 10px 20px;
 	border-radius: 40px;
 	align-self: center;
-  transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 
 	&:hover {
 		transform: scale(1.02);
 	}
+	font-family: var(--montserratFont);
 `;
 
 export const ImgContainer = styled.div`

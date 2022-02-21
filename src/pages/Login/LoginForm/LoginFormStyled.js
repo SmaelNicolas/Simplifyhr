@@ -54,4 +54,5 @@ export const Button = styled.button`
 		transform: scale(1.02);
 		filter: drop-shadow(0px 4px 4px rgba(0.1, 0.1, 0.1, 1));
 	}
+	font-family: var(--montserratFont);
 `;

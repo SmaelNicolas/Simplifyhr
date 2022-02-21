@@ -23,6 +23,7 @@ export const ContactButton = styled.a`
 	&:active {
 		transform: scale(0.95);
 	}
+	font-family: var(--montserratFont);
 `;
 
 function ContactButtonNew() {

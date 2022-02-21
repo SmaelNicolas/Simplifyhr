@@ -95,6 +95,7 @@ export const ButtonStyled = styled.a`
 		width: 300px;
 		font-size: 15px;
 	}
+	font-family: var(--montserratFont);
 `;
 
 export const ButtonToTop = styled(HashLink)`

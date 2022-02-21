@@ -50,4 +50,5 @@ export const SuccesButton = styled.div`
 		color: var(--secondTitleColor);
 		background-position: left;
 	}
+	font-family: var(--montserratFont);
 `;

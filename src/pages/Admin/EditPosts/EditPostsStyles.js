@@ -35,10 +35,10 @@ export const Title = styled.p`
 		font-size: 12px;
 	}
 
-  @media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1024px) {
 		font-size: 14px;
-    width: 50%;
-	}  
+		width: 50%;
+	}
 `;
 
 export const Wrapper = styled.div`
@@ -46,7 +46,6 @@ export const Wrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin: 10px;
-
 `;
 
 export const ViewButton = styled(Link)`
@@ -61,6 +60,7 @@ export const ViewButton = styled(Link)`
 	justify-content: center;
 	align-items: center;
 	font-size: 12px;
+	font-family: var(--montserratFont);
 `;
 
 export const DeleteButton = styled.button`

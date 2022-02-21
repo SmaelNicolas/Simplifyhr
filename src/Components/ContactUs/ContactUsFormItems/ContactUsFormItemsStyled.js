@@ -97,6 +97,7 @@ export const Button = styled.button`
 		transform: scale(1.05);
 		filter: drop-shadow(0px 4px 4px rgba(0.1, 0.1, 0.1, 1));
 	}
+	font-family: var(--montserratFont);
 `;
 
 export const ButtonCancel = styled(Button)`
@@ -104,4 +105,5 @@ export const ButtonCancel = styled(Button)`
 	color: var(--primaryColor);
 	background-color: var(--secondTitleColor);
 	z-index: 40;
+	font-family: var(--montserratFont);
 `;
