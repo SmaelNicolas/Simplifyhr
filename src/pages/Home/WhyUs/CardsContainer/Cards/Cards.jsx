@@ -18,7 +18,6 @@ function Cards() {
 
 	return (
 		<>
-			{console.log("RENDER WHY US CARDS")}
 			<CardStyled alignSelf='center' margin='0px 0px 0px 150px'>
 				<ImgContainer url={svg1} />
 				<TextContainer>

@@ -37,10 +37,7 @@ function Navbar() {
 					</MobileIcon>
 					<NavMenu>
 						<NavbarItem>
-							<NavbarLink
-								smooth
-								to={`/#whyus`}
-							>
+							<NavbarLink smooth to={`/#whyus`}>
 								{data.navbar.a2}
 							</NavbarLink>
 						</NavbarItem>
@@ -58,7 +55,6 @@ function Navbar() {
 						<ContactButtonNew />
 					</NavMenu>
 				</NavContainer>
-				{console.log("RENDERIZA NAVBAR")}
 			</Nav>
 		</>
 	);

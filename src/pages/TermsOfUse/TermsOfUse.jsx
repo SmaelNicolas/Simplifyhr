@@ -11,7 +11,6 @@ import {
 
 function TermsOfUse() {
 	const { data } = useContext(LanguageContext);
-	console.log(data);
 
 	return (
 		<PPContainer>

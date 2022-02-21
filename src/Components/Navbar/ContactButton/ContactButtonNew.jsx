@@ -36,11 +36,7 @@ function ContactButtonNew() {
 
 	return (
 		<>
-			<ContactButton onClick={toggleShow}>
-				{console.log("RENDERIZA CONTACT US")}
-
-				{data.navbar.a4}
-			</ContactButton>
+			<ContactButton onClick={toggleShow}>{data.navbar.a4}</ContactButton>
 			{showContactUs && <ContactUs opacity={1} toggleShow={toggleShow} />}
 		</>
 	);

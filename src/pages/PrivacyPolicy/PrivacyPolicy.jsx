@@ -17,7 +17,6 @@ import { openInNewTab } from "../../Helpers/openNewTab";
 
 function PrivacyPolicy() {
 	const { data } = useContext(LanguageContext);
-	console.log(data);
 
 	return (
 		<PPContainer>

@@ -21,9 +21,7 @@ function WhyUs() {
 		<WhyUsContainer id='whyus'>
 			<TitleStyled>{data.whyUs.title}</TitleStyled>
 			<SubtitleStyled>{data.whyUs.subTitle}</SubtitleStyled>
-			<CardsContainer>
-				{console.log("RENDER WHY US CONTAINER CARDS")}
-			</CardsContainer>
+			<CardsContainer></CardsContainer>
 			<ButtonStyled
 				onClick={() =>
 					openInNewTab("https://calendly.com/simplifyhr/intro-call")
