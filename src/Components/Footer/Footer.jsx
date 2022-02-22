@@ -13,16 +13,9 @@ import {
 } from "./FooterStyled";
 import TypingText from "./TypingText/TypingText";
 import Logo from "../../Components/Logo/Logo";
+import { EmailOutlined } from "@mui/icons-material";
 
 function Footer() {
-	// function Mailto({ email, subject, body, ...props }) {
-	// 	return (
-	// 		<a href={`mailto:${email}?subject=${subject || ""}&body=${body || ""}`}>
-	// 			{props.children}
-	// 		</a>
-	// 	);
-	// }
-
 	const { data } = useContext(LanguageContext);
 
 	return (
@@ -34,7 +27,7 @@ function Footer() {
 					<Cursor id="footerCursor">_</Cursor>
 				</Message>
 				<Email href={"mailto: hello@hr-simplify.com"}>
-					hello@hr-simplify.com
+					<EmailOutlined style={{ marginRight: 5 }}/> hello@hr-simplify.com
 				</Email>
 			</Left>
 			<Right>

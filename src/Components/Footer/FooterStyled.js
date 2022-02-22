@@ -40,6 +40,8 @@ export const Email = styled.a`
 	font-size: 20px;
 	text-decoration: none;
 	color: #fff;
+  display: flex;
+  align-items: center;
 
   @media screen and (max-width: 834px) {
     font-size: 1rem;

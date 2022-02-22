@@ -19,18 +19,28 @@ export const Menu = styled.div`
 
 	@media screen and (max-width: 800px) {
 		width: 100%;
+    flex-direction: row;
+    position: sticky;
+    top: 80px;
 	}
 `;
 
 export const MenuLink = styled.span`
+  width: max-content;
 	height: 30px;
-	padding: 30px;
+	padding: 30px 0 30px 30px;
 	color: #fff;
 	text-transform: uppercase;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	align-items: center;
 	cursor: pointer;
+  gap: 30px;
+
+  @media screen and (max-width: 1050px){
+    gap: 15px;
+    padding-left: 15px;
+  }
 `;
 
 export const MainContainer = styled.div`

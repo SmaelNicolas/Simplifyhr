@@ -16,6 +16,7 @@ export const Row = styled.div`
 	border-radius: 10px;
 	padding: 10px;
 	font-size: 14px;
+
 `;
 
 export const Date = styled.div`
