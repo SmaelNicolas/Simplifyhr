@@ -3,6 +3,7 @@ import {
 	EmailOutlined,
 	FileUploadOutlined,
 } from "@mui/icons-material";
+import LogoutIcon from "@mui/icons-material/Logout";
 import React, { useContext, useState } from "react";
 import { IsLoggedContext } from "../../Context/isLoggedContext";
 import BlogPostScreen from "../Login/BlogPostScreen/BlogPostScreen";
@@ -38,7 +39,7 @@ const Admin = () => {
 					<EmailOutlined /> Mensajes
 				</MenuLink>
 				<MenuLink onClick={logOutLS}>
-					<EmailOutlined /> Log Out
+					<LogoutIcon /> Log Out
 				</MenuLink>
 			</Menu>
 			<MainContainer>
