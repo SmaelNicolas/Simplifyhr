@@ -22,7 +22,7 @@ const Header = () => {
 					autoPlay
 					loop
 					muted
-					src={`${process.env.PUBLIC_URL}${Video}`}
+					src={`${process.env.PUBLIC_URL}/Assets/video.mp4`}
 					type="video/mp4"
 				/>
 			</HeaderBg>
