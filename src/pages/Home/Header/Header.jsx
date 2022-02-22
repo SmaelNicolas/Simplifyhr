@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../../Context/LanguageContext";
-import Video from "../../../Assets/video.mp4";
 import {
 	Button,
 	HeaderBg,
