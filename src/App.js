@@ -13,6 +13,7 @@ import PostView from "./pages/Resources/PostView/PostView";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
 import Cookies from "./pages/Cookies/Cookies";
+import ScrollToTop from "./Helpers/scrollToTop";
 
 function App() {
 	const { loading } = useContext(LanguageContext);
@@ -22,6 +23,7 @@ function App() {
 				<LoadingScreen />
 			) : (
 				<BrowserRouter>
+					<ScrollToTop />
 					<Navbar />
 					<Routes>
 						<Route exact path='/' element={<Home />} />
@@ -42,11 +44,7 @@ function App() {
 							path='/privacy-policy'
 							element={<PrivacyPolicy />}
 						/>
-						<Route
-							exact
-							path='/:postId'
-							element={<PostView />}
-						/>
+						<Route exact path='/:postId' element={<PostView />} />
 					</Routes>
 					<Footer />
 				</BrowserRouter>
