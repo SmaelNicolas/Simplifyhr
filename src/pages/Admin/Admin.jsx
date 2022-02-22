@@ -2,6 +2,7 @@ import {
 	BookmarkBorderOutlined,
 	EmailOutlined,
 	FileUploadOutlined,
+	Logout,
 } from "@mui/icons-material";
 import LogoutIcon from "@mui/icons-material/Logout";
 import React, { useContext, useState } from "react";
@@ -39,7 +40,7 @@ const Admin = () => {
 					<EmailOutlined /> Mensajes
 				</MenuLink>
 				<MenuLink onClick={logOutLS}>
-					<LogoutIcon /> Log Out
+					<Logout /> Log Out
 				</MenuLink>
 			</Menu>
 			<MainContainer>

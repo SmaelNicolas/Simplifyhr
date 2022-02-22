@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
         --montserratFont : "Montserrat", sans-serif;
         --robotoFont : 'Roboto', sans-serif;
         --dmsansFont : 'DM Sans', sans-serif;
+        --poppinsBoldFont: 'Poppins', sans-serif;
      }
 
 
