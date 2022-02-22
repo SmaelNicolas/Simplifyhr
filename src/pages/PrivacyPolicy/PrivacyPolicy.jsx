@@ -17,11 +17,10 @@ import { openInNewTab } from "../../Helpers/openNewTab";
 
 function PrivacyPolicy() {
 	const { data } = useContext(LanguageContext);
-	console.log(data);
 
 	return (
-		<PPContainer>
-			<PPTitle>{data.privacyPolicy.title}</PPTitle>
+		<PPContainer id='privacyPolicy'>
+			<PPTitle >{data.privacyPolicy.title}</PPTitle>
 			<ParagraphStyled>{data.privacyPolicy.paragraph}</ParagraphStyled>
 			<TitleStyled>{data.privacyPolicy.items[1].title}</TitleStyled>
 			<ParagraphStyled>

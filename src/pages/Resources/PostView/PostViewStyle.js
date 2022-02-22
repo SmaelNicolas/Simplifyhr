@@ -45,7 +45,7 @@ export const Info = styled.div`
 `;
 
 export const Title = styled.h1`
-margin-bottom: 20px;
+	margin-bottom: 20px;
 `;
 
 export const Wrapper = styled.div`
@@ -58,9 +58,9 @@ export const Author = styled.h2`
 	font-weight: 400;
 	font-size: 18px;
 
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-  }
+	@media screen and (max-width: 767px) {
+		font-size: 12px;
+	}
 `;
 
 export const VerticalLine = styled.div`
@@ -68,33 +68,34 @@ export const VerticalLine = styled.div`
 	height: 24px;
 	width: 2px;
 	border-radius: 1px;
+	margin: 0 10px;
 
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-  }
+	@media screen and (max-width: 767px) {
+		font-size: 12px;
+	}
 `;
 
 export const ReadTime = styled.p`
 	font-weight: 400;
 	font-size: 18px;
 
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-  }
+	@media screen and (max-width: 767px) {
+		font-size: 12px;
+	}
 `;
 
 export const Image = styled.img`
 	width: 80%;
-  margin: 30px 0;
-  height: 50vh;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 40px;
+	margin: 30px 0;
+	height: 50vh;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 40px;
 `;
 
 export const Body = styled.p`
-  text-align: justify;
-  width: 80%;
-  font-size: 18px;
-  margin-bottom: 30px;
+	text-align: justify;
+	width: 80%;
+	font-size: 18px;
+	margin-bottom: 30px;
 `;

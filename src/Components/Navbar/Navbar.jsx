@@ -37,10 +37,7 @@ function Navbar() {
 					</MobileIcon>
 					<NavMenu>
 						<NavbarItem>
-							<NavbarLink
-								smooth
-								to={`/#whyus`}
-							>
+							<NavbarLink smooth to={`/#whyus`}>
 								{data.navbar.a2}
 							</NavbarLink>
 						</NavbarItem>

@@ -11,11 +11,10 @@ import {
 
 function TermsOfUse() {
 	const { data } = useContext(LanguageContext);
-	console.log(data);
 
 	return (
-		<PPContainer>
-			<PPTitle>{data.termsOfUse.title}</PPTitle>
+		<PPContainer id='termsOfUse'>
+			<PPTitle >{data.termsOfUse.title}</PPTitle>
 			<TitleStyled>{data.termsOfUse.items[1].title}</TitleStyled>
 			<ParagraphStyled>
 				{data.termsOfUse.items[1].paragraph[1]}

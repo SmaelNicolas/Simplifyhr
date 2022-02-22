@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
@@ -62,7 +62,7 @@ export const Wrapper = styled.div`
 	align-items: flex-end;
 `;
 
-export const FooterLink = styled(Link)`
+export const FooterLink = styled(HashLink)`
 	text-decoration: none;
 	color: #fff;
   font-size: 12px;

@@ -1,10 +1,6 @@
 import { DeleteOutlineOutlined } from "@mui/icons-material";
-import { collection, deleteDoc, doc } from "firebase/firestore";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { FirestoreDocsContext } from "../../../Context/FirestoreDocsContext";
-import { LanguageContext } from "../../../Context/LanguageContext";
-import database from "../../../Firebase/Firebase";
-import { getPosts } from "../../../Helpers/getPosts";
 import {
 	Container,
 	Row,
