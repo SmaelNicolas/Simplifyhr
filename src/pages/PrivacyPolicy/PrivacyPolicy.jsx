@@ -19,8 +19,8 @@ function PrivacyPolicy() {
 	const { data } = useContext(LanguageContext);
 
 	return (
-		<PPContainer>
-			<PPTitle>{data.privacyPolicy.title}</PPTitle>
+		<PPContainer id='privacyPolicy'>
+			<PPTitle >{data.privacyPolicy.title}</PPTitle>
 			<ParagraphStyled>{data.privacyPolicy.paragraph}</ParagraphStyled>
 			<TitleStyled>{data.privacyPolicy.items[1].title}</TitleStyled>
 			<ParagraphStyled>

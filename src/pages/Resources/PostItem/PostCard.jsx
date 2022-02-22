@@ -18,7 +18,7 @@ const PostCard = ({ title, img, id, date }) => {
 			<Info>
 				<Title>{title.toUpperCase()}</Title>
 				<Wrapper>
-					<Button to={`/post/${id}`}>
+					<Button to={`/${id}`}>
 						Read More
 					</Button>
 					<Dot />

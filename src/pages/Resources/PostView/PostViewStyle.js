@@ -68,6 +68,7 @@ export const VerticalLine = styled.div`
 	height: 24px;
 	width: 2px;
 	border-radius: 1px;
+	margin: 0 10px;
 
 	@media screen and (max-width: 767px) {
 		font-size: 12px;

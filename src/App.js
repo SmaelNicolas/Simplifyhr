@@ -12,6 +12,7 @@ import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 import PostView from "./pages/Resources/PostView/PostView";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
+import Cookies from "./pages/Cookies/Cookies";
 
 function App() {
 	const { loading } = useContext(LanguageContext);
@@ -30,7 +31,7 @@ function App() {
 							path='/resources'
 							element={<Resources />}
 						/>
-						<Route exact path='/cookies' element={<PostView />} />
+						<Route exact path='/cookies' element={<Cookies />} />
 						<Route
 							exact
 							path='/legal-terms'
@@ -43,7 +44,7 @@ function App() {
 						/>
 						<Route
 							exact
-							path='/post/:postId'
+							path='/:postId'
 							element={<PostView />}
 						/>
 					</Routes>

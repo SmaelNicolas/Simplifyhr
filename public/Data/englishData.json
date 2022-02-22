@@ -360,5 +360,31 @@
 				"paragraph": "All users agree to comply with the Privacy Policy of this website."
 			}
 		}
+	},
+	"cookies": {
+		"title": "Cookies",
+		"paragraph": {
+			"1": "This website may use cookies to offer faster navigation and improve your user experience.",
+			"2": "Cookies are small files for storage and data retrieval that are installed on your computer for a stated purpose; in no way will our cookies process personal data or compromise your privacy.",
+			"3": "If you decide not to accept our cookies, you may still use our website as usual, although it is possible that your user experience will be slightly affected.",
+			"4": "If you decide not to accept our cookies, you may still use our website as usual, although it is possible that your user experience will be slightly affected.",
+			"5": {
+        "items": {
+          "i1": "Internet Explorer:",
+          "i2": "Firefox:",
+          "i3": "Chrome:",
+          "i4": "Opera:",
+          "i5": "Safari:"
+        },
+        "links": {
+          "i1": "https://support.microsoft.com/en-US/help/17442/windows-internet-explorer-delete-managecookies",
+          "i2": "https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences",
+          "i3": "https://support.google.com/chrome/answer/95647?hl=en",
+          "i4": "http://help.opera.com/Windows/11.50/en/cookies.html",
+          "i5": "https://support.apple.com/en-us/HT201265"
+        }
+			},
+			"6": "If you use another browser, you can get more information about configuring the installation of cookies through the help section or through the customer service of the browser. If you need help to carry out the cookie settings in your browser, please send an e-mail to (hello@hr-simplify.com) and we will contact you as soon as possible with the necessary information."
+		}
 	}
 }

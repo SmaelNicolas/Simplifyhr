@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
 import {
-  Cursor,
+	Cursor,
 	Email,
 	FooterContainer,
 	FooterLink,
@@ -23,26 +23,28 @@ function Footer() {
 	// 	);
 	// }
 
-  const {data} = useContext(LanguageContext);
+	const { data } = useContext(LanguageContext);
 
 	return (
 		<FooterContainer>
 			<Left>
-        <Message>
-          <Title id="footerTitle">{data.footer.title}</Title>
-          <TypingText data={data}/>
-          <Cursor id="footerCursor">_</Cursor>
-        </Message>
+				<Message>
+					<Title id="footerTitle">{data.footer.title}</Title>
+					<TypingText data={data} />
+					<Cursor id="footerCursor">_</Cursor>
+				</Message>
 				<Email href={"mailto: hello@hr-simplify.com"}>
 					hello@hr-simplify.com
 				</Email>
 			</Left>
 			<Right>
-				<Logo/>
+				<Logo />
 				<Wrapper>
-					<FooterLink to={'/privacy-policy'}>Privacy Policy</FooterLink>
-					<FooterLink to={'/legal-terms'}>Legal Terms</FooterLink>
-					<FooterLink to={'/cookies'}>Cookies</FooterLink>
+					<FooterLink to={"/privacy-policy/#privacyPolicy"}>
+						Privacy Policy
+					</FooterLink>
+					<FooterLink to={"/legal-terms/#termsOfUse"}>Legal Terms</FooterLink>
+					<FooterLink to={"/cookies"}>Cookies</FooterLink>
 				</Wrapper>
 			</Right>
 		</FooterContainer>
