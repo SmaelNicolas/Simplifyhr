@@ -7,12 +7,14 @@ import {
 	CardSubTextContainerStyled,
 } from "./CardStyled";
 
-function Card({ title, body, subBody }) {
+function Card({ title, body, subBody, fSize }) {
 	return (
 		<CardStyled>
 			<CardTitleStyled>{title}</CardTitleStyled>
 			<CardTextStyled>
-				<CardTextContainerStyled>{body}</CardTextContainerStyled>
+				<CardTextContainerStyled fSize={fSize}>
+					{body}
+				</CardTextContainerStyled>
 				{subBody ? (
 					<CardSubTextContainerStyled>
 						{subBody}

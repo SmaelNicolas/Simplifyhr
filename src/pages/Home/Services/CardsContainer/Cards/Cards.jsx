@@ -1,37 +1,54 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { LanguageContext } from "../../../../../Context/LanguageContext";
-import Card from "./Card/Card";
+import {
+	CardStyled,
+	CardTitleStyled,
+	CardTextStyled,
+	CardTextContainerStyled,
+	CardSubTextContainerStyled,
+} from "./CardStyled";
 
 function Cards() {
 	const { data } = useContext(LanguageContext);
-	const ArrayOfCards = Object.entries(data.services.cards);
-	const [returnData] = useState([loop()]);
+	console.log(data);
 
-	function loop() {
-		let arr = [];
-		for (let i = 0; i < ArrayOfCards.length; i++) {
-			ArrayOfCards[i][1].subBody !== undefined
-				? arr.push(
-						<Card
-							key={`cardService${i}`}
-							title={ArrayOfCards[i][1].title}
-							body={ArrayOfCards[i][1].body}
-							subBody={ArrayOfCards[i][1].subBody}
-						/>
-				  )
-				: arr.push(
-						<Card
-							key={`cardService${i}`}
-							title={ArrayOfCards[i][1].title}
-							body={ArrayOfCards[i][1].body}
-						/>
-				  );
-		}
-
-		return arr;
-	}
-
-	return <>{returnData}</>;
+	return (
+		<>
+			<CardStyled>
+				<CardTitleStyled>
+					{data.services.cards.card1.title}
+				</CardTitleStyled>
+				<CardTextStyled>
+					<CardTextContainerStyled>
+						{data.services.cards.card1.body}
+					</CardTextContainerStyled>
+					<CardSubTextContainerStyled>
+						{data.services.cards.card1.subBody}
+					</CardSubTextContainerStyled>
+				</CardTextStyled>
+			</CardStyled>
+			<CardStyled>
+				<CardTitleStyled>
+					{data.services.cards.card2.title}
+				</CardTitleStyled>
+				<CardTextStyled>
+					<CardTextContainerStyled>
+						{data.services.cards.card2.body}
+					</CardTextContainerStyled>
+				</CardTextStyled>
+			</CardStyled>
+			<CardStyled>
+				<CardTitleStyled>
+					{data.services.cards.card3.title}
+				</CardTitleStyled>
+				<CardTextStyled>
+					<CardTextContainerStyled fSize='20px'>
+						{data.services.cards.card3.body}
+					</CardTextContainerStyled>
+				</CardTextStyled>
+			</CardStyled>
+		</>
+	);
 }
 
 export default Cards;

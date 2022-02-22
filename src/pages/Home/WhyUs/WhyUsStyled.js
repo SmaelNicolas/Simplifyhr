@@ -22,7 +22,7 @@ export const WhyUsContainer = styled.section`
 `;
 
 export const TitleStyled = styled.div`
-	max-width: 428px;
+	max-width: fit-content;
 	height: auto;
 	color: var(--primaryColor);
 	font-size: 45px;
@@ -30,13 +30,13 @@ export const TitleStyled = styled.div`
 	letter-spacing: 0.4px;
 	text-align: center;
 	@media (max-width: 1089px) {
-		font-size: 40px;
+		font-size: 30px;
 	}
 	@media (max-width: 370px) {
 		font-size: 35px;
 	}
 	@media (max-width: 350px) {
-		font-size: 30px;
+		font-size: 25px;
 	}
 `;
 

@@ -47,6 +47,7 @@ function SwiperServices() {
 						key='cardSwiper3'
 						title={data.services.cards.card3.title}
 						body={data.services.cards.card3.body}
+						fSize='20px'
 					/>
 				</SwiperSlide>
 			</SwiperStyled>

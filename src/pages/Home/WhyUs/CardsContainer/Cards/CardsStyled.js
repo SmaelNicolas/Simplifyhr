@@ -42,6 +42,11 @@ export const TextContainer = styled.div`
 	@media (max-width: 1089px) {
 		width: 87%;
 	}
+	@media (max-width: 380px) {
+		font-size: 18px;
+		text-align: center;
+		gap: 15px;
+	}
 `;
 
 export const Title = styled.span`
@@ -55,6 +60,7 @@ export const Title = styled.span`
 
 	@media (max-width: 380px) {
 		font-size: 18px;
+		text-align: center;
 	}
 `;
 export const TextContent = styled.span`
@@ -66,5 +72,9 @@ export const TextContent = styled.span`
 
 	@media (max-width: 1089px) {
 		font-size: 15px;
+	}
+	@media (max-width: 330px) {
+		width: 100%;
+		text-align: center;
 	}
 `;
