@@ -18,26 +18,31 @@ function Cards() {
 
 	return (
 		<>
-			{console.log("RENDER WHY US CARDS")}
-			<CardStyled alignSelf='flex-end'>
+			<CardStyled alignSelf='center' margin='0px 0px 0px 150px'>
 				<ImgContainer url={svg1} />
 				<TextContainer>
 					<Title>{data.whyUs.cards.card1.title}</Title>
-					<TextContent>{data.whyUs.cards.card1.body}</TextContent>
+					<TextContent width='100%'>
+						{data.whyUs.cards.card1.body}
+					</TextContent>
 				</TextContainer>
 			</CardStyled>
 			<CardStyled alignSelf='flex-start'>
 				<ImgContainer url={svg2} />
 				<TextContainer width='800px'>
 					<Title>{data.whyUs.cards.card2.title}</Title>
-					<TextContent>{data.whyUs.cards.card2.body}</TextContent>
+					<TextContent width='80%'>
+						{data.whyUs.cards.card2.body}
+					</TextContent>
 				</TextContainer>
 			</CardStyled>
 			<CardStyled alignSelf='center'>
 				<ImgContainer url={svg3} />
 				<TextContainer width='500px'>
 					<Title>{data.whyUs.cards.card3.title}</Title>
-					<TextContent>{data.whyUs.cards.card3.body}</TextContent>
+					<TextContent width='90%'>
+						{data.whyUs.cards.card3.body}
+					</TextContent>
 				</TextContainer>
 			</CardStyled>
 		</>

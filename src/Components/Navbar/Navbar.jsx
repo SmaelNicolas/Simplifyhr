@@ -55,7 +55,6 @@ function Navbar() {
 						<ContactButtonNew />
 					</NavMenu>
 				</NavContainer>
-				{console.log("RENDERIZA NAVBAR")}
 			</Nav>
 		</>
 	);

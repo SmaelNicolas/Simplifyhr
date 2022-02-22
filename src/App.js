@@ -47,7 +47,6 @@ function App() {
 							element={<PostView />}
 						/>
 					</Routes>
-					{console.log("RENDERIZA APP")}
 					<Footer />
 				</BrowserRouter>
 			)}

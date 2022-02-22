@@ -31,13 +31,7 @@ function Cards() {
 		return arr;
 	}
 
-	return (
-		<>
-			{console.log("RENDER SERVICES CARDS")}
-
-			{returnData}
-		</>
-	);
+	return <>{returnData}</>;
 }
 
 export default Cards;

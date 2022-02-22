@@ -92,9 +92,10 @@ export const ButtonStyled = styled.a`
 	}
 
 	@media (max-width: 370px) {
-		width: 300px;
+		width: 260px;
 		font-size: 15px;
 	}
+	font-family: var(--montserratFont);
 `;
 
 export const ButtonToTop = styled(HashLink)`

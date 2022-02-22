@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CardStyled = styled.section`
 	max-width: 1200px;
+	margin: ${({ margin }) => margin || "0px"};
 
 	display: flex;
 	flex-direction: row;
@@ -10,6 +11,7 @@ export const CardStyled = styled.section`
 
 	@media (max-width: 1089px) {
 		width: 95%;
+		margin: 0px;
 		align-self: center;
 	}
 	@media (max-width: 330px) {
@@ -35,7 +37,7 @@ export const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 
 	@media (max-width: 1089px) {
 		width: 87%;
@@ -45,7 +47,7 @@ export const TextContainer = styled.div`
 export const Title = styled.span`
 	width: 100%;
 	text-align: start;
-	font-size: 26px;
+	font-size: 24px;
 	font-weight: 700;
 	@media (max-width: 1089px) {
 		font-size: 20px;
@@ -56,8 +58,9 @@ export const Title = styled.span`
 	}
 `;
 export const TextContent = styled.span`
-	width: 100%;
-	font-size: 22px;
+	width: ${({ width }) => width || "80%"};
+
+	font-size: 18px;
 	text-align: start;
 	font-weight: 500;
 
