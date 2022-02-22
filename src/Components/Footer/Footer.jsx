@@ -40,10 +40,8 @@ function Footer() {
 			<Right>
 				<Logo />
 				<Wrapper>
-					<FooterLink to={"/privacy-policy/#privacyPolicy"}>
-						Privacy Policy
-					</FooterLink>
-					<FooterLink to={"/legal-terms/#termsOfUse"}>Legal Terms</FooterLink>
+					<FooterLink to={"/privacy-policy"}>Privacy Policy</FooterLink>
+					<FooterLink to={"/legal-terms"}>Legal Terms</FooterLink>
 					<FooterLink to={"/cookies"}>Cookies</FooterLink>
 				</Wrapper>
 			</Right>
