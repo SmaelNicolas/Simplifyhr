@@ -10,7 +10,7 @@ const opac = keyframes`
 
 export const ContactUsContainer = styled.div`
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -24,7 +24,7 @@ export const ContactUsContainer = styled.div`
 export const ContactUsContainer2 = styled.a`
 	background-color: rgba(0, 0, 0, 0.555);
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,7 +38,7 @@ export const ContactUsContainer2 = styled.a`
 
 export const FormContainer = styled.form`
 	width: 500px;
-	height: 540px;
+	min-height: 540px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
