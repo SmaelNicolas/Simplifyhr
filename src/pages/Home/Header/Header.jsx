@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../../Context/LanguageContext";
+import AutoPlaySilentVideo from "../../../Helpers/AutoPLaySilentVideo";
 import {
 	Button,
 	HeaderBg,
 	HeaderContainer,
-	HeaderVideo,
 	ImgContainer,
 	InfoContainer,
 	Subtitle,
@@ -17,12 +17,8 @@ const Header = () => {
 	return (
 		<HeaderContainer id="home">
 			<HeaderBg>
-				<HeaderVideo
-					autoPlay
-					loop
-					muted
-					src={`${process.env.PUBLIC_URL}/Assets/video.mp4`}
-					type="video/mp4"
+				<AutoPlaySilentVideo
+					video={`${process.env.PUBLIC_URL}/Assets/video.mp4`}
 				/>
 			</HeaderBg>
 			<InfoContainer>

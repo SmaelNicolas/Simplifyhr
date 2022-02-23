@@ -28,15 +28,6 @@ export const HeaderBg = styled.div`
 	z-index: 1;
 `;
 
-export const HeaderVideo = styled.video`
-	width: 100%;
-	height: 100%;
-	-o-object-fit: cover;
-	object-fit: cover;
-	//background: var(--primaryColor);
-	opacity: 0.8;
-`;
-
 export const InfoContainer = styled.div`
 	flex: 1;
 	display: flex;
