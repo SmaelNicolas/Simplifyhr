@@ -28,8 +28,7 @@ const PostView = () => {
 		const res = posts.find((el) => el.id === postId);
 		setPost(res);
 	}, []);
-  
-	console.log(post);
+
 	return (
 		<Container>
 			<ReturnContainer>

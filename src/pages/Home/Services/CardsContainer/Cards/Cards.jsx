@@ -10,7 +10,6 @@ import {
 
 function Cards() {
 	const { data } = useContext(LanguageContext);
-	console.log(data);
 
 	return (
 		<>

@@ -27,7 +27,7 @@ function Footer() {
 					<Cursor id="footerCursor">_</Cursor>
 				</Message>
 				<Email href={"mailto: hello@hr-simplify.com"}>
-					<EmailOutlined style={{ marginRight: 5 }}/> hello@hr-simplify.com
+					<EmailOutlined style={{ marginRight: 5 }} /> hello@hr-simplify.com
 				</Email>
 			</Left>
 			<Right>
