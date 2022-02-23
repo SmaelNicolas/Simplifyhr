@@ -7,16 +7,22 @@ import {
 	SidebarWrapper,
 } from "./SidebarStyle";
 
-const Sidebar = ({ data, isOpen }) => {
+const Sidebar = ({ data, isOpen, toggle }) => {
 	return (
 		<SidebarContainer isOpen={isOpen}>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink smooth to={"/#services"}>{data.navbar.a1}</SidebarLink>
-					<SidebarLink smooth to={"/#whyus"}>{data.navbar.a2}</SidebarLink>
-					<SidebarLink smooth to={"/resources"}>{data.navbar.a3}</SidebarLink>
-					<ContactButtonNew />
-					<LanguageButton />
+					<SidebarLink onClick={toggle} smooth to={"/#services"}>
+						{data.navbar.a1}
+					</SidebarLink>
+					<SidebarLink onClick={toggle} smooth to={"/#whyus"}>
+						{data.navbar.a2}
+					</SidebarLink>
+					<SidebarLink onClick={toggle} smooth to={"/resources"}>
+						{data.navbar.a3}
+					</SidebarLink>
+					<ContactButtonNew onClick={toggle} />
+					<LanguageButton onClick={toggle} />
 				</SidebarMenu>
 			</SidebarWrapper>
 		</SidebarContainer>
