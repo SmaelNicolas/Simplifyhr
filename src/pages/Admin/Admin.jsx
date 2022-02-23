@@ -2,6 +2,7 @@ import {
 	BookmarkBorderOutlined,
 	EmailOutlined,
 	FileUploadOutlined,
+	Google,
 	Logout,
 } from "@mui/icons-material";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -10,6 +11,7 @@ import { IsLoggedContext } from "../../Context/isLoggedContext";
 import BlogPostScreen from "../Login/BlogPostScreen/BlogPostScreen";
 import { Container, MainContainer, Menu, MenuLink } from "./AdminStyles";
 import EditPosts from "./EditPosts/EditPosts";
+import GoogleAnalitycs from "./GoogleAnalitycs/GoogleAnalitics";
 import Messages from "./Messages/Messages";
 
 const Admin = () => {
@@ -39,6 +41,13 @@ const Admin = () => {
 				>
 					<EmailOutlined /> Mensajes
 				</MenuLink>
+				<MenuLink
+					onClick={() => {
+						setShow("GA");
+					}}
+				><Google/>
+					Google Analitycs
+				</MenuLink>
 				<MenuLink onClick={logOutLS}>
 					<Logout /> Log Out
 				</MenuLink>
@@ -47,6 +56,7 @@ const Admin = () => {
 				{show === "CreatePost" && <BlogPostScreen />}
 				{show === "ViewPosts" && <EditPosts />}
 				{show === "Messages" && <Messages />}
+				{show === "GA" && <GoogleAnalitycs />}
 			</MainContainer>
 		</Container>
 	);
