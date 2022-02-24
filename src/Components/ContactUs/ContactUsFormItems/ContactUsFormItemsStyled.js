@@ -72,17 +72,17 @@ export const Divisor = styled.div`
 `;
 
 export const Button = styled.button`
-	width: 180px;
-	height: 50px;
+	width: 150px;
+	height: 45px;
 	background-color: var(--primaryColor);
 	color: var(--secondTitleColor);
 
 	border: none;
 	border-radius: 28px;
 
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: 0.5px;
-	font-size: 14px;
+	font-size: 12px;
 	text-transform: uppercase;
 
 	margin: 0 auto;

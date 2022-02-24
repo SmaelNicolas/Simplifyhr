@@ -9,7 +9,7 @@ const opac = keyframes`
 `;
 
 export const ContactUsContainer = styled.div`
-	width: 100vw;
+	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -23,7 +23,7 @@ export const ContactUsContainer = styled.div`
 
 export const ContactUsContainer2 = styled.a`
 	background-color: rgba(0, 0, 0, 0.555);
-	width: 100vw;
+	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -37,8 +37,8 @@ export const ContactUsContainer2 = styled.a`
 `;
 
 export const FormContainer = styled.form`
-	width: 500px;
-	min-height: 540px;
+	max-width: 450px;
+	height: 410px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -50,7 +50,7 @@ export const FormContainer = styled.form`
 	border-radius: 6px;
 	background-color: #ffffff;
 
-	padding: 30px;
+	padding: 15px;
 
 	gap: 10px;
 	position: relative;
@@ -60,8 +60,9 @@ export const FormContainer = styled.form`
 
 	@media (max-width: 540px) {
 		align-self: center;
-		margin-right: 5px;
-		width: 95%;
+		width: 98%;
 		border: 1px solid var(--secondColor);
+		padding: 5px;
+		margin: 0 auto;
 	}
 `;

@@ -50,7 +50,6 @@ function ContactUsFormItems({ toggleShow }) {
 		/>
 	) : (
 		<>
-			<Labels htmlFor='name'>Name </Labels>
 			<Inputs
 				type='text'
 				id='name'
@@ -61,7 +60,6 @@ function ContactUsFormItems({ toggleShow }) {
 				onChange={(e) => setName(e.target.value)}
 			/>
 
-			<Labels htmlFor='company'>Company </Labels>
 			<Inputs
 				type='text'
 				id='company'
@@ -70,8 +68,6 @@ function ContactUsFormItems({ toggleShow }) {
 				required
 				onChange={(e) => setCompany(e.target.value)}
 			/>
-
-			<Labels htmlFor='email'>Email </Labels>
 
 			<Inputs
 				id='email'
@@ -82,10 +78,6 @@ function ContactUsFormItems({ toggleShow }) {
 				required
 				onChange={(e) => setEmail(e.target.value)}
 			/>
-
-			<Labels htmlFor='messageContact' width='90%'>
-				Message
-			</Labels>
 
 			<InputBodyContent
 				type='text'
