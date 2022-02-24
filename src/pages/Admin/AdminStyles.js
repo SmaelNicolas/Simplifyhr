@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const MenuLink = styled.span`
-	width: max-content;
+	max-width: 200px;
 	height: 30px;
 	padding: 30px 0px 30px 30px;
 	display: flex;
@@ -21,11 +21,21 @@ export const MenuLink = styled.span`
 	gap: 30px;
 	color: #fff;
 	text-transform: uppercase;
-
+	text-align: start;
 	cursor: pointer;
+
 	@media screen and (max-width: 1050px) {
 		gap: 15px;
 		padding-left: 15px;
+	}
+	@media screen and (max-width: 800px) {
+		width: 150px;
+		font-size: 14px;
+		text-align: center;
+	}
+
+	@media screen and (max-width: 600px) {
+		gap: 5px;
 	}
 
 	@media screen and (max-width: 550px) {
@@ -35,10 +45,12 @@ export const MenuLink = styled.span`
 		height: auto;
 		font-size: 12px;
 		gap: 5px;
+		text-align: center;
 	}
 `;
 export const Menu = styled.div`
 	background-color: var(--secondColor);
+	gap: 5px;
 	width: 20%;
 	display: flex;
 	flex-direction: column;
@@ -48,8 +60,13 @@ export const Menu = styled.div`
 		position: sticky;
 		top: 80px;
 	}
+	@media screen and (max-width: 600px) {
+		gap: 5px;
+		font-size: 14px;
+	}
+
 	@media screen and (max-width: 550px) {
-		gap: 10px;
+		gap: 8px;
 		justify-content: center;
 	}
 `;
