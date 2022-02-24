@@ -21,31 +21,36 @@ export const ServicesContainer = styled.section`
 `;
 
 export const TitleContainer = styled.div`
-	width: 100%;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 5vw;
+	@media (max-width: 800px) {
+		width: 100%;
+	}
 `;
 
 export const TitleStyled = styled.div`
 	width: 100%;
 	color: var(--secondTitleColor);
-	font-size: 40px;
+	font-size: 36px;
 	font-weight: 700;
 	letter-spacing: 0.4px;
 	line-height: 55px;
 	text-align: center;
 	@media (max-width: 620px) {
-		font-size: 30px;
+		font-size: calc(10px + 4vw);
+		font-weight: 600;
 	}
 	@media (max-width: 420px) {
-		font-size: 25px;
+		font-size: calc(10px + 3.8vw);
 	}
 
 	@media (max-width: 380px) {
-		font-size: 22px;
+		font-size: calc(8px + 3.8vw);
+		background-color: green;
 	}
 `;
 

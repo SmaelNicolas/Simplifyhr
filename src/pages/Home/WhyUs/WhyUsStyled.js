@@ -30,13 +30,7 @@ export const TitleStyled = styled.div`
 	letter-spacing: 0.4px;
 	text-align: center;
 	@media (max-width: 1089px) {
-		font-size: 30px;
-	}
-	@media (max-width: 370px) {
-		font-size: 35px;
-	}
-	@media (max-width: 350px) {
-		font-size: 25px;
+		font-size: calc(20px + 3.5vw);
 	}
 `;
 

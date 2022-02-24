@@ -14,7 +14,7 @@ export const CardStyled = styled.section`
 		margin: 0px;
 		align-self: center;
 	}
-	@media (max-width: 330px) {
+	@media (max-width: 430px) {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -42,10 +42,11 @@ export const TextContainer = styled.div`
 	@media (max-width: 1089px) {
 		width: 87%;
 	}
-	@media (max-width: 380px) {
+	@media (max-width: 430px) {
+		width: 98%;
 		font-size: 18px;
 		text-align: center;
-		gap: 15px;
+		gap: 5px;
 	}
 `;
 
@@ -58,7 +59,7 @@ export const Title = styled.span`
 		font-size: 20px;
 	}
 
-	@media (max-width: 380px) {
+	@media (max-width: 430px) {
 		font-size: 18px;
 		text-align: center;
 	}
@@ -73,7 +74,7 @@ export const TextContent = styled.span`
 	@media (max-width: 1089px) {
 		font-size: 15px;
 	}
-	@media (max-width: 330px) {
+	@media (max-width: 430px) {
 		width: 100%;
 		text-align: center;
 	}
