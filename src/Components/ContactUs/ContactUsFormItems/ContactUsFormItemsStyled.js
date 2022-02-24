@@ -9,21 +9,6 @@ const opac = keyframes`
 
 `;
 
-export const Labels = styled.label`
-	width: 90%;
-	padding-left: 10px;
-
-	color: #524ef8;
-
-	font-size: 15px;
-	font-weight: 600;
-	text-align: start;
-	letter-spacing: 0.5px;
-
-	animation: ${opac} 0.5s linear;
-	z-index: 99;
-`;
-
 export const Inputs = styled.input`
 	width: 90%;
 	height: 50px;

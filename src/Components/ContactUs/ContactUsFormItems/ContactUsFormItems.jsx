@@ -1,7 +1,6 @@
 import {
 	Button,
 	Inputs,
-	Labels,
 	InputBodyContent,
 	Divisor,
 	ButtonCancel,
