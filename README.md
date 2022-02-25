@@ -34,5 +34,10 @@
 
 ## Previe GIF
 
+##### Web
+
 ![Gif Previe](1.gif)
+
+##### Admin Panel
+
 ![Gif Previe](2.gif)
