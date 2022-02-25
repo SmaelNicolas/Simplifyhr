@@ -30,7 +30,7 @@
 
 #### Description
 
-We are a start-up and growth friendly talent partner that helps you find the best candidates that align with your vision and goals. Specialized in technology, product, sales and marketing. We are not your typical recruiter agency. We work fast to understand your needs and deliver to help you hire the right and motivated candidates.
+> We are a start-up and growth friendly talent partner that helps you find the best candidates that align with your vision and goals. Specialized in technology, product, sales and marketing. We are not your typical recruiter agency. We work fast to understand your needs and deliver to help you hire the right and motivated candidates.
 
 ## Previe GIF
 
