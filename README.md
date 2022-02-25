@@ -30,7 +30,7 @@
 
 #### Description
 
-[![](https://img.shields.io/badge/-We%20are%20a%20start--up%20and%20growth%20friendly%20talent%20partner%20that%20helps%20you%20find%20the%20best%20candidates%20that%20align%20with%20your%20vision%20and%20goals.%20Specialized%20in%20technology%2C%20product%2C%20sales%20and%20marketing.%20We%20are%20not%20your%20typical%20recruiter%20agency.%20We%20work%20fast%20to%20understand%20your%20needs%20and%20deliver%20to%20help%20you%20hire%20the%20right%20and%20motivated%20candidates.-orange)](https://github.com/fioseia)
+We are a start-up and growth friendly talent partner that helps you find the best candidates that align with your vision and goals. Specialized in technology, product, sales and marketing. We are not your typical recruiter agency. We work fast to understand your needs and deliver to help you hire the right and motivated candidates.
 
 ## Previe GIF
 
