@@ -50,7 +50,6 @@ export const TitleStyled = styled.div`
 
 	@media (max-width: 380px) {
 		font-size: calc(8px + 3.8vw);
-		background-color: green;
 	}
 `;
 
