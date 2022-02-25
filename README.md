@@ -1,5 +1,7 @@
 # Simplify-hr
 
+[![Simplify-hr](https://img.shields.io/badge/PREVIEW%20SITE%20--%20test%20stage-orange)](https://testsimplify.netlify.app/)
+
 ## Contributors
 
 [![Seia Fiorenza](https://img.shields.io/badge/Seia%20Fiorenza-blue)](https://github.com/fioseia) [![Seia Fiorenza](https://img.shields.io/badge/LinkedIn%20-blue)](https://github.com/fioseia) [![Seia Fiorenza](https://img.shields.io/badge/Git%20Hub-blue)](https://github.com/fioseia)
