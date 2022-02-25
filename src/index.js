@@ -5,15 +5,18 @@ import { GlobalStyle } from "./GlobalStyled";
 import IsLoggedContextProvider from "./Context/isLoggedContext";
 import FirestoreDocsContextProvider from "./Context/FirestoreDocsContext";
 import LanguageContextProvider from "./Context/LanguageContext";
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<GlobalStyle />
 		<LanguageContextProvider>
 			<IsLoggedContextProvider>
-        <FirestoreDocsContextProvider>
-				<App />
-        </FirestoreDocsContextProvider>
+				<FirestoreDocsContextProvider>
+					<HelmetProvider>
+						<App />
+					</HelmetProvider>
+				</FirestoreDocsContextProvider>
 			</IsLoggedContextProvider>
 		</LanguageContextProvider>
 	</React.StrictMode>,

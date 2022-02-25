@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageContext } from "./Context/LanguageContext";
 import styled from "styled-components";
+import { Helmet } from "react-helmet-async";
 
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
@@ -16,40 +17,55 @@ import Cookies from "./pages/Cookies/Cookies";
 import ScrollToTop from "./Helpers/scrollToTop";
 
 function App() {
-	const { loading } = useContext(LanguageContext);
+	const { loading, data } = useContext(LanguageContext);
 	return (
-		<AppContainerStyled>
-			{loading ? (
-				<LoadingScreen />
-			) : (
-				<BrowserRouter>
-					<ScrollToTop />
-					<Navbar />
-					<Routes>
-						<Route exact path='/' element={<Home />} />
-						<Route exact path='/login' element={<Login />} />
-						<Route
-							exact
-							path='/resources'
-							element={<Resources />}
-						/>
-						<Route exact path='/cookies' element={<Cookies />} />
-						<Route
-							exact
-							path='/legal-terms'
-							element={<TermsOfUse />}
-						/>
-						<Route
-							exact
-							path='/privacy-policy'
-							element={<PrivacyPolicy />}
-						/>
-						<Route exact path='/:postId' element={<PostView />} />
-					</Routes>
-					<Footer />
-				</BrowserRouter>
-			)}
-		</AppContainerStyled>
+		<>
+			<Helmet>
+				<title>Loading Symplify-hr</title>
+				<meta name='description' content={data.description} />
+				<link rel='canonical' href='' />
+			</Helmet>
+			<AppContainerStyled>
+				{loading ? (
+					<LoadingScreen />
+				) : (
+					<BrowserRouter>
+						<ScrollToTop />
+						<Navbar />
+						<Routes>
+							<Route exact path='/' element={<Home />} />
+							<Route exact path='/login' element={<Login />} />
+							<Route
+								exact
+								path='/resources'
+								element={<Resources />}
+							/>
+							<Route
+								exact
+								path='/cookies'
+								element={<Cookies />}
+							/>
+							<Route
+								exact
+								path='/legal-terms'
+								element={<TermsOfUse />}
+							/>
+							<Route
+								exact
+								path='/privacy-policy'
+								element={<PrivacyPolicy />}
+							/>
+							<Route
+								exact
+								path='/:postId'
+								element={<PostView />}
+							/>
+						</Routes>
+						<Footer />
+					</BrowserRouter>
+				)}
+			</AppContainerStyled>
+		</>
 	);
 }
 
