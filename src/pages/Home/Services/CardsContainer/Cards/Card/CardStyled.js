@@ -15,13 +15,6 @@ export const CardStyled = styled.div`
 	transition: all 0.1s linear;
 	cursor: default;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-
-	&:hover {
-		opacity: 1;
-
-		transition: all 0.1s linear;
-		transform: scale(1.08);
-	}
 `;
 
 export const CardTitleStyled = styled.div`
