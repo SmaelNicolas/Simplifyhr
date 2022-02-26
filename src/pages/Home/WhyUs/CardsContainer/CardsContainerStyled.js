@@ -18,9 +18,8 @@ export const ContentContainer = styled.div`
 		width: 90%;
 		margin-left: 20px;
 	}
-
-	@media (max-width: 330px) {
-		gap: 50px;
-		margin-left: 0px;
+	@media (max-width: 430px) {
+		width: 100%;
+		margin: 0px;
 	}
 `;
