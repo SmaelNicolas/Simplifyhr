@@ -30,7 +30,7 @@ function App() {
 				{loading ? (
 					<LoadingScreen />
 				) : (
-					<BrowserRouter>
+					<BrowserRouter basename='hr-simplify.com/'>
 						<ScrollToTop />
 						<Navbar />
 						<CookieMessage />
