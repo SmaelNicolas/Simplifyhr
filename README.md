@@ -4,7 +4,7 @@
 
 ## Contributors
 
-[![Seia Fiorenza](https://img.shields.io/badge/Seia%20Fiorenza-blue)](https://github.com/fioseia) [![Seia Fiorenza](https://img.shields.io/badge/LinkedIn%20-blue)](https://github.com/fioseia) [![Seia Fiorenza](https://img.shields.io/badge/Git%20Hub-blue)](https://github.com/fioseia)
+[![Seia Fiorenza](https://img.shields.io/badge/Seia%20Fiorenza-blue)](https://github.com/fioseia) [![Seia Fiorenza](https://img.shields.io/badge/LinkedIn%20-blue)](https://www.linkedin.com/in/fiorenza-seia/) [![Seia Fiorenza](https://img.shields.io/badge/Git%20Hub-blue)](https://github.com/fioseia)
 
 [![Smael Nicolas](https://img.shields.io/badge/Smael%20Nicolas-blue)](https://github.com/SmaelNicolas) [![Smael Nicolas](https://img.shields.io/badge/LinkedIn%20-blue)](https://www.linkedin.com/in/smaeln/) [![Smael Nicolas](https://img.shields.io/badge/Git%20Hub-blue)](https://github.com/SmaelNicolas)
 
