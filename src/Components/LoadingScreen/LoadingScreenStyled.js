@@ -8,22 +8,22 @@ export const LoadingContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-  position: absolute;
-  top: -80px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1000;
+	position: absolute;
+	top: -80px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1000;
 `;
 
 export const Title = styled.h1`
 	color: #fff;
-  margin-bottom: 50px;
-  font-size: 4rem;
-  
-  @media screen and (max-width: 945px){
-    font-size: 3rem;
-  }
+	margin-bottom: 50px;
+	font-size: 4rem;
+
+	@media screen and (max-width: 945px) {
+		font-size: 3rem;
+	}
 `;
 
 export const Subtitle = styled.span`
@@ -36,12 +36,12 @@ export const Subtitle = styled.span`
 	span {
 		display: inline-block;
 		transform: translateY(130%);
-		border: 1px solid #fff;
+		border: 2px solid #fff;
 		padding: 2px 7px;
 		margin: 5px 0;
 	}
 
-  @media screen and (max-width: 945px){
-    font-size: 1.2rem;
-  }
+	@media screen and (max-width: 945px) {
+		font-size: 1.2rem;
+	}
 `;
