@@ -30,7 +30,7 @@ function App() {
 				{loading ? (
 					<LoadingScreen />
 				) : (
-					<BrowserRouter>
+					<BrowserRouter basename={process.env.PUBLIC_URL}>
 						<ScrollToTop />
 						<Navbar />
 						<CookieMessage />
