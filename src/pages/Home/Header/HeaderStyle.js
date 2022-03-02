@@ -59,6 +59,7 @@ export const Button = styled.a`
 	border-radius: 40px;
 	align-self: center;
 	transition: all 0.3s ease-in-out;
+	cursor: pointer;
 
 	&:hover {
 		transform: scale(1.02);

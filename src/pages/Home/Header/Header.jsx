@@ -11,11 +11,13 @@ import {
 	Title,
 } from "./HeaderStyle";
 
+import { openInNewTab } from "../../../Helpers/openNewTab";
+
 const Header = () => {
 	const { data } = useContext(LanguageContext);
 
 	return (
-		<HeaderContainer id="home">
+		<HeaderContainer id='home'>
 			<HeaderBg>
 				<AutoPlaySilentVideo
 					video={`${process.env.PUBLIC_URL}/Assets/video.mp4`}
@@ -26,7 +28,13 @@ const Header = () => {
 				<Subtitle>{data.header.subTitle}</Subtitle>
 			</InfoContainer>
 			<ImgContainer>
-				<Button href="https://calendly.com/simplifyhr/intro-call">
+				<Button
+					onClick={() =>
+						openInNewTab(
+							"https://calendly.com/simplifyhr/intro-call"
+						)
+					}
+				>
 					{data.header.button}
 				</Button>
 			</ImgContainer>
