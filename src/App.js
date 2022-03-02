@@ -30,7 +30,7 @@ function App() {
 				{loading ? (
 					<LoadingScreen />
 				) : (
-					<BrowserRouter basename='hr-simplify.com/'>
+					<BrowserRouter basename={process.env.PUBLIC_URL}>
 						<ScrollToTop />
 						<Navbar />
 						<CookieMessage />
