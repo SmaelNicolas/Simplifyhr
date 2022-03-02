@@ -22,7 +22,7 @@ const EditPosts = () => {
 						<Image src={p.imgUrl} />
 						<Title>{p.title}</Title>
 						<Wrapper>
-							<ViewButton to={`/post/${p.id}`}>
+							<ViewButton to={`/${p.id}`}>
 								Ver post
 							</ViewButton>
 							<DeleteButton
