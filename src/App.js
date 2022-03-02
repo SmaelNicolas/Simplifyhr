@@ -15,6 +15,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
 import Cookies from "./pages/Cookies/Cookies";
 import ScrollToTop from "./Helpers/scrollToTop";
+import CookieMessage from "./Components/CookieMessage/CookieMessage";
 
 function App() {
 	const { loading, data } = useContext(LanguageContext);
@@ -32,6 +33,7 @@ function App() {
 					<BrowserRouter>
 						<ScrollToTop />
 						<Navbar />
+						<CookieMessage />
 						<Routes>
 							<Route exact path='/' element={<Home />} />
 							<Route exact path='/login' element={<Login />} />
