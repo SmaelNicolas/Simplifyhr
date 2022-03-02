@@ -30,6 +30,8 @@
 
 [![mui](https://img.shields.io/badge/mui-%205.4.2-success)](https://mui.com/)
 
+[![react-cookie-consent](https://img.shields.io/badge/react--cookie--consent-%207.3.1-success)](https://www.npmjs.com/package/react-cookie-consent)
+
 #### Description
 
 > We are a start-up and growth friendly talent partner that helps you find the best candidates that align with your vision and goals. Specialized in technology, product, sales and marketing. We are not your typical recruiter agency. We work fast to understand your needs and deliver to help you hire the right and motivated candidates.
