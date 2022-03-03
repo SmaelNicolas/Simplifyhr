@@ -32,7 +32,7 @@
 
 [![react-cookie-consent](https://img.shields.io/badge/react--cookie--consent-%207.3.1-success)](https://www.npmjs.com/package/react-cookie-consent)
 
-[![react-quilljs](https://img.shields.io/badge/react--quilljs--consent-%207.3.1-success)](https://www.npmjs.com/package/react-quilljs)
+[![react-quilljs](https://img.shields.io/badge/react--quilljs-%201.2.17-success)](https://www.npmjs.com/package/react-quilljs)
 
 #### Description
 
