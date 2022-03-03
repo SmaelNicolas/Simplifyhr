@@ -4,7 +4,7 @@
 
 ## Contributors
 
-[![Seia Fiorenza](https://img.shields.io/badge/Seia%20Fiorenza-blue)](https://github.com/fioseia) [![Seia Fiorenza](https://img.shields.io/badge/LinkedIn%20-blue)](https://github.com/fioseia) [![Seia Fiorenza](https://img.shields.io/badge/Git%20Hub-blue)](https://github.com/fioseia)
+[![Seia Fiorenza](https://img.shields.io/badge/Seia%20Fiorenza-blue)](https://github.com/fioseia) [![Seia Fiorenza](https://img.shields.io/badge/LinkedIn%20-blue)](https://www.linkedin.com/in/fiorenza-seia/) [![Seia Fiorenza](https://img.shields.io/badge/Git%20Hub-blue)](https://github.com/fioseia)
 
 [![Smael Nicolas](https://img.shields.io/badge/Smael%20Nicolas-blue)](https://github.com/SmaelNicolas) [![Smael Nicolas](https://img.shields.io/badge/LinkedIn%20-blue)](https://www.linkedin.com/in/smaeln/) [![Smael Nicolas](https://img.shields.io/badge/Git%20Hub-blue)](https://github.com/SmaelNicolas)
 
@@ -29,6 +29,8 @@
 [![firebase](https://img.shields.io/badge/firebase-%209.6.6-success)](https://firebase.google.com/)
 
 [![mui](https://img.shields.io/badge/mui-%205.4.2-success)](https://mui.com/)
+
+[![react-cookie-consent](https://img.shields.io/badge/react--cookie--consent-%207.3.1-success)](https://www.npmjs.com/package/react-cookie-consent)
 
 #### Description
 

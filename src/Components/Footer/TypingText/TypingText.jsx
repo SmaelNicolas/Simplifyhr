@@ -20,8 +20,8 @@ const TypingText = ({ data }) => {
 
 	
 		array.forEach((subt) => {
-      let tl = gsap.timeline({repeat:1, yoyo:true, repeatDelay: 1 })
-      .to(text, { duration: 1, text: subt });
+      let tl = gsap.timeline({repeat:1, yoyo:true, repeatDelay: 2 })
+      .to(text, { duration: 2, text: subt });
       masterTL.add(tl)
 		});
 	}, []);
