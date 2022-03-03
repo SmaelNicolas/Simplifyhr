@@ -3,7 +3,7 @@ import database from "../Firebase/Firebase";
 import { doc, setDoc } from "firebase/firestore";
 
 function generateMessage(name, email, company, body, setShowSucces) {
-	fetch("https://formsubmit.co/ajax/patricialperez1@gmail.com", {
+	fetch("https://formsubmit.co/ajax/hello@hr-simplify.com", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
