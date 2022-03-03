@@ -93,9 +93,7 @@ export const Image = styled.img`
 	border-radius: 40px;
 `;
 
-export const Body = styled.p`
-	text-align: justify;
+export const Body = styled.div`
 	width: 80%;
-	font-size: 18px;
 	margin-bottom: 30px;
 `;

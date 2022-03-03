@@ -48,7 +48,7 @@ const PostView = () => {
 					</Wrapper>
 				</Info>
 				<Image src={post.imgUrl} />
-				<Body>{post.body}</Body>
+				<Body dangerouslySetInnerHTML={{__html: post.body}}></Body>
 			</MainContainer>
 		</Container>
 	);

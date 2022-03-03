@@ -37,7 +37,7 @@ export const Inputs = styled.input`
 	}
 `;
 
-export const InputPostContent = styled.textarea`
+export const InputPostContent = styled.div`
 	width: 100%;
 	height: 470px;
 	padding: 15px;

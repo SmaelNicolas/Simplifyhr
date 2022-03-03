@@ -13,6 +13,8 @@ import SuccessMessage from "../../../../Components/SuccessMessage/SuccesMessage"
 import ErrorMessage from "../../../../Components/ErrorMessage/ErrorMessage";
 import { LanguageContext } from "../../../../Context/LanguageContext";
 import checkForm from "../../../../Helpers/checkBlogForm";
+import { useQuill } from 'react-quilljs';
+import 'quill/dist/quill.snow.css';
 
 function FormBlogItems() {
 	const [title, setTitle] = useState("");
@@ -24,6 +26,9 @@ function FormBlogItems() {
 	const [showSuccess, setShowSucces] = useState(false);
 
 	const { data } = useContext(LanguageContext);
+
+  const { quill, quillRef } = useQuill();
+
 
 	const changeValueSuccessMessage = () => {
 		setShowSucces(!showSuccess);
@@ -44,7 +49,7 @@ function FormBlogItems() {
 			setShowError
 		);
 	};
-
+ 
 	return showSuccess ? (
 		<SuccessMessage
 			click={changeValueSuccessMessage}
@@ -112,7 +117,8 @@ function FormBlogItems() {
 					name='postContent'
 					placeholder='Write something..'
 					required
-					onChange={(e) => setBody(e.target.value)}
+          ref={quillRef}
+					onInput={(e) => setBody(quill.container.firstChild.innerHTML)}
 				/>
 
 				<Submit
