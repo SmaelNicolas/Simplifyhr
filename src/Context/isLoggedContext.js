@@ -1,6 +1,4 @@
 import React, { createContext, useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
-const idValue = uuidv4();
 
 export const IsLoggedContext = createContext();
 
@@ -24,20 +22,20 @@ const IsLoggedContextProvider = ({ children }) => {
 
 	//crea logged=true en LS
 	const createLS = () => {
-		localStorage.setItem(`${idValue}`, JSON.stringify(true));
+		localStorage.setItem("logginValue", JSON.stringify(true));
 	};
 
 	//logged=false en LS y isLogged=false para q muestre la pantalla de login > NUEVO BOTON EN Admin.jsx que llama a esta funcion
 	const logOutLS = () => {
-		localStorage.setItem(`${idValue}`, JSON.stringify(false));
+		localStorage.setItem("logginValue", JSON.stringify(false));
 		setIsLogged(false);
 		setAllowLS(false);
-		localStorage.removeItem(`${idValue}`);
+		localStorage.removeItem("logginValue");
 	};
 
 	// si el valor es verdadero no pide login . Si no esta en LS o el valor es falso pide login > NUEVO USEEFFECT EN Login.jsx para q renderize cuando hay cambios en isLogged
 	const getValueLS = () => {
-		JSON.parse(localStorage.getItem(`${idValue}`))
+		JSON.parse(localStorage.getItem("logginValue"))
 			? setIsLogged(true)
 			: setIsLogged(false);
 	};
